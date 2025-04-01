@@ -1,0 +1,135 @@
+.carouselExampleControls {
+    height: 700px;
+}
+
+.carousel-caption {
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente */
+    align-items: left; /* Alinha verticalmente */
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    text-align: left;
+    color: white;
+    max-width: 40%;
+}
+
+.carousel-item {
+    height: 600px; /* Define a altura para 60% da tela */
+}
+
+.carousel-item img {
+    height: 100%; /* Faz a imagem ocupar toda a altura do slide */
+    object-fit: cover; /* Mantém a proporção e cobre toda a área */
+}
+
+.radius-bottom {
+    width: 50px;  /* Define um tamanho fixo */
+    height: 50px;
+    border-radius: 50%; /* Deixa circular */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro translúcido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+    width: 20px;  /* Ajusta o tamanho do ícone */
+    height: 20px;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.37) 10%, rgba(0, 0, 0, 0.548) 70%);
+  
+  }
+
+.container-valores {    
+    color: white;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+.valores {
+    background-color: #00633C;
+    border-top-right-radius: 40px;
+}
+
+.visao {
+    background-color: #0B8045;
+}
+
+.missao {
+    background-color: #269E37;
+    border-bottom-left-radius: 40px;
+}
+
+/* Serviços */
+.card {
+    padding: 0;
+    border-radius: 1.25rem;
+}
+
+.card-service {
+    height: 100%;
+    cursor: pointer;
+}
+
+.card-service img, .card {
+    border-top-left-radius: 15px;  /* Arredonda a borda superior esquerda */
+    border-top-right-radius: 15px; /* Arredonda a borda superior direita */
+}
+
+.card-service .card-body {
+    background-color: #ffffff;
+    border-radius: 30px;
+}
+
+.section-contato {
+    background-color: #123237;
+    color: white;
+}
+
+.contato {
+    background-color: white;
+    border-radius: 2.5rem;
+    color: black;
+}
+
+form {
+    font-weight: 500;
+}
+
+.div-form button {
+    background-color: #123237;
+}
+
+.div-form {
+    background-color: white;
+    border-top-right-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+}
+
+.brasil {
+    background-color: #F7F6F8;
+    color: #123237;
+    border-top-left-radius: 2.5rem;
+    border-bottom-left-radius: 2.5rem;
+}
+
+.brasil h2 {
+    font-weight: bold;
+}
+
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+}

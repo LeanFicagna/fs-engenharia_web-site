@@ -1,0 +1,61 @@
+/* Reset Universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Melhorias na tipografia */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+/* Remover estilos padrão de listas */
+ul, ol {
+    list-style: none;
+}
+
+/* Remover estilos padrão de links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remover estilos padrão de botões */
+button, input, textarea {
+    font-family: inherit;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+/* Garantir que imagens não ultrapassem seus containers */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Evitar problemas com tabelas */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Normalizar elementos de formulário */
+input, textarea, button, select {
+    font-size: inherit;
+}
+
+/* Melhorar a acessibilidade de botões */
+button {
+    cursor: pointer;
+}
+
+/* HTML5 Elements Display Fix */
+article, aside, details, figcaption, figure, footer, header, nav, section {
+    display: block;
+}

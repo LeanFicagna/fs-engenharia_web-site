@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FS Engenharia - Home</title>
+        <link rel="stylesheet" type="text/css" href="css/_.css" media="screen" />
+
+        <script src="script/_.js"></script>
+    </head>
+    <body>
+        <header>
+            <img src="img/logo-horizontal.png" alt="FS Engenharia">
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <nav id="nav-menu">
+                <a href="home.html">Início</a>
+                <a href="servicos.html">Serviços</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </header>
+
+        <section class="slider">
+            <div class="slides">
+                <div class="slide">BEM VINDO AO FUTURO DO MAPEAMENTO<br>Empresa Inovadora, pronta para novos desafios...</div>
+                <div class="slide">LÍDER EM TOPOGRAFIA E MAPEAMENTO<br>Confiança de centenas de clientes...</div>
+                <div class="slide">SUA PARCEIRA EM ENGENHARIA DE MAPEAMENTO<br>Soluções completas em geotecnologia...</div>
+            </div>
+            <div class="slider-buttons">
+                <button onclick="prevSlide()">&#10094;</button>
+                <button onclick="nextSlide()">&#10095;</button>
+            </div>
+        </section>
+
+        <section class="sobre-dmc">
+            <div class="container">
+                <h2>Sobre a DMC</h2>
+                <div class="texto">
+                    <h3>DMC Geoprocessamento e Engenharia</h3>
+                    <p>
+                        A DMC é uma empresa goiana, referência no mercado do centro-oeste brasileiro, com forte atuação nacional, 
+                        nas áreas de locação de equipes topográficas, levantamentos topográficos especiais, como portos, 
+                        asbuilts industriais, rodovias, planialtimétricos, barragens, etc.
+                    </p>
+                    <p>
+                        Integrando sempre os serviços topográficos com soluções em geoprocessamento, modelando digitalmente os levantamentos 
+                        planialtimétricos em 3 dimensões, verificando manchas de inundação, realizando zoneamentos especiais e mapeamentos 
+                        de grandes áreas em todo o país, a DMC é a solução necessária para você que é empreendedor sem fronteiras.
+                    </p>
+                    <p>
+                        A DMC se baseia no princípio de que negócios são entre empresas, mas relacionamentos são entre pessoas. 
+                        Portanto, acreditamos num relacionamento mais próximo ao cliente, que na maioria das vezes, tornam-se amigos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="valores-section">
+            <div class="valores">
+                <h2>Valores</h2>
+                <p>Honestidade, ética e confiança;<br>Excelência profissional e valorização das pessoas;<br>Comprometimento com o cliente.</p>
+            </div>
+            <div class="visao">
+                <h2>Visão</h2>
+                <p>SSer referencia nacional em serviços de topografia de lata qualidade caracterizados por inovação, rapidez e precisão, reconhecendo que desafios são oportunidades 
+                    ímpares de crescimento e buscando sempre a melhoria continua de solu
+                    ções oferecidas aos nossos clientes.</p>
+            </div>
+            <div class="missao">
+                <h2>Missão</h2>
+                <p>Prestar serviços de topografia e engenharia de alta qualidade, superando as necessidades dos clientes...</p>
+            </div>
+        </section>
+
+        <section class="servicos-section">
+            <h2>Nossos Serviços</h2>
+            <div class="servicos-container">
+                <a href="georeferenciamento.html" class="servico">
+                    <img src="img/georeferenciamento.jpg" alt="Georreferenciamento">
+                    <h3>Georreferenciamento de Imóveis Rurais</h3>
+                    <p>Regularização fundiária para garantir a precisão e legalidade do imóvel rural.</p>
+                </a>
+                <a href="credito-rural.html" class="servico">
+                    <img src="img/credito-rural.jpg" alt="Crédito Rural">
+                    <h3>Crédito Rural</h3>
+                    <p>Assessoria completa para obtenção de crédito rural e financiamento das atividades.</p>
+                </a>
+                <a href="topografia.html" class="servico">
+                    <img src="img/topografia.jpg" alt="Topografia">
+                    <h3>Topografia</h3>
+                    <p>Mapeamento detalhado para projetos de engenharia, construção civil e infraestrutura.</p>
+                </a>
+                <a href="lar.html" class="servico">
+                    <img src="img/lar.jpg" alt="LAR">
+                    <h3>LAR</h3>
+                    <p>Levantamento e análise de recursos para melhor gestão do solo e sustentabilidade.</p>
+                </a>
+            </div>
+        </section>
+        
+        <section class="contato-section">
+            <a href="https://wa.me/seunumerodetelefone" class="whatsapp-btn" target="_blank">💬 Fale Conosco no WhatsApp</a>
+            
+            <h2>Entre em Contato</h2>
+            
+            <form action="enviar_formulario.php" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+        
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+        
+                <button type="submit">Enviar</button>
+            </form>
+        </section>        
+
+        <footer>
+            <p>Todos os direitos reservados &copy; FS Engenharia</p>
+        </footer>
+    </body>
+</html>
