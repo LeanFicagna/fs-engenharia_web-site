@@ -91,7 +91,7 @@
 }
 
 .section-contato {
-    background-color: #123237;
+    background-color: #002222;
     color: white;
 }
 
@@ -126,10 +126,20 @@ form {
     font-weight: bold;
 }
 
+/* secção pre */
+.section-pre {
+    background-color: #001B18;
+    color: white;
+}
+
+.section-pre svg {
+    width: 100%;
+}
+
 footer {
-    background-color: #000;
+    background-color: #001B18;
     color: white;
     text-align: center;
-    padding: 15px 0;
+    padding: 30px 0;
     font-size: 14px;
 }
