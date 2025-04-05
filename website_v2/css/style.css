@@ -144,8 +144,25 @@ form {
     color: white;
 }
 
-.section-pre .nav-link:hover {
-    color: rgba(255, 255, 255, 0.507);
+.contatos-whatsapp .nav-link:hover {
+    opacity: 50%;
+}
+
+.contatos-whatsapp h3 {
+    font-size: 1.75rem;
+}
+
+.contatos-whatsapp svg {
+    width: 2rem;
+    height  : 2rem;
+}
+
+.contatos-whatsapp .nav-link {
+    padding: 0;
+}
+
+.menu-contatos a:hover {
+    opacity: 50%;
 }
 
 footer {
