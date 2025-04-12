@@ -2,6 +2,10 @@ a {
     text-decoration: none;
 }
 
+.menu-black {
+    background-color: black !important;
+}
+
 .carouselExampleControls {
     height: 700px;
 }
@@ -174,3 +178,9 @@ footer {
 }
 
 /* Test */
+
+.section-especialista {
+    border-radius: 30px;
+    background:
+    linear-gradient(30deg, #00633c 30%, #26c00772 70%), url(https://blog.verde.ag/pt/wp-content/uploads/2023/11/Lavoura-de-milho-como-melhorar-a-fertilidade-do-solo.jpg) no-repeat
+}
