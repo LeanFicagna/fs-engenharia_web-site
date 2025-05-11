@@ -33,6 +33,12 @@ a {
     object-fit: cover; /* Mantém a proporção e cobre toda a área */
 }
 
+@media (max-width: 576px) {
+    .carousel-item {
+        height: 470px;
+    }
+}
+
 .radius-bottom {
     width: 50px;  /* Define um tamanho fixo */
     height: 50px;
