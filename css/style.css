@@ -9,6 +9,36 @@ a {
     background: radial-gradient(circle, rgba(0, 0, 0, 0.37) 0%, rgba(0, 0, 0, 0.548) 80%);
 }
 
+/* Missão, valores e visão */
+
+.container-valores {    
+    color: white;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+.valores {
+    background-color: #00633C;
+    border-top-right-radius: 40px;
+}
+
+.visao {
+    background-color: #0B8045;
+}
+
+.missao {
+    background-color: #269E37;
+    border-bottom-left-radius: 40px;
+}
+
+/* Especialista */
+
+.section-especialista {
+    border-radius: 30px;
+    background:
+    linear-gradient(30deg, #00633c 30%, #26c00772 70%), url(https://blog.verde.ag/pt/wp-content/uploads/2023/11/Lavoura-de-milho-como-melhorar-a-fertilidade-do-solo.jpg) no-repeat
+}
+
 /* Fale conosco */
 
 .section-contato {
@@ -45,6 +75,13 @@ form {
 
 .brasil h2 {
     font-weight: bold;
+}
+
+/* Apenas telas pequenas */
+@media (max-width: 576px) {
+  .mapa-brasil {
+    max-width: 12em;
+  }
 }
 
 /* footer */
