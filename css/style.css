@@ -10,6 +10,10 @@ a {
     text-decoration: none;
 }
 
+main {
+    justify-items: center;
+}
+
 .overlay {
     position: absolute;
     width: 100%;
@@ -17,7 +21,27 @@ a {
     background: radial-gradient(circle, rgba(0, 0, 0, 0.37) 0%, rgba(0, 0, 0, 0.548) 80%);
 }
 
+.container {
+    max-width: 1200px;
+}
+
 /* Missão, valores e visão */
+
+
+#container_descricao {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 5rem;
+    justify-items: center;
+}
+
+.section_valores {
+    color: white;
+}
+
+.section_valores > section {
+    padding: 0.8rem 2rem;
+}
 
 .container-valores {    
     color: white;
@@ -41,10 +65,77 @@ a {
 
 /* Especialista */
 
+div > section {
+  margin: 3.2rem 1rem;
+}
+
+#section_especialista {
+    background:
+    linear-gradient(30deg, #00633c 30%, #26c00772 70%), url(https://blog.verde.ag/pt/wp-content/uploads/2023/11/Lavoura-de-milho-como-melhorar-a-fertilidade-do-solo.jpg) no-repeat;
+    color: white;
+    padding: 3rem;
+    border-radius: 30px;
+    text-align: justify;
+}
+
+#section_especialista h2 {
+    font-weight: 700;
+}
+
+#section_especialista h2,
+#section_especialista p {
+  margin-bottom: 16px;
+}
+
+#section_especialista a {
+  background-color: #f4c430;
+  color: #ffffff;
+  padding: 12px 24px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
 .section-especialista {
     border-radius: 30px;
-    background:
-    linear-gradient(30deg, #00633c 30%, #26c00772 70%), url(https://blog.verde.ag/pt/wp-content/uploads/2023/11/Lavoura-de-milho-como-melhorar-a-fertilidade-do-solo.jpg) no-repeat
+    
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+}
+
+.card > img {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.card {
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.card > div {
+    padding: 0.4rem;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Fale conosco */
