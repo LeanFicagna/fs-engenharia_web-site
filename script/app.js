@@ -27,3 +27,10 @@ function prevSlide() {
     currentSlide--;
     showSlide(currentSlide);
 }
+
+const toggle = document.querySelector('.navbar-toggle-s');
+const menu = document.querySelector('.navbar-menu-s');
+
+toggle.addEventListener('click', () => {
+menu.classList.toggle('active');
+});
