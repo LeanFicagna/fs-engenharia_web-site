@@ -52,77 +52,48 @@
       </div>
     </nav>
 
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
+    <section class="slider">
+      <div class="slider-track">
+        <article class="slide active">
           <div class="overlay"></div>
           <img src="img/slide-mapeamento-lg.png" srcset="
-              img/slide-mapeamento-sm.png 750w,
-              img/slide-mapeamento-md.png 1200w,
-              img/slide-mapeamento-lg.png 1500w
-            " sizes="
-              (max-width: 576px) 100vw,
-              (max-width: 992px) 100vw,
-              1500px
-            " class="d-block w-100"
-            alt="Mapeamento técnico de propriedade rural com uso de tecnologia de precisão para aumentar segurança, eficiência e produtividade">
-          <div class="carousel-caption">
-            <h1 class="fw-bold">Precisão que impulsiona sua produção</h1>
-            <p>Mapeamos sua terra com tecnologia e experiência para você produzir com segurança, eficiência e valor.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="overlay"></div>
-          <img src="img/slide-credito-rural-lg.png" srcset="
-              img/slide-credito-rural-sm.png 750w,
-              img/slide-credito-rural-md.png 1200w,
-              img/slide-credito-rural-lg.png 1500w
-            " sizes="
-              (max-width: 576px) 100vw,
-              (max-width: 992px) 100vw,
-              1500px
-            " class="d-block w-100"
-            alt="Consultoria em crédito rural apoiando produtores no planejamento e acesso a financiamento para investimentos no campo">
-          <div class="carousel-caption">
-            <h1 class="fw-bold">Crédito certo, na hora certa</h1>
-            <p>Conte com nossa consultoria para acessar linhas de crédito e investir com tranquilidade no seu negócio
-              rural.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="overlay"></div>
-          <img src="img/slide-mapeamento-lg.png" srcset="
-              img/slide-geoprocessamento-sm.png 750w,
-              img/slide-geoprocessamento-md.png 1200w,
-              img/slide-geoprocessamento-lg.png 1500w
-            " sizes="
-              (max-width: 576px) 100vw,
-              (max-width: 992px) 100vw,
-              1500px
-            " class="d-block w-100"
-            alt="Georreferenciamento de imóvel rural para regularização fundiária, valorização da terra e geração de novas oportunidades">
-          <div class="carousel-caption">
-            <h1 class="fw-bold">Seu imóvel regularizado, seu futuro garantido</h1>
-            <p>Georreferenciamento completo para dar valor, segurança e oportunidades à sua propriedade rural.</p>
+          img/slide-mapeamento-sm.png 750w,
+          img/slide-mapeamento-md.png 1200w,
+          img/slide-mapeamento-lg.png 1500w
+        " sizes="(max-width: 992px) 100vw, 1500px" alt="Mapeamento técnico de propriedade rural" />
 
+          <div class="slide-caption">
+            <h1>Precisão que impulsiona sua produção</h1>
+            <p>Mapeamos sua terra com tecnologia e experiência para produzir com segurança.</p>
           </div>
-        </div>
+        </article>
+
+        <article class="slide">
+          <div class="overlay"></div>
+          <img src="img/slide-credito-rural-lg.png" alt="Crédito rural" />
+          <div class="slide-caption">
+            <h1>Crédito certo, na hora certa</h1>
+            <p>Consultoria completa para acesso a linhas de crédito rural.</p>
+          </div>
+        </article>
+
+        <article class="slide">
+          <div class="overlay"></div>
+          <img src="img/slide-geoprocessamento-lg.png" alt="Georreferenciamento rural" />
+          <div class="slide-caption">
+            <h1>Seu imóvel regularizado, seu futuro garantido</h1>
+            <p>Georreferenciamento completo para valorizar sua propriedade.</p>
+          </div>
+        </article>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-        data-bs-slide="prev">
-        <div class="radius-bottom">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </div>
-        <span class="visually-hidden">Previous</span>
+      <button class="slider-btn prev" aria-label="Slide anterior">
+        <span class="carousel-control-prev-icon" aria-hidden="true">
+        </span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-        data-bs-slide="next">
-        <div class="radius-bottom">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </div>
-        <span class="visually-hidden">Next</span>
+      <button class="slider-btn next" aria-label="Próximo slide">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
       </button>
-    </div>
+    </section>
   </header>
 
   <main>
