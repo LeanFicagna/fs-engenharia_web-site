@@ -27,3 +27,17 @@ function prevSlide() {
     currentSlide--;
     showSlide(currentSlide);
 }
+
+// verifica e aplica a máscara de telefone no campo de entrada do entre em contato
+const handlePhone = (event) => {
+  let input = event.target
+  input.value = phoneMask(input.value)
+}
+
+const phoneMask = (value) => {
+  if (!value) return ""
+  value = value.replace(/\D/g, '') // Remove tudo o que não for número
+  value = value.replace(/(\d{2})(\d)/, "($1) $2") // Coloca parênteses nos dois primeiros dígitos
+  value = value.replace(/(\d{5})(\d)/, "$1-$2") // Coloca o traço após o quinto dígito
+  return value
+}

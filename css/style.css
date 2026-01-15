@@ -129,11 +129,112 @@ form {
 }
 */
 
+/* FORM CONTATOS */
+
 #container-form {
    padding: 1rem;
 }
 
-/* Footer New */
+/* Reset básico e Debug */
+.container * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 1px solid rgba(0, 0, 0, 0.1); /* Debug sutil */
+}
+
+/* Container Principal */
+.container {
+    display: flex;
+    flex-direction: column; /* Celular: Um embaixo do outro */
+    width: 100%;
+    max-width: 1100px;
+    padding: 30px;
+    gap: 30px;
+    justify-self: center;
+    align-items: center;
+}
+
+/* Conteúdo da esquerda (Imagem e Texto) */
+.form-image img {
+    max-width: 100%;
+    height: auto;
+    width: 300px; /* Ajuste o tamanho da imagem */
+}
+
+.form-content-left {
+    justify-items: center;
+    flex: 1;
+}
+
+.form-content-left h3, p{
+    text-align: center;
+}
+
+/* Grid do Formulário */
+.form {
+    width: 100%; /* Força a div do formulário a ocupar toda a largura disponível */
+}
+
+.input-box input, 
+.input-box select, 
+.input-box textarea {
+    width: 100%; /* Garante que os campos dentro do grid preencham o box deles */
+    display: block;
+}
+
+.input-group {
+    display: grid;
+    grid-template-columns: 1fr; /* Celular: Uma coluna */
+    gap: 1.2rem;
+}
+
+/* O campo de mensagem ocupando a linha toda */
+.input-box:last-child {
+    grid-column: span 1;
+}
+
+/* Botão */
+.solicite-button{
+    margin-top: auto;
+}
+
+.solicite-button button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+/* --- VERSÃO DESKTOP (Notebooks e Monitores) --- */
+@media (min-width: 992px) {
+    .container {
+        flex-direction: row; /* Desktop: Lado a lado */
+        align-items: stretch;
+    }
+
+    .form-content-left {
+        text-align: left;
+        position: sticky; /* Opcional: faz a imagem seguir o scroll */
+        top: 20px;
+    }
+
+    .form {
+        flex: 1.5; /* O formulário ganha um pouco mais de espaço */
+        width: auto;
+    }
+
+    .input-group {
+        grid-template-columns: 1fr 1fr; /* Desktop: Dois campos por linha */
+    }
+
+    /* Faz a "Mensagem" ocupar as duas colunas no desktop */
+    .input-box:nth-child(5) { 
+        grid-column: span 2;
+    }
+} 
+
+/* FOOTER NEW */
 footer {
     width: 100%;
     background-color: #001B18;
