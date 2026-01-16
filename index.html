@@ -6,9 +6,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="description" content="Especialistas em crédito rural, georreferenciamento e consultoria agrícola. Atendemos produtores em todo o Brasil com soluções seguras e eficientes.">
+  <meta name="description"
+    content="Consultoria rural no oeste do Pará. Crédito rural, georreferenciamento, licenciamento ambiental e regularização de imóveis." />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta property="og:title" content="FS Engenharia Rural">
+  <meta property="og:description" content="Consultoria rural, crédito e regularização fundiária.">
+  <meta property="og:image" content="https://www.fsengenhariarural.com.br/fs-engenharia-logo.png">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -17,273 +25,268 @@
   <link rel="icon" href="favicon.png" type="image/png">
 
   <link href="css/style.css" rel="stylesheet">
-  <title>FS Engenharia - Serviços de Engenharia Rural</title>
+
+  <script defer src="script/app.js"></script>
+
+  <title>FS Engenharia Rural | Consultoria, Crédito e Regularização</title>
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg menu-black">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img height="20px" src="img/fs-engenharia-logo.png"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+    <nav class="navbar-s">
+      <div class="navbar-container-s">
+        <a href="#" class="navbar-brand-s">
+          <img src="img/fs-engenharia-logo.png" alt="FS Engenharia" />
+        </a>
+
+        <button class="navbar-toggle-s" aria-label="Abrir menu">
+          ☰
         </button>
 
-        <div class="collapse navbar-collapse w-100 flex-column justify-content-end align-items-end text-end"
-          id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sobre</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contatos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Serviços</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="navbar-menu-s">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Serviços</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
       </div>
     </nav>
 
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
+    <section class="slider">
+      <div class="slider-track">
+        <article class="slide active">
           <div class="overlay"></div>
-          <img
-            src="img/slide-mapeamento-lg.png"
-            srcset="
-              img/slide-mapeamento-sm.png 750w,
-              img/slide-mapeamento-md.png 1200w,
-              img/slide-mapeamento-lg.png 1500w
-            "
-            sizes="
-              (max-width: 576px) 100vw,
-              (max-width: 992px) 100vw,
-              1500px
-            "
-            class="d-block w-100"
-            alt="Mapeamento técnico de propriedade rural com uso de tecnologia de precisão para aumentar segurança, eficiência e produtividade"
-          >
-          <div class="carousel-caption">
-            <h1 class="fw-bold">Precisão que impulsiona sua produção</h1>
-            <p>Mapeamos sua terra com tecnologia e experiência para você produzir com segurança, eficiência e valor.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="overlay"></div>
-          <img
-            src="img/slide-credito-rural-lg.png"
-            srcset="
-              img/slide-credito-rural-sm.png 750w,
-              img/slide-credito-rural-md.png 1200w,
-              img/slide-credito-rural-lg.png 1500w
-            "
-            sizes="
-              (max-width: 576px) 100vw,
-              (max-width: 992px) 100vw,
-              1500px
-            "
-            class="d-block w-100"
-            alt="Consultoria em crédito rural apoiando produtores no planejamento e acesso a financiamento para investimentos no campo"
-          >
-          <div class="carousel-caption">
-            <h1 class="fw-bold">Crédito certo, na hora certa</h1>
-            <p>Conte com nossa consultoria para acessar linhas de crédito e investir com tranquilidade no seu negócio
-              rural.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="overlay"></div>
-          <img
-            src="img/slide-mapeamento-lg.png"
-            srcset="
-              img/slide-mapeamento-sm.png 750w,
-              img/slide-mapeamento-md.png 1200w,
-              img/slide-mapeamento-lg.png 1500w
-            "
-            sizes="
-              (max-width: 576px) 100vw,
-              (max-width: 992px) 100vw,
-              1500px
-            "
-            class="d-block w-100"
-            alt="Georreferenciamento de imóvel rural para regularização fundiária, valorização da terra e geração de novas oportunidades"
-          >
-          <div class="carousel-caption">
-            <h1 class="fw-bold">Seu imóvel regularizado, seu futuro garantido</h1>
-            <p>Georreferenciamento completo para dar valor, segurança e oportunidades à sua propriedade rural.</p>
+          <img src="img/slide-mapeamento-lg.png" srcset="
+          img/slide-mapeamento-sm.png 750w,
+          img/slide-mapeamento-md.png 1200w,
+          img/slide-mapeamento-lg.png 1500w
+        " sizes="(max-width: 992px) 100vw, 1500px" alt="Mapeamento técnico de propriedade rural" />
 
+          <div class="slide-caption">
+            <h1>Precisão que impulsiona sua produção</h1>
+            <p>Mapeamos sua terra com tecnologia e experiência para produzir com segurança.</p>
           </div>
-        </div>
+        </article>
+
+        <article class="slide">
+          <div class="overlay"></div>
+          <img src="img/slide-credito-rural-lg.png" alt="Crédito rural" />
+          <div class="slide-caption">
+            <h1>Crédito certo, na hora certa</h1>
+            <p>Consultoria completa para acesso a linhas de crédito rural.</p>
+          </div>
+        </article>
+
+        <article class="slide">
+          <div class="overlay"></div>
+          <img src="img/slide-geoprocessamento-lg.png" alt="Georreferenciamento rural" />
+          <div class="slide-caption">
+            <h1>Seu imóvel regularizado, seu futuro garantido</h1>
+            <p>Georreferenciamento completo para valorizar sua propriedade.</p>
+          </div>
+        </article>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-        <div class="radius-bottom">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </div>
-        <span class="visually-hidden">Previous</span>
+      <button class="slider-btn prev" aria-label="Slide anterior">
+        <span class="carousel-control-prev-icon" aria-hidden="true">
+        </span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-        <div class="radius-bottom">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </div>
-        <span class="visually-hidden">Next</span>
+      <button class="slider-btn next" aria-label="Próximo slide">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
       </button>
-    </div>
+    </section>
   </header>
 
   <main>
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="my-5 md-5 mx-5">
-            <h1>Sobre</h1>
-            <h2>FS Engenharia</h2>
-            <p>
-              A F S Engenharia é uma empresa especializada em consultoria rural, com atuação estratégica na região oeste
-              do Pará, especialmente no município de Rurópolis e arredores. Nascida da necessidade de apoiar o
-              desenvolvimento sustentável no campo, a empresa consolidou-se como uma parceira fundamental de agricultores
-              familiares, médios e grandes produtores, além de comunidades tradicionais, como os quilombolas.
+      <section id="container_descricao">
+        <section>
+          <h1>Sobre</h1>
+          <h2>FS Engenharia</h2>
+          <p>
+            A F S Engenharia é uma empresa especializada em consultoria rural, com atuação estratégica na região oeste
+            do Pará, especialmente no município de Rurópolis e arredores. Nascida da necessidade de apoiar o
+            desenvolvimento sustentável no campo, a empresa consolidou-se como uma parceira fundamental de
+            agricultores
+            familiares, médios e grandes produtores, além de comunidades tradicionais, como os quilombolas.
+          </p>
+
+          <p>
+            Com base em um plano de negócios sólido e já implementado, a F S Engenharia vem transformando propriedades
+            rurais em empreendimentos prósperos, oferecendo soluções inovadoras, técnicas e personalizadas. Entre os
+            serviços prestados, estão a elaboração de projetos para acesso a crédito rural, assistência técnica nas
+            áreas de agricultura e pecuária, análise e correção de solos, regularização fundiária e projetos de
+            licenciamento ambiental para atividades como a piscicultura.
+          </p>
+
+          <p>
+            Nosso compromisso é contribuir para o crescimento do agronegócio local com responsabilidade social e
+            ambiental, priorizando a qualidade no atendimento, a ética nas relações e o aprimoramento contínuo de
+            nossa
+            equipe. Com um time de profissionais experientes e atualizados, utilizamos ferramentas modernas de análise
+            de dados para ajudar nossos clientes a tomar decisões estratégicas e assertivas.
+          </p>
+
+          <p>
+            Acreditamos na força do campo e no seu potencial transformador. Por isso, trabalhamos todos os dias para
+            impulsionar a produtividade, rentabilidade e sustentabilidade das propriedades rurais da nossa região.
+          </p>
+        </section>
+
+        <section class="section_valores">
+          <section class="valores">
+            <h2>Missão</h2>
+            <p>Nossa missão é prestar consultoria aos produtores rurais da região, promovendo o
+              crescimento e o desenvolvimento de suas propriedades tornando-as mais competitivas
+              em suas atividades por meio de soluções inovadoras e sustentáveis, respeitando as
+              pessoas e o meio ambiente.
             </p>
-
-            <p>
-              Com base em um plano de negócios sólido e já implementado, a F S Engenharia vem transformando propriedades
-              rurais em empreendimentos prósperos, oferecendo soluções inovadoras, técnicas e personalizadas. Entre os
-              serviços prestados, estão a elaboração de projetos para acesso a crédito rural, assistência técnica nas
-              áreas de agricultura e pecuária, análise e correção de solos, regularização fundiária e projetos de
-              licenciamento ambiental para atividades como a piscicultura.
             </p>
-
-            <p>
-              Nosso compromisso é contribuir para o crescimento do agronegócio local com responsabilidade social e
-              ambiental, priorizando a qualidade no atendimento, a ética nas relações e o aprimoramento contínuo de nossa
-              equipe. Com um time de profissionais experientes e atualizados, utilizamos ferramentas modernas de análise
-              de dados para ajudar nossos clientes a tomar decisões estratégicas e assertivas.
+          </section>
+          <section class="visao">
+            <h2>Valores</h2>
+            <p>Sustentabilidade e consciência de nossas responsabilidades sociais e com o meio ambiente; humanidade;
+              comprometimento; ética e respeito para com nossos colaboradores, clientes e parceiros; buscando novas
+              metas e desafios tanto para si quanto para a empresa.
             </p>
-
-            <p>
-              Acreditamos na força do campo e no seu potencial transformador. Por isso, trabalhamos todos os dias para
-              impulsionar a produtividade, rentabilidade e sustentabilidade das propriedades rurais da nossa região.
+            <p>Buscando continuamente o desenvolvimento profissional investindo no seu autodesenvolvimento e
+              envolvendo-se em processos de inovação.
             </p>
+          </section>
+          <section class="missao">
+            <h2>Visão</h2>
+            <p>
+              Ser reconhecida nacionalmente como referência em excelência na prestação de serviços de consultoria
+              rural,
+              destacando-se pela qualidade, inovação e comprometimento com os resultados.
+            </p>
+            <p>
+              Nosso propósito é construir parcerias sólidas e duradouras,
+              promovendo o desenvolvimento sustentável, a valorização do produtor rural
+              e o fortalecimento contínuo da fronteira agrícola brasileira.
+            </p>
+          </section>
+        </section>
+      </section>
 
-          </div>
-        </div>
-        <div class="col-md-6 container-valores">
-          <div class="my-5 mx-md-5 mx-4">
-            <div class="px-4 py-4 valores">
-              <h2>Missão</h2>
-              <p>Nossa missão é prestar consultoria aos produtores rurais da região, promovendo o
-                crescimento e o desenvolvimento de suas propriedades tornando-as mais competitivas
-                em suas atividades por meio de soluções inovadoras e sustentáveis, respeitando as
-                pessoas e o meio ambiente.
+      <section id="section_especialista">
+        <h2>Fale com um especialista</h2>
+        <p>FS Engenharia possui mais de 4 anos de experiência no setor, atuando com excelência em
+          topografia, consultoria técnica e apoio especializado para acesso ao crédito rural. Com uma equipe
+          capacitada e conhecimento do campo, ajudamos produtores a conquistar recursos e a tomar decisões
+          seguras para o crescimento sustentável de suas propriedades.</p>
+        <a href="#contato">
+          Fale com um especialista
+        </a>
+      </section>
+
+      <section>
+        <h1>Nossos serviços</h1>
+        <section class="cards">
+          <article class="card">
+            <img class="card-img-top" src="img/geo.jpeg" alt="Imagem representando georreferenciamento de imóveis">
+            <div>
+              <h5 class="card-text">Georreferenciamento de Imóveis</h5>
+              <p class="card-description">
+                Levantamento topográfico preciso para certificação de imóveis rurais junto aos órgãos competentes,
+                atendendo às exigências do Incra.
               </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card-img-top" src="img/geo.jpeg" alt="Imagem representando crédito rural">
+            <div>
+              <h5 class="card-text">Crédito Rural</h5>
+              <p class="card-description">
+                Elaboração de projetos técnicos para acesso a linhas de crédito rural, fomentando o crescimento
+                sustentável da produção agropecuária.
               </p>
             </div>
-            <div class="px-4 py-4 visao">
-              <h2>Valores</h2>
-              <p>Sustentabilidade e consciência de nossas responsabilidades sociais e com o meio ambiente; humanidade;
-                comprometimento; ética e respeito para com nossos colaboradores, clientes e parceiros; buscando novas
-                metas e desafios tanto para si quanto para a empresa.
-              </p>
-              <p>Buscando continuamente o desenvolvimento profissional investindo no seu autodesenvolvimento e
-                envolvendo-se em processos de inovação.
-              </p>
-            </div>
-            <div class="px-4 py-4 missao">
-              <h2>Visão</h2>
-              <p>
-                Ser reconhecida nacionalmente como referência em excelência na prestação de serviços de consultoria rural,
-                destacando-se pela qualidade, inovação e comprometimento com os resultados.
-              </p>
-              <p>
-                Nosso propósito é construir parcerias sólidas e duradouras,
-                promovendo o desenvolvimento sustentável, a valorização do produtor rural
-                e o fortalecimento contínuo da fronteira agrícola brasileira.
+          </article>
+
+          <article class="card">
+            <img class="card-img-top" src="img/geo.jpeg" alt="Imagem representando serviço de topografia">
+            <div>
+              <h5 class="card-text">Topografia</h5>
+              <p class="card-description">
+                Serviços de medição, levantamento planialtimétrico e demarcação de terrenos, essenciais para
+                planejamento e gestão rural eficiente.
               </p>
             </div>
-          </div>
-        </div>
-      </div>
+          </article>
 
-      <div class="container my-5 p-4 mx-auto">
-        <div class="rounded-4 p-md-5 p-4 mx-md-5 text-white section-especialista">
-          <div class="w-lg-75">
-            <h2 class="fw-bold mb-3">Fale com um especialista</h2>
-            <p class="mb-4">FS Engenharia possui mais de 4 anos de experiência no setor, atuando com excelência em 
-              topografia, consultoria técnica e apoio especializado para acesso ao crédito rural. Com uma equipe 
-              capacitada e conhecimento do campo, ajudamos produtores a conquistar recursos e a tomar decisões 
-              seguras para o crescimento sustentável de suas propriedades.</p>
-          </div>
-          <a href="#contato" class="btn btn-warning text-white rounded-pill">
-            <h4 class="fw-bold px-4 pt-2 ">Fale com um especialista </h4>
-          </a>
-        </div>
-      </div>
-      
-
-      <div class="mx-md-5 mx-4">
-        <h1 class="mb-4">Nossos serviços</h1>
-        <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-12 mb-5">
-            <div class="card card-service">
-              <img class="card-img-top" src="img/geo.jpeg" alt="Imagem representando georreferenciamento de imóveis">
-              <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
-                <h5 class="card-text">Georreferenciamento de Imóveis</h5>
-                <p class="card-description">
-                  Levantamento topográfico preciso para certificação de imóveis rurais junto aos órgãos competentes,
-                  atendendo às exigências do Incra.
-                </p>
-              </div>
+          <article class="card">
+            <img class="card-img-top" src="img/geo.jpeg" alt="Imagem representando o serviço LAR">
+            <div>
+              <h5 class="card-text">LAR</h5>
+              <p class="card-description">
+                Regularização fundiária completa com foco na legalização de imóveis rurais e acesso às políticas
+                públicas de desenvolvimento do campo.
+              </p>
             </div>
-          </div>
+          </article>
+        </section>
+      </section>
 
-          <div class="col-lg-3 col-md-6 col-sm-12 mb-5">
-            <div class="card card-service">
-              <img class="card-img-top" src="img/geo.jpeg" alt="Imagem representando crédito rural">
-              <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
-                <h5 class="card-text">Crédito Rural</h5>
-                <p class="card-description">
-                  Elaboração de projetos técnicos para acesso a linhas de crédito rural, fomentando o crescimento
-                  sustentável da produção agropecuária.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 mb-5">
-            <div class="card card-service">
-              <img class="card-img-top" src="img/geo.jpeg" alt="Imagem representando serviço de topografia">
-              <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
-                <h5 class="card-text">Topografia</h5>
-                <p class="card-description">
-                  Serviços de medição, levantamento planialtimétrico e demarcação de terrenos, essenciais para
-                  planejamento e gestão rural eficiente.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 mb-5">
-            <div class="card card-service">
-              <img class="card-img-top" src="img/geo.jpeg" alt="Imagem representando o serviço LAR">
-              <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
-                <h5 class="card-text">LAR</h5>
-                <p class="card-description">
-                  Regularização fundiária completa com foco na legalização de imóveis rurais e acesso às políticas
-                  públicas de desenvolvimento do campo.
-                </p>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-      </div>
+      <section>
+        <h1>Nossa Equipe e Projetos</h1>
+        <section class="section-equipes-projetos">
+          <section class="section-equipes">
+            <article class="item-1">
+              <img src="cda.jpg" alt="Georreferenciamento rural" style="width: 100%;" />
+              <p>A <strong>FS Engenharia Rural</strong> conta com uma equipe de engenheiros, agrimensores e técnicos especializados, 
+                com sólida atuação no campo e trabalho direto junto ao produtor rural, pautada na responsabilidade
+                técnica, proximidade e foco em resultados, oferecendo soluções eficientes e sustentáveis para o
+                desenvolvimento e a valorização das propriedades rurais, com ampla experiência no setor.</p>
+              <a>Fale com nossos especialistas ></a>
+            </article>
+            <section class="item-2">
+              <h5>Conheça nosso dia a dia:</h5>
+              <hr></hr>
+              <section class="grid-posts">
+                <article>
+                  <img src="cda.jpg" alt="Georreferenciamento rural" style="width: 100%;" />
+                </article>
+                <article>
+                  <img src="cda.jpg" alt="Georreferenciamento rural" style="width: 100%;" />
+                </article>
+                <article>
+                  <img src="cda.jpg" alt="Georreferenciamento rural" style="width: 100%;" />
+                </article>
+                <article>
+                  <img src="cda.jpg" alt="Georreferenciamento rural" style="width: 100%;" />
+                </article>
+              </section>
+              <a>Ver mais no Instagram ></a>
+            </section>
+          </section>
+          <hr></hr>
+          <h4>Veja alguns dos nossos trabalhos realizados no campo</h4>
+          <section>
+            <section class="section-service-menu">
+              <button>Georreferenciamento</button>
+              <button>Energia Solar</button>
+              <button>Licença Fundiária</button>
+              <button>Crédito Rural</button>
+            </section>
+            <section class="section-service-posts">
+                <article>
+                  <img src="cda.jpg" alt="Georreferenciamento rural" style="width: 100%;" />
+                </article>
+                <article>
+                  <img src="cda.jpg" alt="Georreferenciamento rural" style="width: 100%;" />
+                </article>
+                <article>
+                  <img src="cda.jpg" alt="Georreferenciamento rural" style="width: 100%;" />
+                </article>
+            </section>
+            <a>Solicitar orçamento para o meu projeto ></a>
+            <a>Entender qual serviço eu preciso ></a>
+          </section>
+        </section>
+      </section>
     </div>
+  </main>
 
 <!--SECAO ENTRE EM CONTATO-->
     <div class="container-form">
@@ -374,10 +377,11 @@
           <img src="img/fs-engenharia-logo.png" alt="Fs Engenharia-logo">
           <h1>Engenharia</h1>
         </div>
-          <p>Mais que consultoria, somos parceiros do produtor rural na busca por resultados sólidos e sustentáveis.</p>
-        
+        <p>Mais que consultoria, somos parceiros do produtor rural na busca por resultados sólidos e sustentáveis.</p>
+
         <div id="footer_social_media">
-          <a href="https://www.instagram.com/fsconsultoriarural?igsh=NTQxbnllamVkZnBu" class="footer-link" id="instagram">
+          <a href="https://www.instagram.com/fsconsultoriarural?igsh=NTQxbnllamVkZnBu" class="footer-link"
+            id="instagram">
             <i class="fa-brands fa-instagram"></i>
           </a>
 
@@ -385,7 +389,7 @@
             <i class="fa-brands fa-facebook"></i>
           </a>
 
-          
+
         </div>
       </div>
 
@@ -426,14 +430,14 @@
     </div>
 
     <!-- copyright -->
-      <div id="footer_copyright">
-        &#169; 2024 FS Engenharia. Todos os direitos reservados.
-      </div>
-    
+    <div id="footer_copyright">
+      &#169; 2024 FS Engenharia. Todos os direitos reservados.
+    </div>
+
   </Footer>
 
-  
-  
+
+
   <!-- Optional JavaScript; choose one of the two! -->
 
   <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
@@ -442,6 +446,8 @@
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
     integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
     crossorigin="anonymous"></script>
+
+    <script async src="//www.instagram.com/embed.js"></script>
 
 </body>
 

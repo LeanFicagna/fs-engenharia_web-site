@@ -28,6 +28,39 @@ function prevSlide() {
     showSlide(currentSlide);
 }
 
+const toggle = document.querySelector('.navbar-toggle-s');
+const menu = document.querySelector('.navbar-menu-s');
+
+toggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+
+const slides = document.querySelectorAll('.slide');
+const track = document.querySelector('.slider-track');
+const nextBtn = document.querySelector('.slider-btn.next');
+const prevBtn = document.querySelector('.slider-btn.prev');
+
+let index = 0;
+
+function updateSlide() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+}
+
+nextBtn.addEventListener('click', () => {
+    index = (index + 1) % slides.length;
+    updateSlide();
+});
+
+prevBtn.addEventListener('click', () => {
+    index = (index - 1 + slides.length) % slides.length;
+    updateSlide();
+});
+
+// autoplay
+setInterval(() => {
+    index = (index + 1) % slides.length;
+    updateSlide();
+}, 10000);
 // verifica e aplica a máscara de telefone no campo de entrada do entre em contato
 const handlePhone = (event) => {
   let input = event.target

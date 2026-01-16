@@ -1,13 +1,22 @@
 :root {
-    --color-neutral-0: #0e0c0c; 
-    --color-neutral-10: #171717; 
-    --color-neutral-30: #a8a29e; 
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
     --color-neutral-40: #f5f5f5;
 }
 
 
 a {
     text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+main {
+    justify-items: center;
 }
 
 .overlay {
@@ -17,9 +26,99 @@ a {
     background: radial-gradient(circle, rgba(0, 0, 0, 0.37) 0%, rgba(0, 0, 0, 0.548) 80%);
 }
 
+
+.container {
+    max-width: 1200px;
+}
+
+/* Header */
+
+.navbar-s {
+    background-color: black;
+    padding: 0 10px;
+}
+
+.navbar-container-s {
+    width: 100%;
+    max-width: 1600px;
+    height: 56px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header li a {
+    color: white;
+}
+
+.navbar-brand-s img {
+    height: 20px;
+}
+
+.navbar-menu-s {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 10px;
+}
+
+.navbar-toggle-s {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar-toggle-s {
+        display: block;
+    }
+
+    .navbar-menu-s {
+        position: absolute;
+        top: 56px;
+        right: 0;
+        background-color: #111;
+        flex-direction: column;
+        width: 60%;
+        padding: 1rem 0;
+        margin: 0;
+        display: none;
+        z-index: 100;
+    }
+
+    .navbar-menu-s li {
+        text-align: center;
+        padding: 0.75rem 0;
+    }
+
+    .navbar-menu-s.active {
+        display: flex;
+    }
+}
+
 /* Missão, valores e visão */
 
-.container-valores {    
+
+#container_descricao {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 5rem;
+    justify-items: center;
+}
+
+.section_valores {
+    color: white;
+}
+
+.section_valores>section {
+    padding: 0.8rem 2rem;
+}
+
+.container-valores {
     color: white;
     border-top-right-radius: 40px;
     border-bottom-left-radius: 40px;
@@ -41,10 +140,166 @@ a {
 
 /* Especialista */
 
+div>section {
+    margin: 3.2rem 1rem;
+}
+
+#section_especialista {
+    background:
+        linear-gradient(30deg, #00633c 30%, #26c00772 70%), url(https://blog.verde.ag/pt/wp-content/uploads/2023/11/Lavoura-de-milho-como-melhorar-a-fertilidade-do-solo.jpg) no-repeat;
+    color: white;
+    padding: 3rem;
+    border-radius: 30px;
+}
+
+#section_especialista h2 {
+    font-weight: 700;
+}
+
+#section_especialista h2,
+#section_especialista p {
+    margin-bottom: 16px;
+}
+
+#section_especialista a {
+    background-color: #f4c430;
+    color: #ffffff;
+    padding: 12px 24px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
 .section-especialista {
     border-radius: 30px;
-    background:
-    linear-gradient(30deg, #00633c 30%, #26c00772 70%), url(https://blog.verde.ag/pt/wp-content/uploads/2023/11/Lavoura-de-milho-como-melhorar-a-fertilidade-do-solo.jpg) no-repeat
+
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+}
+
+.card>img {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.card {
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.card>div {
+    padding: 0.4rem;
+}
+
+.section-equipes-projetos {
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, .125);
+    padding: 1.5rem;
+}
+
+.section-equipes {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 1rem;
+}
+
+.item-1 {
+    grid-column: span 5;
+}
+
+.item-2 {
+    grid-column: span 4;
+}
+
+.item-2>a {
+    cursor: pointer;
+}
+
+.grid-posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.section-service-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.section-service-menu h6 {
+    cursor: pointer;
+}
+
+.section-equipes-projetos a {
+    background-color: #00633C;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 0.8rem;
+    padding: 15px 20px;
+    color: white !important;
+    border-radius: 0.6rem;
+}
+
+.item-2 > a {
+    padding: 5px 10px;
+}
+
+.section-equipes-projetos img {
+    border-radius: 10px;
+}
+
+hr {
+    margin: 20px 0;
+    border: 1px solid gray;
+}
+
+.section-service-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.section-service-menu {
+    margin: 1.4rem 0;
+}
+
+.section-service-menu button {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.4rem;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .section-equipes {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Fale conosco */
@@ -87,9 +342,9 @@ form {
 
 /* Apenas telas pequenas */
 @media (max-width: 576px) {
-  .mapa-brasil {
-    max-width: 12em;
-  }
+    .mapa-brasil {
+        max-width: 12em;
+    }
 }
 
 /* footer */
@@ -105,7 +360,7 @@ form {
 
 .contatos-whatsapp svg {
     width: 2rem;
-    height  : 2rem;
+    height: 2rem;
 }
 
 .contatos-whatsapp .nav-link {
@@ -114,6 +369,9 @@ form {
 
 /* FORMULÁRIO DE CONTATO ESTILIZAÇÃO COMPLETA */
 
+#container-form {
+    padding: 1rem;
+}
 /* --- CONFIGURAÇÕES GLOBAIS E VARIÁVEIS --- */
 :root {
     --color-dark: #0b242a;       /* Cor principal (Azul Petróleo) para textos, botões e ícones */
@@ -315,7 +573,7 @@ form {
 footer {
     width: 100%;
     background-color: #001B18;
-    color:var(--color-neutral-40);
+    color: var(--color-neutral-40);
 }
 
 #footer_content {
@@ -327,8 +585,8 @@ footer {
 }
 
 #footer_contacts {
-   gap: 10px;
-   display: grid;
+    gap: 10px;
+    display: grid;
 }
 
 #footer_contacts h1 {
@@ -337,26 +595,26 @@ footer {
     margin: 0;
 }
 
-#footer_contacts img{
+#footer_contacts img {
     display: block;
     height: auto;
     max-width: 30px;
 }
 
-.footer-logo{
+.footer-logo {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-#footer_social_media{
+#footer_social_media {
     display: flex;
     justify-content: center;
     gap: 2rem;
     /* margin-top: 1.5rem;  */
 }
 
-#footer_social_media .footer-link{
+#footer_social_media .footer-link {
     height: 2.5rem;
     width: 2.5rem;
     color: var(--color-neutral-40);
@@ -364,22 +622,24 @@ footer {
     transition: all 0.3s ease;
 }
 
-#footer_social_media .footer-link i{
+#footer_social_media .footer-link i {
     font-size: 1.3rem;
 }
-#footer_social_media .footer-link:hover{
+
+#footer_social_media .footer-link:hover {
     opacity: 0.8;
     background-color: var(--color-neutral-30);
     color: var(--color-neutral-0);
 }
-#instagram{
+
+#instagram {
     background: linear-gradient(#7f37c9, #ff2992, #ff9807);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#facebook{
+#facebook {
     background: #1877F2;
     display: flex;
     justify-content: center;
@@ -398,6 +658,7 @@ footer {
     color: var(--color-neutral-30);
     transition: all 0.3s ease;
 }
+
 .footer-list .footer-link:hover {
     color: #00633c;
 }
@@ -423,7 +684,7 @@ footer {
     #footer_content {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
-    }  
+    }
 
     #footer_copyright {
         text-align: center;
@@ -434,7 +695,7 @@ footer {
     #footer_content {
         grid-template-columns: repeat(1, 1fr);
         padding: 3rem 2rem;
-    }  
+    }
 
     #footer_copyright {
         text-align: center;
@@ -442,7 +703,76 @@ footer {
 }
 
 @media (max-width: 768px) {
-  footer h5 {
-    font-size: 16px;
-  }
+    footer h5 {
+        font-size: 16px;
+    }
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+    max-width: 1600px;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 15%;
+    left: 8%;
+    max-width: 600px;
+    color: #fff;
+}
+
+.slide-caption h1 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin-bottom: 0.5rem;
+}
+
+.slide-caption p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Botões */
+.slider-btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0 2vw;
+    opacity: 0.5;
+}
+
+.slider-btn.prev {
+    left: 0;
+}
+
+.slider-btn.next {
+    right: 0;
+}
+
+.slider-btn:hover {
+    opacity: 1;
 }
