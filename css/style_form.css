@@ -1,0 +1,231 @@
+
+/* Reset básico e Debug */
+:root {
+    --color-dark: #0b242a;       /* O azul petróleo do mapa e botão */
+    --color-light: #f4f6f9;      /* O cinza bem clarinho do lado da imagem */
+    --color-white: #ffffff;      /* Branco puro do lado do formulário */
+    --color-border: #d1d9e0;     /* Cor das bordas dos inputs */
+    --color-text: #333;
+}
+
+.container-form {
+    background-color: var(--color-dark); /* Fundo da página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa a altura total da tela */
+}
+
+.container * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+/* Container Principal */
+.container {
+    display: flex;
+    flex-direction: column; /* Celular: Um embaixo do outro */
+    width: 100%;
+    max-width: 1100px;
+    /* padding: 30px;
+    gap: 30px;
+    justify-self: center;
+    align-items: center; */
+    background-color: var(--color-white);
+    border-radius: 50px; /* Bordas bem arredondadas como no modelo */
+    overflow: hidden;    /* Garante que o fundo cinza não escape da curva */
+    gap: 0;              /* Remove o gap para as metades encostarem */
+    padding: 0;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* Conteúdo da esquerda (Imagem e Texto) */
+.form-image img {
+    max-width: 100%;
+    height: auto;
+    width: 400px; /* Ajuste o tamanho da imagem */
+}
+
+.form-content-left {
+    display: grid;
+    background-color: var(--color-light);
+    /* padding: 40px; */
+    justify-items: center;
+    align-items: center;
+    flex: 1;
+}
+
+.form-content-left h3 {
+    color: var(--color-dark);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.form-sobre {
+    margin-bottom: 1.5rem;
+}
+
+.form-content-left h3, p{
+    text-align: center;
+}
+
+/* Contéudo do Formulário com Displey flex */
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Força a div do formulário a ocupar toda a largura disponível */
+    min-height: 100%;
+
+    padding: 40px;
+    background-color: var(--color-white);
+    flex: 1.2;
+}
+
+.form #solicite-button {
+    align-items: end;
+}
+
+.form-header {
+    margin: 1rem;
+    border-radius: 0.2rem;
+}
+
+.input-box label {
+    font-weight: 600;
+    color: var(--color-dark);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.input-box input, 
+.input-box select, 
+.input-box textarea {
+    width: 100%; /* Garante que os campos dentro do grid preencham o box deles */
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    background-color: var(--color-white);
+    transition: 0.3s;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+}
+
+/* Efeito de foco: quando o usuário clica para digitar */
+.input-box input:focus, 
+.input-box select:focus, 
+.input-box textarea:focus {
+    outline: none;
+    border-color: #ff9807; /* Cor da sua marca */
+    box-shadow: 0 0 8px rgba(255, 152, 7, 0.2); /* Um brilho suave */
+    background-color: #fff;
+}
+
+.input-group {
+    display: grid;
+    grid-template-columns: 1fr; /* Celular: Uma coluna */
+    gap: 1.2rem;
+    flex: 1;
+    margin: 1rem;
+}
+
+.input-message {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-message textarea {
+    flex: 1; /* Faz o textarea ocupar todo o espaço da div dele */
+    resize: none; /* Evita que o usuário quebre o layout redimensionando */
+    min-height: 100px; /* Altura mínima para não ficar esmagado no mobile */
+    padding: 10px;
+    border-radius: 0.2rem;
+}
+
+/* O campo de mensagem ocupando a linha toda */
+.input-box:last-child {
+    grid-column: span 1;
+}
+
+/* Botão */
+#solicite-button{
+    margin-top: auto;
+    margin: 1rem;
+    border-radius: 0.2rem;
+}
+
+#solicite-button button {
+    width: 100%;
+    padding: 12px;
+    /* cursor: pointer; */
+    background-color: var(--color-dark);
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    /* margin-top: 20px; */
+    transition: transform 0.2s, background 0.3s;
+}
+
+#solicite-button button:hover {
+    background-color: #153a44;
+    transform: translateY(-2px);
+}
+
+/* --- VERSÃO DESKTOP (Notebooks e Monitores) --- */
+@media (min-width: 992px) {
+    .container {
+        flex-direction: row; /* Desktop: Lado a lado */
+        align-items: stretch;
+        min-height: 650px;
+    }
+
+    .form-content-left {
+        text-align: left;
+        position: sticky; /* Opcional: faz a imagem seguir o scroll */
+        top: 20px;
+    }
+
+    .form {
+        flex: 1.5; /* O formulário ganha um pouco mais de espaço */
+        width: auto;
+    }
+
+    .input-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Desktop: Dois campos por linha */
+        grid-template-rows: auto auto 1fr;
+
+    }
+
+    /* Nome ocupa a linha toda */
+    .input-box:nth-child(1) { grid-column: span 2; }
+
+    /* Telefone ocupa a linha toda */
+    .input-box:nth-child(2) { grid-column: span 2; }
+
+    /* UF (3) e Cidade (4) ficam lado a lado */
+    .input-box:nth-child(3) { grid-column: span 1; }
+
+    .input-box:nth-child(4) { grid-column: span 1; }
+    
+    /* Mensagem (5) ocupa tudo */
+    .input-box:nth-child(5) { 
+        grid-column: span 2;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Faz a "Mensagem" ocupar as duas colunas no desktop */
+    /* .input-box:nth-child(5) { 
+        grid-column: span 2;
+    } */
+}
