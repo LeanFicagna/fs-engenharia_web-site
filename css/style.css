@@ -198,6 +198,92 @@ div>section {
     padding: 0.4rem;
 }
 
+.section-equipes-projetos {
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, .125);
+    padding: 1.5rem;
+}
+
+.section-equipes {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 1rem;
+}
+
+.item-1 {
+    grid-column: span 5;
+}
+
+.item-2 {
+    grid-column: span 4;
+}
+
+.item-2>a {
+    cursor: pointer;
+}
+
+.grid-posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.section-service-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.section-service-menu h6 {
+    cursor: pointer;
+}
+
+.section-equipes-projetos a {
+    background-color: #00633C;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 0.8rem;
+    padding: 15px 20px;
+    color: white !important;
+    border-radius: 0.6rem;
+}
+
+.item-2 > a {
+    padding: 5px 10px;
+}
+
+.section-equipes-projetos img {
+    border-radius: 10px;
+}
+
+hr {
+    margin: 20px 0;
+    border: 1px solid gray;
+}
+
+.section-service-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.section-service-menu {
+    margin: 1.4rem 0;
+}
+
+.section-service-menu button {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.4rem;
+}
+
 /* Tablet */
 @media (max-width: 1024px) {
     .cards {
@@ -208,6 +294,10 @@ div>section {
 /* Mobile */
 @media (max-width: 600px) {
     .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .section-equipes {
         grid-template-columns: 1fr;
     }
 }
@@ -453,6 +543,7 @@ footer {
     min-width: 100%;
     height: 100%;
     position: relative;
+    max-width: 1600px;
 }
 
 .slide img {
