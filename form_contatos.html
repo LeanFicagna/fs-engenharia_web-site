@@ -3,85 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles_form_final.css">
     <title>Form Contatos</title>
 </head>
 <body>
-    <div class="container">
-        <div class="form-content-left">
-            <div class="form-image">
-                <img src="img/mapa-brasil.svg" alt="mapa do brasil">
-            </div>
-            <div class="form-sobre">
-                <h3>Atuamos em todo o Brasil</h3>
-                <p>Leve a excelência da FS Engenharia para sua propriedade, onde quer que ela esteja.</p>
-            </div>
-        </div>
-        
-        <div class="form">
-            <form action="#">
-                <div class="form-header">
-                    <div class="title">
-                        <h3>Entre em contato conosco</h3>
-                    </div>
+    <div class="container-form">
+        <div class="container">
+            <div class="form-content-left">
+                <div class="form-image">
+                    <img src="img/mapa-brasil.svg" alt="mapa do brasil">
                 </div>
-
-                <div class="input-group">
-                    <div class="input-box">
-                        <label for="firstName">Nome</label>
-                        <input id="firstName" type="text" name="firstName" placeholder="Digite seu nome" required>
-                    </div>
-                    <div class="input-box">
-                        <label for="telephone">Telefone</label>
-                        <input id="tel" class="form-control" pattern="\(\d{2}\)\s\d{5}-\d{4}" type="tel" placeholder="Digite seu telefone" maxlength="15" onkeyup="handlePhone(event)"required>
-                    </div>
-                    <div class="input-box">
-                        <label for="uf" class="form-label">Estado (UF)</label>
-                        <select name="uf" id="uf" class="form-select" required>
-                            <option value="" selected disabled>Selecione o estado</option>
-                            <option value="AC">Acre (AC)</option>
-                            <option value="AL">Alagoas (AL)</option>
-                            <option value="AP">Amapá (AP)</option>
-                            <option value="AM">Amazonas (AM)</option>
-                            <option value="BA">Bahia (BA)</option>
-                            <option value="CE">Ceará (CE)</option>
-                            <option value="DF">Distrito Federal (DF)</option>
-                            <option value="ES">Espírito Santo (ES)</option>
-                            <option value="GO">Goiás (GO)</option>
-                            <option value="MA">Maranhão (MA)</option>
-                            <option value="MT">Mato Grosso (MT)</option>
-                            <option value="MS">Mato Grosso do Sul (MS)</option>
-                            <option value="MG">Minas Gerais (MG)</option>
-                            <option value="PA">Pará (PA)</option>
-                            <option value="PB">Paraíba (PB)</option>
-                            <option value="PR">Paraná (PR)</option>
-                            <option value="PE">Pernambuco (PE)</option>
-                            <option value="PI">Piauí (PI)</option>
-                            <option value="RJ">Rio de Janeiro (RJ)</option>
-                            <option value="RN">Rio Grande do Norte (RN)</option>
-                            <option value="RS">Rio Grande do Sul (RS)</option>
-                            <option value="RO">Rondônia (RO)</option>
-                            <option value="RR">Roraima (RR)</option>
-                            <option value="SC">Santa Catarina (SC)</option>
-                            <option value="SP">São Paulo (SP)</option>
-                            <option value="SE">Sergipe (SE)</option>
-                            <option value="TO">Tocantins (TO)</option>
-                        </select>
-                    </div>
-                    <div class="input-box">
-                        <label for="city">Cidade</label>
-                        <input id="city" type="text" name="city" placeholder="Cidade" required>
-                    </div>
-                    <div class="input-box">
-                        <label for="menssage">Mensagem</label>
-                        <input id="menssage" type="text" name="menssage" placeholder="Qual o seu problema..." required>
-                    </div>
+                <div class="form-sobre">
+                    <h3>Atuamos em todo o Brasil</h3>
+                    <p>Leve a excelência da FS Engenharia para sua propriedade, onde quer que ela esteja.</p>
                 </div>
+            </div>
 
-                <div class="solicite-button">
+            <div class="form">
+                <form action="#">
+                    <div class="form-header">
+                        <div class="title">
+                            <h3>Entre em contato conosco</h3>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="firstName">Nome</label>
+                            <input id="firstName" type="text" name="firstName" placeholder="Digite seu nome" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="telephone">Telefone</label>
+                            <input id="tel" class="form-control" pattern="\(\d{2}\)\s\d{5}-\d{4}" type="tel" placeholder="Digite seu telefone" maxlength="15" onkeyup="handlePhone(event)"required>
+                        </div>
+                        <div class="input-box">
+                            <label for="uf" class="form-label">Estado (UF)</label>
+                            <select name="uf" id="uf" class="form-select" required>
+                                <option value="" selected disabled>Selecione o estado</option>
+                                <option value="AC">Acre (AC)</option>
+                                <option value="AL">Alagoas (AL)</option>
+                                <option value="AP">Amapá (AP)</option>
+                                <option value="AM">Amazonas (AM)</option>
+                                <option value="BA">Bahia (BA)</option>
+                                <option value="CE">Ceará (CE)</option>
+                                <option value="DF">Distrito Federal (DF)</option>
+                                <option value="ES">Espírito Santo (ES)</option>
+                                <option value="GO">Goiás (GO)</option>
+                                <option value="MA">Maranhão (MA)</option>
+                                <option value="MT">Mato Grosso (MT)</option>
+                                <option value="MS">Mato Grosso do Sul (MS)</option>
+                                <option value="MG">Minas Gerais (MG)</option>
+                                <option value="PA">Pará (PA)</option>
+                                <option value="PB">Paraíba (PB)</option>
+                                <option value="PR">Paraná (PR)</option>
+                                <option value="PE">Pernambuco (PE)</option>
+                                <option value="PI">Piauí (PI)</option>
+                                <option value="RJ">Rio de Janeiro (RJ)</option>
+                                <option value="RN">Rio Grande do Norte (RN)</option>
+                                <option value="RS">Rio Grande do Sul (RS)</option>
+                                <option value="RO">Rondônia (RO)</option>
+                                <option value="RR">Roraima (RR)</option>
+                                <option value="SC">Santa Catarina (SC)</option>
+                                <option value="SP">São Paulo (SP)</option>
+                                <option value="SE">Sergipe (SE)</option>
+                                <option value="TO">Tocantins (TO)</option>
+                            </select>
+                        </div>
+                        <div class="input-box">
+                            <label for="city">Cidade</label>
+                            <input id="city" type="text" name="city" placeholder="Cidade" required>
+                        </div>
+                        <div class="input-box input-message">
+                            <label for="menssage">Mensagem</label>
+                            <textarea id="menssage" type="text" name="menssage" placeholder="Qual o seu problema..." required></textarea>
+                        </div>
+                    </div>
+                </form>
+
+                <div id="solicite-button">
                     <button type="submit">Solicitar Atendimento</button>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 </body>
