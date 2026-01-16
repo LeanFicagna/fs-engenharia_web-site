@@ -39,7 +39,7 @@ const slides = document.querySelectorAll('.slide');
 const track = document.querySelector('.slider-track');
 const nextBtn = document.querySelector('.slider-btn.next');
 const prevBtn = document.querySelector('.slider-btn.prev');
-/*
+
 let index = 0;
 
 function updateSlide() {
@@ -60,7 +60,7 @@ prevBtn.addEventListener('click', () => {
 setInterval(() => {
     index = (index + 1) % slides.length;
     updateSlide();
-}, 10000);*/
+}, 10000);
 // verifica e aplica a máscara de telefone no campo de entrada do entre em contato
 const handlePhone = (event) => {
   let input = event.target
