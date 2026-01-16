@@ -149,6 +149,7 @@ form {
     border-radius: 50px;        /* Curvatura acentuada nas quinas do card */
     overflow: hidden;           /* Corta o conteúdo interno para respeitar o arredondamento das bordas */
     box-shadow: 0 20px 40px rgba(0,0,0,0.3); /* Sombra para dar profundidade ao card */
+    margin: 20px;
 }
 
 /* --- COLUNA DA ESQUERDA (Destaque/Imagem) --- */
@@ -157,7 +158,7 @@ form {
     background-color: var(--color-light);
     justify-items: center;      /* Centraliza a imagem e o texto horizontalmente */
     align-items: center;        /* Centraliza o conteúdo verticalmente */
-    flex: 1;                    /* Faz esta coluna ocupar espaço proporcional no flexbox */
+    flex: 1;                    /* Faz esta coluna ocupar espaço proporcional no flexbox */;
 }
 
 .form-image img {
