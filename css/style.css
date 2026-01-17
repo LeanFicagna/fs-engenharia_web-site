@@ -551,6 +551,20 @@ form {
     transform: translateY(-2px); /* Efeito de levante ao passar o mouse */
 }
 
+@media (min-width: 540px) {
+    /* Regras de expansão de colunas no Grid Desktop */
+    .input-box:nth-child(1) { grid-column: span 2; } /* Nome ocupa a largura total */
+    .input-box:nth-child(2) { grid-column: span 2; } /* Cidade ocupa a largura total */
+    .input-box:nth-child(3) { grid-column: span 1; } /* UF ocupa metade */
+    .input-box:nth-child(4) { grid-column: span 1; } /* Cidade ocupa metade */
+    .input-box:nth-child(5) { 
+        grid-column: span 2;                        /* Mensagem ocupa a largura total */
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
 /* --- RESPONSIVIDADE (Telas Maiores que 992px) --- */
 @media (min-width: 992px) {
     .container-formulario {
