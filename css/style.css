@@ -367,11 +367,25 @@ form {
     padding: 0;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* FORMULÁRIO DE CONTATO ESTILIZAÇÃO COMPLETA */
 
-#container-form {
-    padding: 1rem;
-}
 /* --- CONFIGURAÇÕES GLOBAIS E VARIÁVEIS --- */
 :root {
     --color-dark: #0b242a;       /* Cor principal (Azul Petróleo) para textos, botões e ícones */
@@ -399,8 +413,8 @@ form {
 
 /* --- ESTRUTURA DO CARD PRINCIPAL --- */
 .container-formulario {
-    display: flex;
-    flex-direction: column;     /* Empilha imagem e formulário no mobile */
+    display: grid;
+    grid-template-columns: 1fr;   /* Layout em coluna única por padrão (mobile) */
     width: 100%;
     max-width: 1100px;
     background-color: var(--color-white);
@@ -540,9 +554,9 @@ form {
 /* --- RESPONSIVIDADE (Telas Maiores que 992px) --- */
 @media (min-width: 992px) {
     .container-formulario {
-        flex-direction: row;    /* Coloca imagem e formulário lado a lado */
-        align-items: stretch;   /* Força as duas colunas a terem a mesma altura */
-        min-height: 650px;
+        grid-template-columns: 1fr 1fr;  /* Duas colunas: imagem à esquerda, formulário à direita */
+        /* align-items: stretch;   Força as duas colunas a terem a mesma altura */
+        
     }
 
     .form-content-left {
@@ -567,6 +581,38 @@ form {
 }
 /* --- FIM RESPONSIVIDADE (Telas Maiores que 992px) --- */
 /* --- FIM ESTILIZAÇÃO DO FORMULÁRIO DE CONTATO --- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* FOOTER NEW */
