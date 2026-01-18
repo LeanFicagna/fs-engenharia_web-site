@@ -429,8 +429,8 @@ form {
     display: flex;
     background-color: var(--color-light);
     padding: 5px;               
-    justify-items: center;      /* Centraliza a imagem e o texto horizontalmente */
-    align-items: start;        /* Centraliza o conteúdo verticalmente */
+    justify-items: center;      
+    align-items: start;       
     flex: 1;                    /* Faz esta coluna ocupar espaço proporcional no flexbox */;
 }
 
@@ -457,12 +457,10 @@ form {
 
 /* --- ÁREA DO FORMULÁRIO (Direita) --- */
 .form {
-    display: flex;
-    flex-direction: column;
     width: 100%;
     padding: 10px;              /* Espaçamento interno para o conteúdo não encostar nas bordas */
     background-color: var(--color-white);
-    flex: 1.2;                  /* Dá leve prioridade de espaço para a área de campos */
+    font-size: 0.7rem;
 }
 
 .form-header {
@@ -472,7 +470,7 @@ form {
 
 .title h3 {
     color: var(--color-dark);
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -481,7 +479,7 @@ form {
 .input-group {
     display: grid;
     grid-template-columns: 1fr; /* Coluna única para facilitar preenchimento no mobile */
-    gap: 1rem;                /* Espaçamento fixo entre cada campo do formulário */
+    gap: 0.4rem;                /* Espaçamento fixo entre cada campo do formulário */
     flex: 1;                    /* Permite que o grupo de inputs cresça verticalmente */
 }
 
@@ -498,7 +496,7 @@ form {
 .input-box textarea {
     width: 100%;
     padding: 0.5rem 1rem;
-    font-size: 1rem;
+    font-size: 0.7rem;
     background-color: var(--color-white);
     border: 1px solid var(--color-border);
     border-radius: 8px;
@@ -560,6 +558,26 @@ form {
         flex: 1;                    /* Faz esta coluna ocupar espaço proporcional no flexbox */;
     }
 
+    .form {
+        width: 100%;
+        padding: 10px;              
+        background-color: var(--color-white);
+        font-size: 1rem;
+    }
+
+    .title h3 {
+        color: var(--color-dark);
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .input-box input, 
+    .input-box select, 
+    .input-box textarea {
+        font-size: 1rem;
+    }
+
     .form-content-left h3 {
         padding: 10px;
         font-size: 1.5rem; 
@@ -573,7 +591,7 @@ form {
     .form-image img {
         max-width: 100%;
         height: auto;
-        width: 300px;               /* Define a largura ideal para o mapa/logo */
+        width: 300px;               
     }
 
     /* Regras de expansão de colunas no Grid Desktop */
@@ -603,6 +621,26 @@ form {
         flex-direction: column;
         justify-content: center; 
         align-items: center;     
+    }
+
+    .form {
+        width: 100%;
+        padding: 10px;              
+        background-color: var(--color-white);
+        font-size: 1rem;
+    }
+
+    .title h3 {
+        color: var(--color-dark);
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .input-box input, 
+    .input-box select, 
+    .input-box textarea {
+        font-size: 1rem;
     }
     
     .form-image {
