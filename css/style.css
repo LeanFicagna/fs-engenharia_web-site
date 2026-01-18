@@ -388,7 +388,7 @@ form {
 
 /* --- CONFIGURAÇÕES GLOBAIS E VARIÁVEIS --- */
 :root {
-    --color-dark: #0b242a;       /* Cor principal (Azul Petróleo) para textos, botões e ícones */
+    --color-dark: #00633C;       /* Cor principal (Azul Petróleo) para textos, botões e ícones */
     --color-light: #f4f6f9;      /* Fundo suave para a coluna de destaque (esquerda) */
     --color-white: #ffffff;      /* Fundo puro para a área de digitação */
     --color-border: #d1d9e0;     /* Cor padrão para bordas de inputs */
@@ -427,17 +427,18 @@ form {
 /* --- COLUNA DA ESQUERDA (Destaque/Imagem) --- */
 .form-content-left {
     display: flex;
-    background-color: var(--color-light);
     padding: 5px;               
     justify-items: center;      
     align-items: start;       
     flex: 1;                    /* Faz esta coluna ocupar espaço proporcional no flexbox */;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255)), url('../img/slide-mapeamento-lg.png');
+        background-size:cover;
 }
 
 .form-image img {
     max-width: 100%;
     height: auto;
-    width: 400px;               
+    width: 400px;             
 }
 
 
@@ -508,7 +509,7 @@ form {
 .input-box select:focus, 
 .input-box textarea:focus {
     outline: none;
-    border-color: #00633C;      /* Destaque visual ao clicar no campo */
+    border-color: #00633C;    
     box-shadow: 0 0 10px rgba(255, 152, 7, 0.2);
 }
 
@@ -551,11 +552,13 @@ form {
 @media (min-width: 540px) {
 
     .form-content-left {
-        background-color: var(--color-light);
+        background-image: url('img/slide-mapeamento-lg.png');
         padding: 10px;               
         justify-items: center;      
         align-items: center;        
         flex: 1;                    /* Faz esta coluna ocupar espaço proporcional no flexbox */;
+        background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255)), url('../img/slide-mapeamento-lg.png');
+        background-size:cover;
     }
 
     .form {
@@ -620,7 +623,9 @@ form {
         display: flex;
         flex-direction: column;
         justify-content: center; 
-        align-items: center;     
+        align-items: center;   
+        background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255)), url('../img/slide-mapeamento-lg.png');
+        background-size:cover;
     }
 
     .form {
@@ -628,6 +633,10 @@ form {
         padding: 10px;              
         background-color: var(--color-white);
         font-size: 1rem;
+    }
+
+    #form-content-left .form-image, .form-sobre {
+        opacity: 100%;          
     }
 
     .title h3 {
