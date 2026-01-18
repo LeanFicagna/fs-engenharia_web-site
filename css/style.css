@@ -510,8 +510,8 @@ form {
 .input-box select:focus, 
 .input-box textarea:focus {
     outline: none;
-    border-color: #ff9807;      /* Destaque visual ao clicar no campo */
-    box-shadow: 0 0 8px rgba(255, 152, 7, 0.2);
+    border-color: #00633C;      /* Destaque visual ao clicar no campo */
+    box-shadow: 0 0 10px rgba(255, 152, 7, 0.2);
 }
 
 /* Comportamento específico para o campo de Mensagem (Textarea) */
