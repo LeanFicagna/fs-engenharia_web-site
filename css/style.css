@@ -440,14 +440,14 @@ form {
 }
 
 .form-sobre {
-    margin-bottom: 1.5rem;      /* Espaçamento abaixo do bloco de texto informativo */
+    margin-bottom: 0.5rem;      /* Espaçamento abaixo do bloco de texto informativo */
 }
 
 .form-content-left h3 {
     color: var(--color-dark);
+    padding: 10px;
     font-size: 1.8rem;
     text-transform: uppercase;
-    margin-top: 10px;
     letter-spacing: 1px;        /* Afastamento entre letras para estética corporativa */
     text-align: center;
 }
@@ -461,13 +461,13 @@ form {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 40px;              /* Espaçamento interno para o conteúdo não encostar nas bordas */
+    padding: 10px;              /* Espaçamento interno para o conteúdo não encostar nas bordas */
     background-color: var(--color-white);
     flex: 1.2;                  /* Dá leve prioridade de espaço para a área de campos */
 }
 
 .form-header {
-    margin: 1rem;
+    margin: 0.5rem; 
     text-align: center;
 }
 
@@ -482,7 +482,7 @@ form {
 .input-group {
     display: grid;
     grid-template-columns: 1fr; /* Coluna única para facilitar preenchimento no mobile */
-    gap: 1.2rem;                /* Espaçamento fixo entre cada campo do formulário */
+    gap: 1rem;                /* Espaçamento fixo entre cada campo do formulário */
     flex: 1;                    /* Permite que o grupo de inputs cresça verticalmente */
 }
 
@@ -560,6 +560,11 @@ form {
     .input-box:nth-child(5) { grid-column: span 1; } /* Telefone ocupa a largura total */
     .input-box:nth-child(6) { 
         grid-column: span 2;                        /* Mensagem ocupa a largura total */
+    }
+
+    .input-group {
+        row-gap: 0.5rem;
+        padding: 1rem;
     }
 
     .input-box textarea {
