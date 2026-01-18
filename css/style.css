@@ -428,19 +428,16 @@ form {
 .form-content-left {
     display: grid;
     background-color: var(--color-light);
+    padding: 30px;               /* Espaçamento interno para o conteúdo não encostar nas bordas */
     justify-items: center;      /* Centraliza a imagem e o texto horizontalmente */
-    align-items: center;        /* Centraliza o conteúdo verticalmente */
+    align-items: start;        /* Centraliza o conteúdo verticalmente */
     flex: 1;                    /* Faz esta coluna ocupar espaço proporcional no flexbox */;
 }
 
 .form-image img {
     max-width: 100%;
     height: auto;
-    width: 400px;               /* Define a largura ideal para o mapa/logo */
-}
-
-.form-sobre {
-    margin-bottom: 0.5rem;      /* Espaçamento abaixo do bloco de texto informativo */
+    width: 300px;               /* Define a largura ideal para o mapa/logo */
 }
 
 .form-content-left h3 {
@@ -575,14 +572,24 @@ form {
 
 /* --- RESPONSIVIDADE (Telas Maiores que 992px) --- */
 @media (min-width: 992px) {
-    .container-formulario {
-        grid-template-columns: 1fr 1fr;  /* Duas colunas: imagem à esquerda, formulário à direita */
-        /* align-items: stretch;   Força as duas colunas a terem a mesma altura */
-        
-    }
 
     .form-content-left {
-        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;     
+    }
+    
+    .form-image {
+        align-self: center; 
+    }
+
+    .form-sobre {
+        align-self: center; 
+        margin-top: 10px;   
+    }
+    .container-formulario {
+        grid-template-columns: 1fr 1fr;  /* Duas colunas: imagem à esquerda, formulário à direita */       
     }
 
     .input-group {
@@ -599,6 +606,10 @@ form {
         grid-column: span 2;                        /* Mensagem ocupa a largura total */
         display: flex;
         flex-direction: column;
+    }
+
+    #form-content-left {  
+        align-items: center;  /* Centraliza o conteúdo verticalmente */  
     }
 }
 /* --- FIM RESPONSIVIDADE (Telas Maiores que 992px) --- */
