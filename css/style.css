@@ -3,6 +3,8 @@
     --color-neutral-10: #171717;
     --color-neutral-30: #a8a29e;
     --color-neutral-40: #f5f5f5;
+
+    --colot-button-primary: #f4c430;
 }
 
 
@@ -31,16 +33,27 @@ main {
     max-width: 1200px;
 }
 
-/* Header */
 
+/*------------------ Estilos da NavBar ----------------- */
 .navbar-s {
-    background-color: black;
-    padding: 0 10px;
+    background: linear-gradient(rgb(27, 138, 81), rgb(68, 60, 39));
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+
+
+.navbar-brand-s img {
+    color: #fff;
 }
 
 .navbar-container-s {
     width: 100%;
-    max-width: 1600px;
+    max-width: 1400px;
     height: 56px;
     margin: 0 auto;
     display: flex;
@@ -53,12 +66,12 @@ header li a {
 }
 
 .navbar-brand-s img {
-    height: 20px;
+    height: 40px;
 }
 
 .navbar-menu-s {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     list-style: none;
     margin: 10px;
 }
@@ -79,26 +92,42 @@ header li a {
 
     .navbar-menu-s {
         position: absolute;
-        top: 56px;
+        top: 74px;
         right: 0;
-        background-color: #111;
+        background: linear-gradient(0deg,rgb(27, 138, 81), rgb(68, 60, 39));
         flex-direction: column;
-        width: 60%;
-        padding: 1rem 0;
+        width: 40%;
+        padding: 0;
         margin: 0;
-        display: none;
+
+        display: flex;
+        max-width: 0;
+        overflow: hidden;
+        transition: max-width 0.5s ease-in-out padding 0.6s ease;
         z-index: 100;
+    }
+
+    .navbar-menu-s.active {
+        max-width: 500px;
+        padding: 0.5rem 0;
+        border-radius: 5px;
     }
 
     .navbar-menu-s li {
         text-align: center;
         padding: 0.75rem 0;
+        opacity: 0;
+        transition: opacity 0.4s ease;
     }
 
-    .navbar-menu-s.active {
-        display: flex;
+    
+    .navbar-menu-s.active li {
+        opacity: 1;
     }
 }
+
+/*----------------- Fim estilos da NavBar -----------------*/
+
 
 /* Missão, valores e visão */
 
@@ -162,7 +191,7 @@ div>section {
 }
 
 #section_especialista a {
-    background-color: #f4c430;
+    background-color: var(--colot-button-primary);
     color: #ffffff;
     padding: 12px 24px;
     font-size: 1.5rem;
@@ -370,21 +399,7 @@ form {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* FORMULÁRIO DE CONTATO ESTILIZAÇÃO COMPLETA */
+/*----------------- FORMULÁRIO ----------------- */
 
 /* --- CONFIGURAÇÕES GLOBAIS E VARIÁVEIS --- */
 :root {
@@ -685,42 +700,12 @@ form {
     }
 }
 /* --- FIM RESPONSIVIDADE (Telas Maiores que 992px) --- */
-/* --- FIM ESTILIZAÇÃO DO FORMULÁRIO DE CONTATO --- */
+/* -----------------FORMULÁRIO DE CONTATO END -----------------*/
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* FOOTER NEW */
+/*----------------- FOOTER NEW -----------------*/
 footer {
     width: 100%;
     background-color: #001B18;
@@ -927,3 +912,4 @@ footer {
 .slider-btn:hover {
     opacity: 1;
 }
+/*----------------- Fim do FOOTER NEW -----------------*/
