@@ -5,6 +5,13 @@
     --color-neutral-40: #f5f5f5;
 
     --colot-button-primary: #f4c430;
+
+    --brand-primary: #0b6b3a;
+    --brand-secondary: #f2c94c;
+    --accent-default: #66a365;
+    --accent-soft: #92c58b;
+    --surface-default: #f1ead3;
+    --text-default: #343a40;
 }
 
 
@@ -92,7 +99,7 @@ header li a {
         position: absolute;
         top: 74px;
         right: 0;
-        background: linear-gradient(0deg,rgb(27, 138, 81), rgb(68, 60, 39));
+        background: linear-gradient(0deg, rgb(27, 138, 81), rgb(68, 60, 39));
         flex-direction: column;
         width: 40%;
         padding: 0;
@@ -118,7 +125,7 @@ header li a {
         transition: opacity 0.4s ease;
     }
 
-    
+
     .navbar-menu-s.active li {
         opacity: 1;
     }
@@ -282,7 +289,7 @@ div>section {
     border-radius: 0.6rem;
 }
 
-.item-2 > a {
+.item-2>a {
     padding: 5px 10px;
 }
 
@@ -401,57 +408,72 @@ form {
 
 /* --- CONFIGURAÇÕES GLOBAIS E VARIÁVEIS --- */
 :root {
-    --color-dark: #00633C;       /* Cor principal (Azul Petróleo) para textos, botões e ícones */
-    --color-light: #f4f6f9;      /* Fundo suave para a coluna de destaque (esquerda) */
-    --color-white: #ffffff;      /* Fundo puro para a área de digitação */
-    --color-border: #d1d9e0;     /* Cor padrão para bordas de inputs */
-    --color-text: #333;          /* Cor para parágrafos e textos auxiliares */
+    --color-dark: #00633C;
+    /* Cor principal (Azul Petróleo) para textos, botões e ícones */
+    --color-light: #f4f6f9;
+    /* Fundo suave para a coluna de destaque (esquerda) */
+    --color-white: #ffffff;
+    /* Fundo puro para a área de digitação */
+    --color-border: #d1d9e0;
+    /* Cor padrão para bordas de inputs */
+    --color-text: #333;
+    /* Cor para parágrafos e textos auxiliares */
 }
 
 /* --- RESET E COMPORTAMENTO BASE --- */
 .container-formulario * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;     /* Garante que padding/border não aumentem o tamanho fixo dos elementos */
+    box-sizing: border-box;
+    /* Garante que padding/border não aumentem o tamanho fixo dos elementos */
 }
 
 /* Seção externa que envolve todo o componente de formulário */
 .container-form {
-    background-color: var(--color-dark); 
+    background-color: var(--color-dark);
     display: flex;
-    justify-content: center;    /* Centraliza o formulário horizontalmente na tela */
-    align-items: center;        /* Centraliza o formulário verticalmente na tela */
-    min-height: 100vh;          /* Garante que o fundo ocupe sempre a altura total do navegador */
+    justify-content: center;
+    /* Centraliza o formulário horizontalmente na tela */
+    align-items: center;
+    /* Centraliza o formulário verticalmente na tela */
+    min-height: 100vh;
+    /* Garante que o fundo ocupe sempre a altura total do navegador */
 }
 
 /* --- ESTRUTURA DO CARD PRINCIPAL --- */
 .container-formulario {
     display: grid;
-    grid-template-columns: 1fr;   /* Layout em coluna única por padrão (mobile) */
+    grid-template-columns: 1fr;
+    /* Layout em coluna única por padrão (mobile) */
     width: 100%;
     max-width: 1100px;
     background-color: var(--color-white);
-    border-radius: 50px;        /* Curvatura acentuada nas quinas do card */
-    overflow: hidden;           /* Corta o conteúdo interno para respeitar o arredondamento das bordas */
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3); /* Sombra para dar profundidade ao card */
+    border-radius: 50px;
+    /* Curvatura acentuada nas quinas do card */
+    overflow: hidden;
+    /* Corta o conteúdo interno para respeitar o arredondamento das bordas */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    /* Sombra para dar profundidade ao card */
     margin: 20px;
 }
 
 /* --- COLUNA DA ESQUERDA (Destaque/Imagem) --- */
 .form-content-left {
     display: flex;
-    padding: 5px;               
-    justify-items: center;      
-    align-items: start;       
-    flex: 1;                    /* Faz esta coluna ocupar espaço proporcional no flexbox */;
+    padding: 5px;
+    justify-items: center;
+    align-items: start;
+    flex: 1;
+    /* Faz esta coluna ocupar espaço proporcional no flexbox */
+    ;
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255)), url('../img/slide-mapeamento-lg.png');
-        background-size:cover;
+    background-size: cover;
 }
 
 .form-image img {
     max-width: 100%;
     height: auto;
-    width: 400px;             
+    width: 400px;
 }
 
 
@@ -460,7 +482,8 @@ form {
     padding: 10px;
     font-size: 1rem;
     text-transform: uppercase;
-    letter-spacing: 1px;        /* Afastamento entre letras para estética corporativa */
+    letter-spacing: 1px;
+    /* Afastamento entre letras para estética corporativa */
     text-align: center;
 }
 
@@ -472,13 +495,14 @@ form {
 /* --- ÁREA DO FORMULÁRIO (Direita) --- */
 .form {
     width: 100%;
-    padding: 10px;              /* Espaçamento interno para o conteúdo não encostar nas bordas */
+    padding: 10px;
+    /* Espaçamento interno para o conteúdo não encostar nas bordas */
     background-color: var(--color-white);
     font-size: 0.7rem;
 }
 
 .form-header {
-    margin: 0.5rem; 
+    margin: 0.5rem;
     text-align: center;
 }
 
@@ -492,9 +516,12 @@ form {
 /* Organização dos inputs (Grid) */
 .input-group {
     display: grid;
-    grid-template-columns: 1fr; /* Coluna única para facilitar preenchimento no mobile */
-    gap: 0.4rem;                /* Espaçamento fixo entre cada campo do formulário */
-    flex: 1;                    /* Permite que o grupo de inputs cresça verticalmente */
+    grid-template-columns: 1fr;
+    /* Coluna única para facilitar preenchimento no mobile */
+    gap: 0.4rem;
+    /* Espaçamento fixo entre cada campo do formulário */
+    flex: 1;
+    /* Permite que o grupo de inputs cresça verticalmente */
 }
 
 /* Estilização individual dos campos de entrada */
@@ -502,11 +529,12 @@ form {
     font-weight: 600;
     color: var(--color-dark);
     margin-bottom: 8px;
-    display: block;             /* Garante que o label fique acima do campo */
+    display: block;
+    /* Garante que o label fique acima do campo */
 }
 
-.input-box input, 
-.input-box select, 
+.input-box input,
+.input-box select,
 .input-box textarea {
     width: 100%;
     padding: 0.5rem 1rem;
@@ -514,15 +542,16 @@ form {
     background-color: var(--color-white);
     border: 1px solid var(--color-border);
     border-radius: 8px;
-    transition: all 0.3s ease;  /* Suaviza mudanças de cor e sombra */
+    transition: all 0.3s ease;
+    /* Suaviza mudanças de cor e sombra */
 }
 
 /* Estados de interação dos inputs */
-.input-box input:focus, 
-.input-box select:focus, 
+.input-box input:focus,
+.input-box select:focus,
 .input-box textarea:focus {
     outline: none;
-    border-color: #00633C;    
+    border-color: #00633C;
     box-shadow: 0 0 10px rgba(255, 152, 7, 0.2);
 }
 
@@ -533,14 +562,17 @@ form {
 }
 
 .input-message textarea {
-    flex: 1;                    /* Faz a caixa de texto ocupar o máximo de altura disponível */
-    resize: none;               /* Desativa o redimensionamento manual para não quebrar o layout */
+    flex: 1;
+    /* Faz a caixa de texto ocupar o máximo de altura disponível */
+    resize: none;
+    /* Desativa o redimensionamento manual para não quebrar o layout */
     min-height: 100px;
 }
 
 /* --- BOTÃO DE AÇÃO --- */
 #solicite-button {
-    margin-top: auto;           /* Empurra o botão para o fim do container flex */
+    margin-top: auto;
+    /* Empurra o botão para o fim do container flex */
     margin: 1rem;
 }
 
@@ -558,25 +590,29 @@ form {
 }
 
 #solicite-button button:hover {
-    background-color: #153a44;  /* Escurece levemente no hover */
-    transform: translateY(-2px); /* Efeito de levante ao passar o mouse */
+    background-color: #153a44;
+    /* Escurece levemente no hover */
+    transform: translateY(-2px);
+    /* Efeito de levante ao passar o mouse */
 }
 
 @media (min-width: 540px) {
 
     .form-content-left {
         background-image: url('img/slide-mapeamento-lg.png');
-        padding: 10px;               
-        justify-items: center;      
-        align-items: center;        
-        flex: 1;                    /* Faz esta coluna ocupar espaço proporcional no flexbox */;
+        padding: 10px;
+        justify-items: center;
+        align-items: center;
+        flex: 1;
+        /* Faz esta coluna ocupar espaço proporcional no flexbox */
+        ;
         background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255)), url('../img/slide-mapeamento-lg.png');
-        background-size:cover;
+        background-size: cover;
     }
 
     .form {
         width: 100%;
-        padding: 10px;              
+        padding: 10px;
         background-color: var(--color-white);
         font-size: 1rem;
     }
@@ -588,15 +624,15 @@ form {
         letter-spacing: 1px;
     }
 
-    .input-box input, 
-    .input-box select, 
+    .input-box input,
+    .input-box select,
     .input-box textarea {
         font-size: 1rem;
     }
 
     .form-content-left h3 {
         padding: 10px;
-        font-size: 1.5rem; 
+        font-size: 1.5rem;
     }
 
     .form-content-left p {
@@ -607,16 +643,38 @@ form {
     .form-image img {
         max-width: 100%;
         height: auto;
-        width: 300px;               
+        width: 300px;
     }
 
     /* Regras de expansão de colunas no Grid Desktop */
-    .input-box:nth-child(1) { grid-column: span 2; } /* Nome ocupa a largura total */
-    .input-box:nth-child(2) { grid-column: span 1; } /* E-mail ocupa a largura total */
-    .input-box:nth-child(3) { grid-column: span 1; } /* UF ocupa metade */
-    .input-box:nth-child(4) { grid-column: span 1; } /* Cidade ocupa metade */
-    .input-box:nth-child(5) { grid-column: span 1; } /* Telefone ocupa a largura total */
-    .input-box:nth-child(6) { grid-column: span 2; }
+    .input-box:nth-child(1) {
+        grid-column: span 2;
+    }
+
+    /* Nome ocupa a largura total */
+    .input-box:nth-child(2) {
+        grid-column: span 1;
+    }
+
+    /* E-mail ocupa a largura total */
+    .input-box:nth-child(3) {
+        grid-column: span 1;
+    }
+
+    /* UF ocupa metade */
+    .input-box:nth-child(4) {
+        grid-column: span 1;
+    }
+
+    /* Cidade ocupa metade */
+    .input-box:nth-child(5) {
+        grid-column: span 1;
+    }
+
+    /* Telefone ocupa a largura total */
+    .input-box:nth-child(6) {
+        grid-column: span 2;
+    }
 
     .input-group {
         row-gap: 0.5rem;
@@ -635,21 +693,22 @@ form {
     .form-content-left {
         display: flex;
         flex-direction: column;
-        justify-content: center; 
-        align-items: center;   
+        justify-content: center;
+        align-items: center;
         background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255)), url('../img/slide-mapeamento-lg.png');
-        background-size:cover;
+        background-size: cover;
     }
 
     .form {
         width: 100%;
-        padding: 10px;              
+        padding: 10px;
         background-color: var(--color-white);
         font-size: 1rem;
     }
 
-    #form-content-left .form-image, .form-sobre {
-        opacity: 100%;          
+    #form-content-left .form-image,
+    .form-sobre {
+        opacity: 100%;
     }
 
     .title h3 {
@@ -659,44 +718,67 @@ form {
         letter-spacing: 1px;
     }
 
-    .input-box input, 
-    .input-box select, 
+    .input-box input,
+    .input-box select,
     .input-box textarea {
         font-size: 1rem;
     }
-    
+
     .form-image {
-        align-self: center; 
+        align-self: center;
     }
 
     .form-sobre {
-        align-self: center; 
-        margin-top: 10px;   
+        align-self: center;
+        margin-top: 10px;
     }
+
     .container-formulario {
-        grid-template-columns: 1fr 1fr;  /* Duas colunas: imagem à esquerda, formulário à direita */       
+        grid-template-columns: 1fr 1fr;
+        /* Duas colunas: imagem à esquerda, formulário à direita */
     }
 
     .input-group {
-        grid-template-columns: 1fr 1fr;   /* Divide os campos em duas colunas */
-        grid-template-rows: auto auto 1fr; /* As primeiras linhas se ajustam e a última (mensagem) cresce */
+        grid-template-columns: 1fr 1fr;
+        /* Divide os campos em duas colunas */
+        grid-template-rows: auto auto 1fr;
+        /* As primeiras linhas se ajustam e a última (mensagem) cresce */
     }
 
     /* Regras de expansão de colunas no Grid Desktop */
-    .input-box:nth-child(1) { grid-column: span 2; } /* Nome ocupa a largura total */
-    .input-box:nth-child(2) { grid-column: span 2; } /* Telefone ocupa a largura total */
-    .input-box:nth-child(3) { grid-column: span 1; } /* UF ocupa metade */
-    .input-box:nth-child(4) { grid-column: span 1; } /* Cidade ocupa metade */
-    .input-box:nth-child(5) { 
-        grid-column: span 2;                        /* Mensagem ocupa a largura total */
+    .input-box:nth-child(1) {
+        grid-column: span 2;
+    }
+
+    /* Nome ocupa a largura total */
+    .input-box:nth-child(2) {
+        grid-column: span 2;
+    }
+
+    /* Telefone ocupa a largura total */
+    .input-box:nth-child(3) {
+        grid-column: span 1;
+    }
+
+    /* UF ocupa metade */
+    .input-box:nth-child(4) {
+        grid-column: span 1;
+    }
+
+    /* Cidade ocupa metade */
+    .input-box:nth-child(5) {
+        grid-column: span 2;
+        /* Mensagem ocupa a largura total */
         display: flex;
         flex-direction: column;
     }
 
-    #form-content-left {  
-        align-items: center;  /* Centraliza o conteúdo verticalmente */  
+    #form-content-left {
+        align-items: center;
+        /* Centraliza o conteúdo verticalmente */
     }
 }
+
 /* --- FIM RESPONSIVIDADE (Telas Maiores que 992px) --- */
 /* -----------------FORMULÁRIO DE CONTATO END -----------------*/
 
@@ -910,4 +992,5 @@ footer {
 .slider-btn:hover {
     opacity: 1;
 }
+
 /*----------------- Fim do FOOTER NEW -----------------*/
