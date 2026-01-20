@@ -38,65 +38,35 @@
         <a href="#" class="navbar-brand-s">
           <img src="img/logo-branca-horizontal.png" alt="FS Engenharia" />
         </a>
-        
-        <div class="nav-btn-container">
-          <a href="#container-form" class="btn-nav-contato">Solicitar Orçamento</a>
+
+        <div class="nav-container-flex">
+          <div class="nav-btn-container">
+            <a href="#container-form" class="btn-nav-contato">Solicitar Orçamento</a>
+          </div>
+
+          <button class="navbar-toggle-s" aria-label="Abrir menu">
+            ☰
+          </button>
+
+          <ul class="navbar-menu-s">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
         </div>
 
-        <button class="navbar-toggle-s" aria-label="Abrir menu">
-          ☰
-        </button>
-
-        <ul class="navbar-menu-s">
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Serviços</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
       </div>
     </nav>
 
-    <section class="slider">
-      <div class="slider-track">
-        <article class="slide active">
-          <div class="overlay"></div>
-          <img src="img/slide-mapeamento-lg.png" srcset="
-          img/slide-mapeamento-sm.png 750w,
-          img/slide-mapeamento-md.png 1200w,
-          img/slide-mapeamento-lg.png 1500w
-        " sizes="(max-width: 992px) 100vw, 1500px" alt="Mapeamento técnico de propriedade rural" />
+    <section class="hero">
+      <div class="hero-overlay"></div>
 
-          <div class="slide-caption">
-            <h1>Precisão que impulsiona sua produção</h1>
-            <p>Mapeamos sua terra com tecnologia e experiência para produzir com segurança.</p>
-          </div>
-        </article>
-
-        <article class="slide">
-          <div class="overlay"></div>
-          <img src="img/slide-credito-rural-lg.png" alt="Crédito rural" />
-          <div class="slide-caption">
-            <h1>Crédito certo, na hora certa</h1>
-            <p>Consultoria completa para acesso a linhas de crédito rural.</p>
-          </div>
-        </article>
-
-        <article class="slide">
-          <div class="overlay"></div>
-          <img src="img/slide-geoprocessamento-lg.png" alt="Georreferenciamento rural" />
-          <div class="slide-caption">
-            <h1>Seu imóvel regularizado, seu futuro garantido</h1>
-            <p>Georreferenciamento completo para valorizar sua propriedade.</p>
-          </div>
-        </article>
+      <div class="hero-content">
+        <h1>Precisão que impulsiona sua produção</h1>
+        <p>Mapeamos sua terra com tecnologia e experiência para produzir com segurança.</p>
+        <a href="#contato" class="hero-btn">Fale com um especialista</a>
       </div>
-      <button class="slider-btn prev" aria-label="Slide anterior">
-        <span class="carousel-control-prev-icon" aria-hidden="true">
-        </span>
-      </button>
-      <button class="slider-btn next" aria-label="Próximo slide">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      </button>
     </section>
   </header>
 
@@ -238,7 +208,8 @@
           <section class="section-equipes">
             <article class="item-1">
               <img src="img/equipe.png" alt="Georreferenciamento rural" style="width: 100%;" />
-              <p>A <strong>FS Engenharia Rural</strong> conta com uma equipe de engenheiros, agrimensores e técnicos especializados, 
+              <p>A <strong>FS Engenharia Rural</strong> conta com uma equipe de engenheiros, agrimensores e técnicos
+                especializados,
                 com sólida atuação no campo e trabalho direto junto ao produtor rural, pautada na responsabilidade
                 técnica, proximidade e foco em resultados, oferecendo soluções eficientes e sustentáveis para o
                 desenvolvimento e a valorização das propriedades rurais, com ampla experiência no setor.</p>
@@ -246,7 +217,8 @@
             </article>
             <section class="item-2">
               <h5>Conheça nosso dia a dia:</h5>
-              <hr></hr>
+              <hr>
+              </hr>
               <section class="grid-posts">
                 <article>
                   <img src="cda.jpg" alt="Georreferenciamento rural" style="width: 100%;" />
@@ -264,7 +236,8 @@
               <a>Ver mais no Instagram ></a>
             </section>
           </section>
-          <hr></hr>
+          <hr>
+          </hr>
           <h4>Veja alguns dos nossos trabalhos realizados no campo</h4>
           <section>
             <section class="section-service-menu">
@@ -274,15 +247,15 @@
               <button>Crédito Rural</button>
             </section>
             <section class="section-service-posts">
-                <article>
-                  <img src="cda.jpg" alt="Georreferenciamento rural" style="width: 100%;" />
-                </article>
-                <article>
-                  <img src="cda.jpg" alt="Georreferenciamento rural" style="width: 100%;" />
-                </article>
-                <article>
-                  <img src="cda.jpg" alt="Georreferenciamento rural" style="width: 100%;" />
-                </article>
+              <article>
+                <img src="cda.jpg" alt="Georreferenciamento rural" style="width: 100%;" />
+              </article>
+              <article>
+                <img src="cda.jpg" alt="Georreferenciamento rural" style="width: 100%;" />
+              </article>
+              <article>
+                <img src="cda.jpg" alt="Georreferenciamento rural" style="width: 100%;" />
+              </article>
             </section>
             <a>Solicitar orçamento para o meu projeto ></a>
             <a>Entender qual serviço eu preciso ></a>
@@ -292,89 +265,91 @@
     </div>
   </main>
 
-<!--SECAO ENTRE EM CONTATO-->
-    <div class="container-form">
-        <div class="container-formulario">
-            <div class="form-content-left" id="form-content-left">
-                <div class="form-image">
-                    <img src="img/mapa-brasil.svg" alt="mapa do brasil">
-                </div>
-                <div class="form-sobre">
-                    <h3>Atuamos em todo o Brasil</h3>
-                    <p>Leve a excelência da FS Engenharia para sua propriedade, onde quer que ela esteja.</p>
-                </div>
-            </div>
-
-            <div class="form">
-                <form action="#">
-                    <div class="form-header">
-                        <div class="title">
-                            <h3>Entre em contato conosco</h3>
-                        </div>
-                    </div>
-                    <div class="input-group">
-                        <div class="input-box">
-                            <label for="firstName">Nome</label>
-                            <input id="firstName" type="text" name="firstName" placeholder="Digite seu nome" required>
-                        </div>
-                        <div class="input-box">
-                          <label for="email">Email</label>
-                            <input id="email" type="text" name="mail" placeholder="Digite seu email" required>
-                        </div>
-                        <div class="input-box">
-                          <label for="city">Cidade</label>
-                            <input id="city" type="text" name="city" placeholder="Cidade" required>
-                        </div>              
-                        <div class="input-box">
-                            <label for="uf" class="form-label">Estado (UF)</label>
-                            <select name="uf" id="uf" class="form-select" required>
-                                <option value="" selected disabled>Seu Estado</option>
-                                <option value="AC">Acre (AC)</option>
-                                <option value="AL">Alagoas (AL)</option>
-                                <option value="AP">Amapá (AP)</option>
-                                <option value="AM">Amazonas (AM)</option>
-                                <option value="BA">Bahia (BA)</option>
-                                <option value="CE">Ceará (CE)</option>
-                                <option value="DF">Distrito Federal (DF)</option>
-                                <option value="ES">Espírito Santo (ES)</option>
-                                <option value="GO">Goiás (GO)</option>
-                                <option value="MA">Maranhão (MA)</option>
-                                <option value="MT">Mato Grosso (MT)</option>
-                                <option value="MS">Mato Grosso do Sul (MS)</option>
-                                <option value="MG">Minas Gerais (MG)</option>
-                                <option value="PA">Pará (PA)</option>
-                                <option value="PB">Paraíba (PB)</option>
-                                <option value="PR">Paraná (PR)</option>
-                                <option value="PE">Pernambuco (PE)</option>
-                                <option value="PI">Piauí (PI)</option>
-                                <option value="RJ">Rio de Janeiro (RJ)</option>
-                                <option value="RN">Rio Grande do Norte (RN)</option>
-                                <option value="RS">Rio Grande do Sul (RS)</option>
-                                <option value="RO">Rondônia (RO)</option>
-                                <option value="RR">Roraima (RR)</option>
-                                <option value="SC">Santa Catarina (SC)</option>
-                                <option value="SP">São Paulo (SP)</option>
-                                <option value="SE">Sergipe (SE)</option>
-                                <option value="TO">Tocantins (TO)</option>
-                            </select>
-                          </div>
-                        <div class="input-box">
-                            <label for="telephone">Telefone</label>
-                            <input id="tel" class="form-control" pattern="\(\d{2}\)\s\d{5}-\d{4}" type="tel" placeholder="Digite seu telefone" maxlength="15" onkeyup="handlePhone(event)"required>
-                        </div>
-                        <div class="input-box input-message">
-                            <label for="menssage">Mensagem</label>
-                            <textarea id="menssage" type="text" name="menssage" placeholder="Qual o seu problema..." required></textarea>
-                        </div>
-                    </div>
-                </form>
-
-                <div id="solicite-button">
-                    <button type="submit">Solicitar Atendimento</button>
-                </div>
-            </div>
+  <!--SECAO ENTRE EM CONTATO-->
+  <div class="container-form">
+    <div class="container-formulario">
+      <div class="form-content-left" id="form-content-left">
+        <div class="form-image">
+          <img src="img/mapa-brasil.svg" alt="mapa do brasil">
         </div>
+        <div class="form-sobre">
+          <h3>Atuamos em todo o Brasil</h3>
+          <p>Leve a excelência da FS Engenharia para sua propriedade, onde quer que ela esteja.</p>
+        </div>
+      </div>
+
+      <div class="form">
+        <form action="#">
+          <div class="form-header">
+            <div class="title">
+              <h3>Entre em contato conosco</h3>
+            </div>
+          </div>
+          <div class="input-group">
+            <div class="input-box">
+              <label for="firstName">Nome</label>
+              <input id="firstName" type="text" name="firstName" placeholder="Digite seu nome" required>
+            </div>
+            <div class="input-box">
+              <label for="email">Email</label>
+              <input id="email" type="text" name="mail" placeholder="Digite seu email" required>
+            </div>
+            <div class="input-box">
+              <label for="city">Cidade</label>
+              <input id="city" type="text" name="city" placeholder="Cidade" required>
+            </div>
+            <div class="input-box">
+              <label for="uf" class="form-label">Estado (UF)</label>
+              <select name="uf" id="uf" class="form-select" required>
+                <option value="" selected disabled>Seu Estado</option>
+                <option value="AC">Acre (AC)</option>
+                <option value="AL">Alagoas (AL)</option>
+                <option value="AP">Amapá (AP)</option>
+                <option value="AM">Amazonas (AM)</option>
+                <option value="BA">Bahia (BA)</option>
+                <option value="CE">Ceará (CE)</option>
+                <option value="DF">Distrito Federal (DF)</option>
+                <option value="ES">Espírito Santo (ES)</option>
+                <option value="GO">Goiás (GO)</option>
+                <option value="MA">Maranhão (MA)</option>
+                <option value="MT">Mato Grosso (MT)</option>
+                <option value="MS">Mato Grosso do Sul (MS)</option>
+                <option value="MG">Minas Gerais (MG)</option>
+                <option value="PA">Pará (PA)</option>
+                <option value="PB">Paraíba (PB)</option>
+                <option value="PR">Paraná (PR)</option>
+                <option value="PE">Pernambuco (PE)</option>
+                <option value="PI">Piauí (PI)</option>
+                <option value="RJ">Rio de Janeiro (RJ)</option>
+                <option value="RN">Rio Grande do Norte (RN)</option>
+                <option value="RS">Rio Grande do Sul (RS)</option>
+                <option value="RO">Rondônia (RO)</option>
+                <option value="RR">Roraima (RR)</option>
+                <option value="SC">Santa Catarina (SC)</option>
+                <option value="SP">São Paulo (SP)</option>
+                <option value="SE">Sergipe (SE)</option>
+                <option value="TO">Tocantins (TO)</option>
+              </select>
+            </div>
+            <div class="input-box">
+              <label for="telephone">Telefone</label>
+              <input id="tel" class="form-control" pattern="\(\d{2}\)\s\d{5}-\d{4}" type="tel"
+                placeholder="Digite seu telefone" maxlength="15" onkeyup="handlePhone(event)" required>
+            </div>
+            <div class="input-box input-message">
+              <label for="menssage">Mensagem</label>
+              <textarea id="menssage" type="text" name="menssage" placeholder="Qual o seu problema..."
+                required></textarea>
+            </div>
+          </div>
+        </form>
+
+        <div id="solicite-button">
+          <button type="submit">Solicitar Atendimento</button>
+        </div>
+      </div>
     </div>
+  </div>
   </main>
 
   <!-- Rodapé -->
@@ -455,7 +430,7 @@
     integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
     crossorigin="anonymous"></script>
 
-    <script async src="//www.instagram.com/embed.js"></script>
+  <script async src="//www.instagram.com/embed.js"></script>
 
 </body>
 

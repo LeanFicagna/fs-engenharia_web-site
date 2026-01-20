@@ -27,7 +27,7 @@ function prevSlide() {
     currentSlide--;
     showSlide(currentSlide);
 }
-
+/*
 const toggle = document.querySelector('.navbar-toggle-s');
 const menu = document.querySelector('.navbar-menu-s');
 
@@ -55,7 +55,7 @@ prevBtn.addEventListener('click', () => {
     index = (index - 1 + slides.length) % slides.length;
     updateSlide();
 });
-
+*/
 // autoplay
 setInterval(() => {
     index = (index + 1) % slides.length;
@@ -74,3 +74,24 @@ const phoneMask = (value) => {
   value = value.replace(/(\d{5})(\d)/, "$1-$2") // Coloca o traço após o quinto dígito
   return value
 }
+
+
+/* Hero */
+
+const hero = document.querySelector('.hero');
+
+  const backgrounds = [
+    'img/slide-mapeamento-lg.png',
+    'img/slide-credito-rural-lg.png',
+    'img/slide-geoprocessamento-lg.png'
+  ];
+
+  let index = 0;
+
+  function changeBackground() {
+    hero.style.backgroundImage = `url(${backgrounds[index]})`;
+    index = (index + 1) % backgrounds.length;
+  }
+
+  changeBackground(); // primeira imagem
+  setInterval(changeBackground, 6000); // troca a cada 6s
