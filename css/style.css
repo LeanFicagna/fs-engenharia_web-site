@@ -302,11 +302,14 @@ div>section {
     padding: 0.4rem;
 }
 
-/* .section-equipes-projetos {
+
+/*--------Ininicio Nossa equipe e projetos--------*/
+
+.section-equipes-projetos {
     border-radius: 16px;
     border: 1px solid rgba(0, 0, 0, .125);
     padding: 1.5rem;
-} */
+}
 
 .section-equipes {
     display: grid;
@@ -406,74 +409,6 @@ hr {
     }
 }
 
-/* Fale conosco */
-
-.section-contato {
-    background-color: #002222;
-    color: white;
-}
-
-.contato {
-    background-color: white;
-    border-radius: 2.5rem;
-    color: black;
-}
-
-form {
-    font-weight: 500;
-}
-
-.div-form button {
-    background-color: #123237;
-}
-
-.div-form {
-    background-color: white;
-    border-top-right-radius: 2.5rem;
-    border-bottom-right-radius: 2.5rem;
-}
-
-.brasil {
-    background-color: #F7F6F8;
-    color: #123237;
-    border-top-left-radius: 2.5rem;
-    border-bottom-left-radius: 2.5rem;
-}
-
-.brasil h2 {
-    font-weight: bold;
-}
-
-/* Apenas telas pequenas */
-@media (max-width: 576px) {
-    .mapa-brasil {
-        max-width: 12em;
-    }
-}
-
-/* footer */
-
-.section-pre svg {
-    width: 100%;
-}
-
-
-.section-pre .nav-link {
-    color: white;
-}
-
-.contatos-whatsapp svg {
-    width: 2rem;
-    height: 2rem;
-}
-
-.contatos-whatsapp .nav-link {
-    padding: 0;
-}
-
-
-
-
 /*----------------- FORMULÁRIO ----------------- */
 
 /* --- CONFIGURAÇÕES GLOBAIS E VARIÁVEIS --- */
@@ -540,6 +475,11 @@ form {
     background-size: cover;
 }
 
+.form-image{
+    padding-left: 10px;
+    padding-top: 7px;
+}
+
 .form-image img {
     max-width: 100%;
     height: auto;
@@ -549,17 +489,19 @@ form {
 
 .form-content-left h3 {
     color: var(--color-dark);
-    padding: 10px;
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     /* Afastamento entre letras para estética corporativa */
     text-align: center;
+    padding-right: 20px;
+    padding-top: 10px;
 }
 
 .form-content-left p {
     text-align: center;
     font-size: 0.7rem;
+    padding-right: 20px;
 }
 
 /* --- ÁREA DO FORMULÁRIO (Direita) --- */
@@ -578,6 +520,7 @@ form {
 
 .title h3 {
     color: var(--color-dark);
+    padding-top: 2rem;
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -598,7 +541,7 @@ form {
 .input-box label {
     font-weight: 600;
     color: var(--color-dark);
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     display: block;
     /* Garante que o label fique acima do campo */
 }
@@ -607,7 +550,7 @@ form {
 .input-box select,
 .input-box textarea {
     width: 100%;
-    padding: 0.5rem 1rem;
+    padding: 0.1rem 0.5rem;
     font-size: 0.7rem;
     background-color: var(--color-white);
     border: 1px solid var(--color-border);
@@ -791,7 +734,7 @@ form {
     .input-box input,
     .input-box select,
     .input-box textarea {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .form-image {
@@ -848,8 +791,6 @@ form {
         /* Centraliza o conteúdo verticalmente */
     }
 }
-
-/* --- FIM RESPONSIVIDADE (Telas Maiores que 992px) --- */
 /* -----------------FORMULÁRIO DE CONTATO END -----------------*/
 
 

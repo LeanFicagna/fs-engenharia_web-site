@@ -1,192 +1,246 @@
-a {
-    text-decoration: none;
+/* ==========================================================================
+   1. VARIÁVEIS E CONFIGURAÇÕES GLOBAIS
+   ========================================================================== */
+:root {
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+    --colot-button-primary: #f4c430;
+    --brand-primary: #0b6b3a;
+    --brand-secondary: #f2c94c;
+    --accent-default: #66a365;
+    --accent-soft: #92c58b;
+    --surface-default: #f1ead3;
+    --text-default: #343a40;
+    /* Variáveis do Formulário de Contato */
+    --color-dark: #00633C;
+    --color-light: #f4f6f9;
+    --color-white: #ffffff;
+    --color-border: #d1d9e0;
+    --color-text: #333;
 }
 
-.menu-black {
-    background-color: black !important;
-}
-
-.carouselExampleControls {
-    height: 700px;
-}
-
-.carousel-caption {
-    display: flex;
-    justify-content: center; /* Alinha horizontalmente */
-    align-items: left; /* Alinha verticalmente */
-    flex-direction: column;
-    position: absolute;
-    top: 50%;
-    right: 10%;
-    transform: translateY(-50%);
-    text-align: left;
-    color: white;
-    max-width: 40%;
-}
-
-.carousel-item {
-    height: 600px; /* Define a altura para 60% da tela */
-}
-
-.carousel-item img {
-    height: 100%; /* Faz a imagem ocupar toda a altura do slide */
-    object-fit: cover; /* Mantém a proporção e cobre toda a área */
-}
-
-@media (max-width: 576px) {
-    .carousel-item {
-        height: 470px;
-    }
-}
-
-.radius-bottom {
-    width: 50px;  /* Define um tamanho fixo */
-    height: 50px;
-    border-radius: 50%; /* Deixa circular */
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro translúcido */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.carousel-control-prev-icon, 
-.carousel-control-next-icon {
-    width: 20px;  /* Ajusta o tamanho do ícone */
-    height: 20px;
-}
+/* ==========================================================================
+   2. AJUSTES DE TAGS DO DOCUMENTO (BASE)
+   ========================================================================== */
+body { padding-top: 76px; }
+a { text-decoration: none; }
+ul, ol { list-style: none; }
+main { justify-items: center; }
+.container { max-width: 1200px; }
 
 .overlay {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(0, 0, 0, 0.37) 10%, rgba(0, 0, 0, 0.548) 70%);
-  
-  }
-
-.container-valores {    
-    color: white;
-    border-top-right-radius: 40px;
-    border-bottom-left-radius: 40px;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.37) 0%, rgba(0, 0, 0, 0.548) 80%);
 }
 
-.valores {
-    background-color: #00633C;
-    border-top-right-radius: 40px;
+hr { margin: 20px 0; border: 1px solid gray; }
+
+/* ==========================================================================
+   3. NAVBAR (HEADER)
+   ========================================================================== */
+.navbar-s {
+    background: linear-gradient(rgb(27, 138, 81), rgb(68, 60, 39));
+    padding: 10px;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
 }
 
-.visao {
-    background-color: #0B8045;
-}
-
-.missao {
-    background-color: #269E37;
-    border-bottom-left-radius: 40px;
-}
-
-/* Serviços */
-.card {
-    padding: 0;
-    border-radius: 1.25rem;
-}
-
-.card-service {
-    height: 100%;
-    cursor: pointer;
-}
-
-.card-service img, .card {
-    border-top-left-radius: 15px;  /* Arredonda a borda superior esquerda */
-    border-top-right-radius: 15px; /* Arredonda a borda superior direita */
-}
-
-.card-service .card-body {
-    background-color: #ffffff;
-    border-radius: 30px;
-}
-
-.section-contato {
-    background-color: #002222;
-    color: white;
-}
-
-.contato {
-    background-color: white;
-    border-radius: 2.5rem;
-    color: black;
-}
-
-form {
-    font-weight: 500;
-}
-
-.div-form button {
-    background-color: #123237;
-}
-
-.div-form {
-    background-color: white;
-    border-top-right-radius: 2.5rem;
-    border-bottom-right-radius: 2.5rem;
-}
-
-.brasil {
-    background-color: #F7F6F8;
-    color: #123237;
-    border-top-left-radius: 2.5rem;
-    border-bottom-left-radius: 2.5rem;
-}
-
-.brasil h2 {
-    font-weight: bold;
-}
-
-/* secção pre s*/
-.section-pre {
-    background-color: #001B18;
-    color: white;
-}
-
-.section-pre svg {
+.navbar-container-s {
+    display: flex;
     width: 100%;
+    max-width: 1400px;
+    height: 56px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.section-pre .nav-link {
-    color: white;
-}
+.navbar-brand-s { order: 1; }
+.navbar-brand-s img { height: 40px; color: #fff; }
 
-.contatos-whatsapp .nav-link:hover {
-    opacity: 50%;
-}
+.nav-btn-container { order: 2; margin-left: auto; margin-right: 1rem; }
 
-.contatos-whatsapp h3 {
-    font-size: 1.75rem;
-}
-
-.contatos-whatsapp svg {
-    width: 2rem;
-    height  : 2rem;
-}
-
-.contatos-whatsapp .nav-link {
-    padding: 0;
-}
-
-.menu-contatos a:hover {
-    opacity: 50%;
-}
-
-footer {
-    background-color: #001B18;
-    color: white;
+.btn-nav-contato {
+    background-color: var(--colot-button-primary);
+    color: white !important;
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    display: inline-block;
     text-align: center;
-    padding: 30px 0;
-    font-size: 14px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
 }
 
-/* Test */
-
-.section-especialista {
-    border-radius: 30px;
-    background:
-    linear-gradient(30deg, #00633c 30%, #26c00772 70%), url(https://blog.verde.ag/pt/wp-content/uploads/2023/11/Lavoura-de-milho-como-melhorar-a-fertilidade-do-solo.jpg) no-repeat
+.btn-nav-contato:hover {
+    background-color: transparent;
+    border-color: #ff9807;
+    color: #ff9807 !important;
+    transform: scale(1.05);
 }
+
+.navbar-menu-s { display: flex; gap: 1rem; margin: 10px; order: 4; }
+header li a { color: white; }
+
+.navbar-toggle-s {
+    display: none;
+    background: none; border: none;
+    font-size: 1.5rem; color: #fff;
+    cursor: pointer; order: 3;
+}
+
+@media (max-width: 768px) {
+    .navbar-toggle-s { display: block; margin-left: 10px; }
+    .navbar-menu-s {
+        position: absolute; top: 74px; right: 0;
+        background: linear-gradient(0deg, rgb(27, 138, 81), rgb(68, 60, 39));
+        flex-direction: column; width: 40%;
+        display: flex; max-width: 0; overflow: hidden;
+        transition: max-height 0.5s ease-in-out, padding 0.4s ease;
+    }
+    .navbar-menu-s.active { max-width: 500px; padding: 0.5rem 0; border-radius: 5px; }
+    .navbar-menu-s li { text-align: center; padding: 0.75rem 0; opacity: 0; transition: opacity 0.4s ease; }
+    .navbar-menu-s.active li { opacity: 1; }
+    .nav-btn-container { display: block; margin: 0; }
+    .btn-nav-contato { padding: 0.5rem 0.8rem; font-size: 0.85rem; }
+}
+
+@media (max-width: 375px) {
+    .btn-nav-contato { white-space: normal; max-width: 100px; font-size: 0.85rem; padding: 0.4rem; line-height: 1.2; display: flex; align-items: center; justify-content: center; }
+}
+
+/* ==========================================================================
+   4. SLIDER (CARROSSEL)
+   ========================================================================== */
+.slider { position: relative; width: 100%; overflow: hidden; }
+.slider-track { display: flex; height: 100%; transition: transform 0.6s ease-in-out; }
+.slide { min-width: 100%; height: 100%; position: relative; max-width: 1600px; }
+.slide img { width: 100%; height: 100%; object-fit: cover; opacity: 0.4; }
+.slide-caption { position: absolute; bottom: 15%; left: 8%; max-width: 600px; color: #ffffff; }
+.slide-caption h1 { font-size: clamp(1.8rem, 4vw, 3rem); margin-bottom: 0.5rem; }
+.slide-caption p { font-size: 1.1rem; line-height: 1.5; }
+.slider-btn { position: absolute; top: 0; bottom: 0; background: none; border: none; color: #fff; font-size: 2rem; cursor: pointer; padding: 0 2vw; opacity: 0.5; }
+.slider-btn.prev { left: 0; }
+.slider-btn.next { right: 0; }
+.slider-btn:hover { opacity: 1; }
+
+@media (max-width: 435px) {
+    .slide-caption { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; left: 15%; right: 15%; bottom: 10%; max-width: 80%; }
+    .slide-caption h1 { font-size: clamp(1rem, 6vw, 2rem); line-height: 1.2; margin-bottom: 0.3rem; }
+    .slide-caption p { font-size: 0.6rem; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .carousel-control-prev-icon, .carousel-control-next-icon { height: 1rem; width: 1rem; }
+}
+
+/* ==========================================================================
+   5. SEÇÕES DE CONTEÚDO (SOBRE, VALORES, ESPECIALISTA)
+   ========================================================================== */
+#container_descricao { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 5rem; justify-items: center; }
+.section_valores { color: white; }
+.section_valores>section { padding: 0.8rem 2rem; }
+.container-valores { color: white; border-top-right-radius: 40px; border-bottom-left-radius: 40px; }
+.valores { background-color: #00633C; border-top-right-radius: 40px; }
+.visao { background-color: #0B8045; }
+.missao { background-color: #269E37; border-bottom-left-radius: 40px; }
+
+div>section { margin: 3.2rem 1rem; }
+#section_especialista {
+    background: linear-gradient(30deg, #00633c 30%, #26c00772 70%), url(https://blog.verde.ag/pt/wp-content/uploads/2023/11/Lavoura-de-milho-como-melhorar-a-fertilidade-do-solo.jpg) no-repeat;
+    color: white; padding: 3rem; border-radius: 30px;
+}
+#section_especialista h2 { font-weight: 700; margin-bottom: 16px; }
+#section_especialista a {
+    background-color: var(--colot-button-primary); color: #ffffff; padding: 12px 24px; font-size: 1.5rem; font-weight: 700; border-radius: 1rem; display: inline-block; margin-top: 0.5rem;
+}
+
+/* ==========================================================================
+   6. CARDS DE SERVIÇOS
+   ========================================================================== */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 1rem; }
+.card { border-radius: 16px; cursor: pointer; }
+.card>img { border-radius: 10px 10px 0px 0px; }
+.card>div { padding: 0.4rem; }
+
+@media (max-width: 1024px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .cards { grid-template-columns: 1fr; } }
+
+
+
+/* ==========================================================================
+   8. FORMULÁRIO DE CONTATO (ENTRE EM CONTATO)
+   ========================================================================== */
+.container-form { background-color: var(--color-dark); display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+
+.container-formulario {
+    display: grid; grid-template-columns: 1fr; width: 100%; max-width: 1100px;
+    background-color: var(--color-white); border-radius: 50px; overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); margin: 20px;
+}
+
+.form-content-left {
+    display: flex; padding: 5px; flex: 1;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255)), url('../img/slide-mapeamento-lg.png');
+    background-size: cover;
+}
+
+.form-image { padding: 7px 0 0 10px; }
+.form-image img { max-width: 100%; height: auto; width: 400px; }
+.form-content-left h3 { color: var(--color-dark); font-size: 1rem; text-transform: uppercase; text-align: center; padding: 10px 20px 0 0; }
+.form-content-left p { text-align: center; font-size: 0.7rem; padding-right: 20px; }
+
+.form { width: 100%; padding: 10px; background-color: var(--color-white); font-size: 0.7rem; }
+.title h3 { color: var(--color-dark); padding-top: 2rem; font-size: 1rem; text-transform: uppercase; }
+
+.input-group { display: grid; grid-template-columns: 1fr; gap: 0.4rem; flex: 1; }
+.input-box label { font-weight: 600; color: var(--color-dark); margin-bottom: 5px; display: block; }
+.input-box input, .input-box select, .input-box textarea { width: 100%; padding: 0.1rem 0.5rem; font-size: 0.7rem; border: 1px solid var(--color-border); border-radius: 8px; }
+.input-box input:focus, .input-box select:focus, .input-box textarea:focus { outline: none; border-color: #00633C; box-shadow: 0 0 10px rgba(255, 152, 7, 0.2); }
+
+.input-message { display: flex; flex-direction: column; }
+.input-message textarea { flex: 1; resize: none; min-height: 100px; }
+
+#solicite-button { margin: 1rem; }
+#solicite-button button {
+    width: 100%; background-color: var(--color-dark); color: white; border: none; padding: 18px; border-radius: 8px; font-weight: 600; font-size: 1.1rem; cursor: pointer;
+}
+
+@media (min-width: 540px) {
+    .form { font-size: 1rem; }
+    .input-group { grid-template-columns: 1fr 1fr; gap: 0.5rem; padding: 1rem; }
+    .input-box:nth-child(1), .input-box:nth-child(6) { grid-column: span 2; }
+    .input-box textarea { min-height: 150px; }
+}
+
+@media (min-width: 992px) {
+    .container-formulario { grid-template-columns: 1fr 1fr; }
+    .input-box:nth-child(1), .input-box:nth-child(2), .input-box:nth-child(5) { grid-column: span 2; }
+    .input-box:nth-child(3), .input-box:nth-child(4) { grid-column: span 1; }
+    .form-content-left { flex-direction: column; justify-content: center; align-items: center; }
+}
+
+/* ==========================================================================
+   9. FOOTER (RODAPÉ)
+   ========================================================================== */
+footer { width: 100%; background-color: #001B18; color: var(--color-neutral-40); }
+#footer_content { background-color: var(--color-neutral-10); display: grid; grid-template-columns: repeat(3, minmax(200px, 1fr)); padding: 2rem 2rem 0; gap: 1rem; }
+#footer_contacts { gap: 10px; display: grid; }
+#footer_contacts h1 { font-size: 1.5rem; text-align: center; }
+#footer_contacts img { max-width: 30px; }
+.footer-logo { display: flex; align-items: center; gap: 10px; }
+#footer_social_media { display: flex; justify-content: center; gap: 2rem; }
+#footer_social_media .footer-link { height: 2.5rem; width: 2.5rem; color: var(--color-neutral-40); border-radius: 50%; display: flex; justify-content: center; align-items: center; }
+#instagram { background: linear-gradient(#7f37c9, #ff2992, #ff9807); }
+#facebook { background: #1877F2; }
+.footer-list { display: flex; flex-direction: column; gap: 0.75rem; padding-left: 0; }
+.footer-list .footer-link { color: var(--color-neutral-30); }
+.footer-list-item { display: flex; gap: 1rem; }
+#footer_copyright { display: flex; justify-content: center; background-color: var(--color-neutral-0); font-size: 0.9rem; }
+
+@media screen and (max-width: 768px) { #footer_content { grid-template-columns: repeat(2, 1fr); } }
+@media screen and (max-width: 426px) { #footer_content { grid-template-columns: repeat(1, 1fr); } }
