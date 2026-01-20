@@ -49,17 +49,14 @@ main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     transition: background-image 2.2s ease-in-out;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
     text-align: center;
     color: #ffffff;
     max-width: 800px;
@@ -67,27 +64,15 @@ main {
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 4rem;
+    font-weight: 700;
     margin-bottom: 1rem;
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-}
-
-.hero-btn {
-    background-color: #f2c94c;
-    padding: 14px 32px;
-    border-radius: 8px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background .8s ease;
-}
-
-
-.hero-btn:hover {
-    background-color: var(--brand-secondary);
+    font-weight: 500;
 }
 
 .hero-overlay {
@@ -110,7 +95,6 @@ main {
 
 .navbar-container-s {
     display: flex;
-    width: 100%;
     max-width: 1200px;
     height: 72px;
     margin: 0 auto;
@@ -149,7 +133,7 @@ header li a:hover {
     cursor: pointer;
 }
 
-.btn-nav-contato {
+.btn-nav-contato, .btn-primary-yellow {
     background-color: var(--colot-button-primary);
     /* Cor de destaque (Laranja/Ouro) */
     padding: 0.6rem 1rem;
@@ -163,7 +147,7 @@ header li a:hover {
     border: 2px solid transparent;
 }
 
-.btn-nav-contato:hover {
+.btn-nav-contato:hover, .btn-primary-yellow:hover {
     border-color: #ff9807;
     transform: scale(1.05);
     /* Dá um leve aumento */
@@ -171,7 +155,7 @@ header li a:hover {
 
 /* --- AJUSTE PARA DISPOSITIVOS MÓVEIS (435px ou menos) --- */
 @media (max-width: 375px) {
-    .btn-nav-contato {
+    .btn-nav-contato, .btn-primary-yellow {
         max-width: 100px;
         font-size: 0.85rem;
         padding: 0.4rem;
@@ -216,18 +200,11 @@ header li a:hover {
         max-width: 500px;
         padding: 0.5rem 0;
         border-radius: 5px;
-        border: 1px solid var(--brand-secondary);
     }
 
     .navbar-menu-s li {
         text-align: center;
         padding: 0.75rem 0;
-        opacity: 0;
-        transition: opacity 0.4s ease;
-    }
-
-    .navbar-menu-s.active li {
-        opacity: 1;
     }
 
     .btn-nav-contato {
