@@ -105,11 +105,14 @@ header li a {
 .btn-nav-contato {
     background-color: var(--colot-button-primary); /* Cor de destaque (Laranja/Ouro) */
     color: white !important;
-    padding: 0.2rem;
+    padding: 0.6rem 1rem;
     border-radius: 0.5rem;        /* Bordas levemente arredondadas */
     font-weight: bold;
     font-size: 1rem;
     text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
     transition: all 0.3s ease;
     border: 2px solid transparent;
 }
@@ -118,6 +121,20 @@ header li a {
     border-color: #ff9807;
     color: #ff9807 !important;
     transform: scale(1.05); /* Dá um leve aumento */
+}
+
+/* --- AJUSTE PARA DISPOSITIVOS MÓVEIS (435px ou menos) --- */
+@media (max-width: 375px) {
+    .btn-nav-contato {
+        white-space: normal;    /* Permite que o texto quebre linha */
+        max-width: 100px;       /* Força uma largura pequena para o texto "achatar" */
+        font-size: 0.85rem;     /* Reduz um pouco a fonte para caber melhor */
+        padding: 0.4rem;        /* Diminui o respiro lateral */
+        line-height: 1.2;       /* Controla o espaço entre as linhas "Solicitar" e "Orçamento" */
+        display: flex;          /* Usamos flex para centralizar o texto quebrado */
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 768px) {
