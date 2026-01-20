@@ -3,9 +3,7 @@
     --color-neutral-10: #171717;
     --color-neutral-30: #a8a29e;
     --color-neutral-40: #f5f5f5;
-
     --colot-button-primary: #f4c430;
-
     --brand-primary: #0b6b3a;
     --brand-secondary: #f2c94c;
     --accent-default: #66a365;
@@ -15,7 +13,7 @@
 }
 
 body {
-    padding-top: 76px;
+    margin-top: 76px;
 }
 
 a {
@@ -46,7 +44,7 @@ main {
 
 /*------------------ Estilos da NavBar ----------------- */
 .navbar-s {
-    background: linear-gradient(rgb(27, 138, 81), rgb(68, 60, 39));
+    background: var(--brand-primary);
     padding: 10px;
     position: fixed;
     top: 0;
@@ -55,16 +53,7 @@ main {
     z-index: 1000;
 }
 
-.navbar-brand-s {
-    order: 1;
-}
-
-.navbar-brand-s img {
-    color: #fff;
-}
-
 .nav-btn-container{
-    order: 2;
     margin-left: auto;
     margin-right: 1rem;
 }
@@ -72,7 +61,7 @@ main {
 .navbar-container-s {
     display: flex;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1200px;
     height: 56px;
     margin: 0 auto;
     align-items: center;
@@ -81,6 +70,16 @@ main {
 
 header li a {
     color: white;
+    padding: 10px 10px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+header li a:hover {
+    color: #ff9807;
+    border-bottom: 1px solid #ff9807;
 }
 
 .navbar-brand-s img {
@@ -107,7 +106,7 @@ header li a {
 
 .btn-nav-contato {
     background-color: var(--colot-button-primary); /* Cor de destaque (Laranja/Ouro) */
-    color: white !important;
+    color: white;
     padding: 0.6rem 1rem;
     border-radius: 0.5rem;        
     font-weight: bold;
@@ -120,9 +119,7 @@ header li a {
     border: 2px solid transparent;
 }
 .btn-nav-contato:hover {
-    background-color: transparent;
     border-color: #ff9807;
-    color: #ff9807 !important;
     transform: scale(1.05); /* Dá um leve aumento */
 }
 
@@ -305,11 +302,6 @@ div>section {
 
 /*--------Ininicio Nossa equipe e projetos--------*/
 
-.section-equipes-projetos {
-    border-radius: 16px;
-    border: 1px solid rgba(0, 0, 0, .125);
-    padding: 1.5rem;
-}
 
 .section-equipes {
     display: grid;
@@ -440,8 +432,7 @@ hr {
     justify-content: center;
     /* Centraliza o formulário horizontalmente na tela */
     align-items: center;
-    /* Centraliza o formulário verticalmente na tela */
-    min-height: 100vh;
+    padding: 2rem 0;
     /* Garante que o fundo ocupe sempre a altura total do navegador */
 }
 
