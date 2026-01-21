@@ -46,5 +46,6 @@ const hero = document.querySelector('.hero');
     index = (index + 1) % backgrounds.length;
   }
 
+  // Comportamento da imagem do slide
   changeBackground(); // primeira imagem
   setInterval(changeBackground, 6000); // troca a cada 6s

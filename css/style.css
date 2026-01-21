@@ -18,6 +18,14 @@ body {
     margin-top: var(--height-nav-bar);
 }
 
+[id] {
+    scroll-margin-top: 92px; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     text-decoration: none;
     color: white;
@@ -712,7 +720,7 @@ hr {
         margin-top: 10px;
     }
 
-    .container-formulario {
+    .container-formulario { 
         grid-template-columns: 1fr 1fr;
         /* Duas colunas: imagem à esquerda, formulário à direita */
     }
