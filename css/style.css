@@ -11,7 +11,6 @@
     --surface-default: #f1ead3;
     --text-default: #343a40;
     --border-default: #ff9807;
-
     --height-nav-bar: 92px;
 }
 
@@ -22,6 +21,7 @@ body {
 a {
     text-decoration: none;
     color: white;
+    cursor: pointer;
 }
 
 a:hover {
@@ -60,11 +60,11 @@ main {
     text-align: center;
     color: #ffffff;
     max-width: 800px;
-    padding: 0 1.5rem;
+    padding: 20px 0;
 }
 
 .hero-content h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
@@ -80,6 +80,12 @@ main {
     width: 100%;
     height: 100%;
     background: #0b4930a9;
+}
+
+.hero a {
+    padding: 20px;
+    font-size: 1.5rem;
+    border-radius: 1rem;
 }
 
 /*------------------ Estilos da NavBar ----------------- */
@@ -130,10 +136,9 @@ header li a:hover {
     border: none;
     font-size: 1.5rem;
     color: #fff;
-    cursor: pointer;
 }
 
-.btn-nav-contato, .btn-primary-yellow {
+.btn-primary-yellow {
     background-color: var(--colot-button-primary);
     /* Cor de destaque (Laranja/Ouro) */
     padding: 0.6rem 1rem;
@@ -141,16 +146,16 @@ header li a:hover {
     font-weight: bold;
     font-size: 1rem;
     display: inline-block;
-    text-align: center;
     transition: all 0.3s ease;
+    
 }
 
-.btn-nav-contato:hover, .btn-primary-yellow:hover {
+.btn-primary-yellow:hover {
     transform: scale(1.1);
 }
 
 /* --- AJUSTE PARA DISPOSITIVOS MÓVEIS (435px ou menos) --- */
-@media (max-width: 425px) {
+@media (max-width: 426px) {
     .btn-nav-contato {
         display: none;
     }
@@ -159,23 +164,24 @@ header li a:hover {
 @media (max-width: 768px) {
     .navbar-toggle-s {
         display: block;
-        margin-left: 10px;
+        margin: 0 10px;
+        font-size: 1.8rem;
     }
+
 
     .navbar-menu-s {
         position: absolute;
-        top: var(--height-nav-bar);
+        top: 92px;
         right: 0;
         background: var(--brand-primary);
         flex-direction: column;
         width: 40%;
         padding: 0;
         margin: 0;
-
         display: flex;
         max-width: 0;
         overflow: hidden;
-        transition: max-height 0.5s ease-in-out, padding 0.4s ease;
+        transition: max-height 0.8s ease-in-out, padding 0.4s ease;
     }
 
     .navbar-menu-s.active {
@@ -187,11 +193,6 @@ header li a:hover {
     .navbar-menu-s li {
         text-align: center;
         padding: 0.75rem 0;
-    }
-
-    .btn-nav-contato {
-        text-align: center;
-        font-size: 16px;
     }
 }
 
@@ -205,7 +206,6 @@ header li a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 5rem;
-    justify-items: center;
 }
 
 .section_valores {
@@ -251,25 +251,12 @@ div>section {
 }
 
 #section_especialista h2 {
-    font-weight: 700;
+    font-weight: bold;
 }
 
 #section_especialista h2,
 #section_especialista p {
     margin-bottom: 16px;
-}
-
-#section_especialista a {
-    background-color: var(--colot-button-primary);
-    color: #ffffff;
-    padding: 12px 24px;
-    font-size: 1.5rem;
-    font-weight: 700;
-    border-radius: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: inline-block;
-    margin-top: 0.5rem;
 }
 
 .section-especialista {
@@ -314,10 +301,6 @@ div>section {
     grid-column: span 4;
 }
 
-.item-2>a {
-    cursor: pointer;
-}
-
 .grid-posts {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -343,7 +326,6 @@ div>section {
 
 .section-equipes-projetos a {
     background-color: #00633C;
-    cursor: pointer;
     display: inline-block;
     margin-top: 0.8rem;
     padding: 15px 20px;
@@ -725,10 +707,6 @@ hr {
         font-size: 0.9rem;
     }
 
-    .form-image {
-        align-self: center;
-    }
-
     .form-sobre {
         align-self: center;
         margin-top: 10px;
@@ -780,11 +758,6 @@ hr {
     }
 }
 
-/* -----------------FORMULÁRIO DE CONTATO END -----------------*/
-
-
-
-
 /*----------------- FOOTER NEW -----------------*/
 footer {
     width: 100%;
@@ -801,13 +774,12 @@ footer {
 }
 
 #footer_contacts {
-    gap: 10px;
     display: grid;
+    gap: 10px;
 }
 
-#footer_contacts h1 {
+#footer_contacts h2 {
     font-size: 1.5rem;
-    text-align: center;
     margin: 0;
 }
 
@@ -827,7 +799,6 @@ footer {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    /* margin-top: 1.5rem;  */
 }
 
 #footer_social_media .footer-link {
@@ -843,23 +814,22 @@ footer {
 }
 
 #footer_social_media .footer-link:hover {
-    opacity: 0.8;
     background-color: var(--color-neutral-30);
     color: var(--color-neutral-0);
 }
 
-#instagram {
-    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+.footer-link {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
 #facebook {
     background: #1877F2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .footer-list {
@@ -899,10 +869,6 @@ footer {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
-
-    #footer_copyright {
-        text-align: center;
-    }
 }
 
 @media screen and (max-width: 426px) {
@@ -910,16 +876,4 @@ footer {
         grid-template-columns: repeat(1, 1fr);
         padding: 3rem 2rem;
     }
-
-    #footer_copyright {
-        text-align: center;
-    }
 }
-
-@media (max-width: 768px) {
-    footer h5 {
-        font-size: 16px;
-    }
-}
-
-/*----------------- Fim do FOOTER NEW -----------------*/
