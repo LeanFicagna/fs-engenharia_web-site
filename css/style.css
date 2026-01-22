@@ -272,7 +272,130 @@ div>section {
 
 }
 
-.cards {
+/*------ Estilo Nossos Serviços --------*/
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  outline: none;
+}
+
+img {
+  width: 100%;
+
+}
+
+.card-wrapper {
+  max-width: 1200px;
+  margin: 0 60px 35px;
+  overflow: hidden;
+  list-style: none;
+}
+.card-list .card-item {
+  /* background: #182d43; */
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  transition: 0.5s;
+}
+.card-list .card-item:hover {
+  border: 1px solid #00633C;
+}
+.card-list .card-item img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.content h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 0;
+  color: #00633C;
+}
+
+.content p {
+  color: #060606;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.link-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #00633C;
+  display: flex;
+  color: #ceddd7;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-top: 10px;
+  transition: 0.4s;
+  background-color: #fcfcfc;
+}
+
+.link-btn i {
+  font-size: 22px;
+  transition: 0.4s;
+  color: #000000;
+}
+.card-list .card-item:hover .link-btn {
+  color: #fff;
+  background: rgba(0, 99, 59, 0.5);
+}
+.card-list .card-item:hover .link-btn {
+  transform: rotate(-35deg);
+}
+
+.card-wrapper .swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  opacity: 0.5;
+  background: #00633C;
+}
+.card-wrapper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+.card-wrapper .swiper-button-next,
+.card-wrapper .swiper-button-prev {
+  color: #00633C;
+  font-size: 25px;
+}
+
+@media (max-width: 425px) {
+  .card-wrapper .swiper-button-next,
+  .card-wrapper .swiper-button-prev {
+    display: none;
+  }
+  .card-wrapper {
+    margin: 0 20px 35px;
+  }
+}
+
+
+/* .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 1rem;
@@ -289,7 +412,7 @@ div>section {
 
 .card>div {
     padding: 0.4rem;
-}
+} */
 
 
 /*--------Ininicio Nossa equipe e projetos--------*/

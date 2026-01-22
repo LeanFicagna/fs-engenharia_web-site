@@ -1,24 +1,70 @@
-<main>
-    <section id="sobre" class="py-5">
-        <div class="container">
-            </div>
-    </section>
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slide of cards</title>
 
-    <aside class="container my-5">
-        <div class="section-especialista">
-            <h2>Fale com um especialista</h2>
-            </div>
-    </aside>
+    <!-- link do Swiperjs e CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
 
-    <section id="servicos" class="py-5">
-        <div class="container">
-            <h2>Nossos Serviços</h2>
-            </div>
-    </section>
+    <!-- link do icon do google -->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
 
-    <section id="contato" class="section-contato pt-5">
-        <div class="container">
-            <h2>Contato</h2>
+    <link rel="stylesheet" href="css/style_slide.css" />
+  </head>
+  <body>
+      <section id="service">
+         <section class="cards">
+          <article class="card">
+            <img class="card-img-top" src="img/card-car.jpeg" alt="Imagem representando georreferenciamento de imóveis">
+            <div>
+              <h5 class="card-text">Georreferenciamento de Imóveis</h5>
+              <p class="card-description">
+                Levantamento topográfico preciso para certificação de imóveis rurais junto aos órgãos competentes,
+                atendendo às exigências do Incra.
+              </p>
             </div>
-    </section>
-</main>
+          </article>
+
+          <article class="card">
+            <img class="card-img-top" src="img/card-credito-rural.png" alt="Imagem representando crédito rural">
+            <div>
+              <h5 class="card-text">Crédito Rural</h5>
+              <p class="card-description">
+                Elaboração de projetos técnicos para acesso a linhas de crédito rural, fomentando o crescimento
+                sustentável da produção agropecuária.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card-img-top" src="img/card-topografia.png" alt="Imagem representando serviço de topografia">
+            <div>
+              <h5 class="card-text">Topografia</h5>
+              <p class="card-description">
+                Serviços de medição, levantamento planialtimétrico e demarcação de terrenos, essenciais para
+                planejamento e gestão rural eficiente.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card-img-top" src="img/card-lar.png" alt="Imagem representando o serviço LAR">
+            <div>
+              <h5 class="card-text">LAR</h5>
+              <p class="card-description">
+                Regularização fundiária completa com foco na legalização de imóveis rurais e acesso às políticas
+                públicas de desenvolvimento do campo.
+              </p>
+            </div>
+          </article>
+        </section>
+      </section>
+
+    <!-- link do Swiperjs script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>  
+    <script src="./script/app.js"></script>
+    <script src="./script/slide.js"></script>
+  </body>
+</html>
