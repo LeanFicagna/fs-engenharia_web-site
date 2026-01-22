@@ -51,7 +51,6 @@ changeBackground(); // primeira imagem
 setInterval(changeBackground, 6000); // troca a cada 6s
 
 
-
 // Configuracao do swiper
 new Swiper('.card-wrapper', {
     slidesPerView: 3,
@@ -89,5 +88,4 @@ new Swiper('.card-wrapper', {
             slidesPerView: 4
         },
     }
-
 });

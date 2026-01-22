@@ -9,12 +9,78 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
 
     <!-- link do icon do google -->
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
 
     <link rel="stylesheet" href="css/style_slide.css" />
   </head>
   <body>
-      <section id="service">
+    <section class="swiper">
+
+        <div class="card-sec ">
+            <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="img/card-car.jpeg" alt="">
+                            <div class="content">
+                                <h3>Georreferenciamento de Imóveis</h3>
+                                <p>Levantamento topográfico preciso para certificação de imóveis rurais junto aos órgãos competentes,
+                                atendendo às exigências do Incra.</p>
+                                <div class="link-btn">
+                                    <a href="#"><i class="ri-arrow-right-line"></i></a>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="./img/card-credito-rural.png" alt="">
+                            <div class="content">
+                                <h3>Crédito Rural</h3>
+                                <p>Elaboração de projetos técnicos para acesso a linhas de crédito rural, fomentando o crescimento
+                                sustentável da produção agropecuária.</p>
+                                <div class="link-btn">
+                                    <a href="#"><i class="ri-arrow-right-line"></i></a>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="img/card-topografia.png" alt="">
+                            <div class="content">
+                                <h3>Topografia</h3>
+                                <p>Serviços de medição, levantamento planialtimétrico e demarcação de terrenos, essenciais para
+                                planejamento e gestão rural eficiente.</p>
+                                <div class="link-btn">
+                                    <a href="#"><i class="ri-arrow-right-line"></i></a>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="img/card-lar.png" alt="">
+                            <div class="content">
+                                <h3>LAR</h3>
+                                <p>Regularização fundiária completa com foco na legalização de imóveis rurais e acesso às políticas
+                                públicas de desenvolvimento do campo.</p>
+                                <div class="link-btn">
+                                    <a href="#"><i class="ri-arrow-right-line"></i></a>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+
+      <!-- <section id="service">
          <section class="cards">
           <article class="card">
             <img class="card-img-top" src="img/card-car.jpeg" alt="Imagem representando georreferenciamento de imóveis">
@@ -60,11 +126,11 @@
             </div>
           </article>
         </section>
-      </section>
+      </section> -->
 
     <!-- link do Swiperjs script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>  
     <script src="./script/app.js"></script>
-    <script src="./script/slide.js"></script>
+    <script src="./script/Swiper.js"></script>
   </body>
 </html>
