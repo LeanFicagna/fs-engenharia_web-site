@@ -1,5 +1,5 @@
 #service *{
-  margin: 0;
+  /* margin: 0; */
   padding: 0;
   list-style: none;
   text-decoration: none;
@@ -22,6 +22,7 @@
   max-width: 1200px;
   margin: 0 60px 35px;
   overflow: hidden;
+  /* background-color: #00633C; */
 }
 .card-list .card-item {
   /* background: #182d43; */
@@ -121,5 +122,6 @@
   }
   .card-wrapper {
     margin: 0 20px 35px;
+    /* padding: 20rem; */
   }
 }
