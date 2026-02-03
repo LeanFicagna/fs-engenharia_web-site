@@ -34,9 +34,10 @@ const phoneMask = (value) => {
 const hero = document.querySelector(".hero");
 
 const backgrounds = [
-  "img/slide-mapeamento-lg.png",
-  "img/slide-credito-rural-lg.png",
-  "img/slide-geoprocessamento-lg.png",
+  "img/hero/Slide_Hero_1.webp",
+  "img/hero/Slide_Hero_2.webp",
+  "img/hero/Slide_Hero_3.webp",
+  "img/hero/Slide_Hero_4.webp",
 ];
 
 let index = 0;
@@ -48,7 +49,7 @@ function changeBackground() {
 
 // Comportamento da imagem do slide
 changeBackground(); // primeira imagem
-setInterval(changeBackground, 6000); // troca a cada 6s
+setInterval(changeBackground, 7000); // troca a cada 6s
 
 
 // Configuracao do swiper

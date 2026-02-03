@@ -66,7 +66,7 @@ main {
 .hero-content {
 	position: relative;
 	text-align: center;
-	color: #ffffff;
+	color: var(--color-neutral-40);
 	max-width: 800px;
 	padding: 20px 0;
 }
@@ -395,23 +395,22 @@ hr {
 /* --- CONFIGURAÇÕES GLOBAIS E VARIÁVEIS --- */
 :root {
 	--color-dark: #00633c;
-	/* Cor principal (Azul Petróleo) para textos, botões e ícones */
+	
 	--color-light: #f4f6f9;
-	/* Fundo suave para a coluna de destaque (esquerda) */
+	
 	--color-white: #ffffff;
-	/* Fundo puro para a área de digitação */
+	
 	--color-border: #d1d9e0;
-	/* Cor padrão para bordas de inputs */
+	
 	--color-text: #333;
-	/* Cor para parágrafos e textos auxiliares */
 }
+	
 
 /* --- RESET E COMPORTAMENTO BASE --- */
 .container-formulario * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	/* Garante que padding/border não aumentem o tamanho fixo dos elementos */
 }
 
 /* Seção externa que envolve todo o componente de formulário */
@@ -884,7 +883,7 @@ footer {
 }
 
 @media screen and (max-width: 426px) {
-	#footer_content {
+    #footer_content {
 		grid-template-columns: repeat(1, 1fr);
 		padding: 3rem 2rem;
 	}
