@@ -1,4 +1,3 @@
-
 function toggleMenu() {
   var nav = document.getElementById("nav-menu");
   if (nav.style.display === "flex") {
@@ -8,85 +7,38 @@ function toggleMenu() {
   }
 }
 
-const toggle = document.querySelector(".navbar-toggle-s");
-const menu = document.querySelector(".navbar-menu-s");
+const toggle = document.querySelector(".navbar-toggle");
+const menu = document.querySelector(".navbar-menu");
 
 toggle.addEventListener("click", () => {
-  menu.classList.toggle("active");
+  menu.classList.toggle("is-open");
 });
 
-// verifica e aplica a máscara de telefone no campo de entrada do entre em contato
-const handlePhone = (event) => {
-  let input = event.target;
-  input.value = phoneMask(input.value);
-};
-
-const phoneMask = (value) => {
-  if (!value) return "";
-  value = value.replace(/\D/g, ""); // Remove tudo o que não for número
-  value = value.replace(/(\d{2})(\d)/, "($1) $2"); // Coloca parênteses nos dois primeiros dígitos
-  value = value.replace(/(\d{5})(\d)/, "$1-$2"); // Coloca o traço após o quinto dígito
-  return value;
-};
-
-/* Hero */
-
-const hero = document.querySelector(".hero");
-
-const backgrounds = [
-  "img/hero/Slide_Hero_1.webp",
-  "img/hero/Slide_Hero_2.webp",
-  "img/hero/Slide_Hero_3.webp",
-  "img/hero/Slide_Hero_4.webp",
-];
-
-let index = 0;
-
-function changeBackground() {
-  hero.style.backgroundImage = `url(${backgrounds[index]})`;
-  index = (index + 1) % backgrounds.length;
-}
-
-// Comportamento da imagem do slide
-changeBackground(); // primeira imagem
-setInterval(changeBackground, 7000); // troca a cada 6s
 
 
-// Configuracao do swiper
-new Swiper('.card-wrapper', {
-    slidesPerView: 3,
-    loop: true,
-    spaceBetween: 30,
+// Nossos Serviços
+console.log("Swiper carregado");
 
+new Swiper(".services-carousel", {
+  spaceBetween: 20,
+  slidesPerView: 1, // fallback padrão
 
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        dynamicBullets: true,
+  breakpoints: {
+    480: {
+      slidesPerView: 2
     },
-
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-    breakpoints: {
-        0: {
-            slidesPerView: 1
-        },
-        675: {
-            slidesPerView: 2
-        },
-        768: {
-            slidesPerView: 2
-        },
-        1024: {
-            slidesPerView: 3
-        },
-        1280: {
-            slidesPerView: 4
-        },
+    1024: {
+      slidesPerView: 4
     }
+  },
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  }
 });

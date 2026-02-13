@@ -1,0 +1,332 @@
+.contact-section {
+	background-color: var(--color-brand-primary);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem 0;
+	background:
+		linear-gradient(rgba(19, 95, 0, 0.363), var(--color-brand-primary)),
+		url("../../img/slide-milharal-lg.png");
+	background-size: cover;
+}
+
+/* --- ESTRUTURA DO CARD PRINCIPAL --- */
+.contact-card {
+	display: grid;
+	grid-template-columns: 1fr;
+	width: 100%;
+	max-width: 1200px;
+	background-color: var(--surface-default);
+	border-radius: 50px;
+	overflow: hidden;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+	margin: 20px;
+}
+
+/* --- COLUNA DA ESQUERDA (Destaque/Imagem) --- */
+.contact-highlight {
+	display: flex;
+	padding: 5px;
+	justify-items: center;
+	align-items: start;
+	flex: 1;
+	background:
+		linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255)),
+		url("../../img/slide-mapeamento-lg.png");
+	background-size: cover;
+}
+
+.highlight-image {
+	padding-left: 10px;
+	padding-top: 7px;
+}
+
+.highlight-image img {
+	max-width: 100%;
+	height: auto;
+	width: 400px;
+}
+
+.contact-highlight h3 {
+	color: var(--color-brand-primary);
+	font-size: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-align: center;
+	padding-right: 20px;
+	padding-top: 10px;
+}
+
+.contact-highlight p {
+	text-align: center;
+	font-size: 0.7rem;
+	padding-right: 20px;
+}
+
+/* --- ÁREA DO FORMULÁRIO (Direita) --- */
+.contact-form {
+	width: 100%;
+	padding: 10px;
+	background-color: var(--surface-default);
+	font-size: 0.7rem;
+}
+
+.form-header {
+	margin: 0.5rem;
+	text-align: center;
+}
+
+.title {
+	color: var(--color-brand-primary);
+	padding-top: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+/* Organização dos inputs (Grid) */
+.form-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 0.4rem;
+	flex: 1;
+}
+
+/* Estilização individual dos campos de entrada */
+.input-box label {
+	font-weight: 600;
+	color: var(--color-brand-primary);
+	margin-bottom: 5px;
+	display: block;
+}
+
+.input-box input,
+.input-box select,
+.input-box textarea {
+	width: 100%;
+	padding: 0.1rem 0.5rem;
+	font-size: 0.7rem;
+	background-color: var(--surface-default);
+	border: 1px solid var(--color-neutral-40);
+	border-radius: 8px;
+	transition: all 0.3s ease;
+}
+
+/* Estados de interação dos inputs */
+.input-box input:focus,
+.input-box select:focus,
+.input-box textarea:focus {
+	outline: none;
+	border-color: #00633c;
+	box-shadow: 0 0 10px rgba(255, 152, 7, 0.2);
+}
+
+/* Comportamento específico para o campo de Mensagem (Textarea) */
+.input-message {
+	display: flex;
+	flex-direction: column;
+}
+
+.input-message textarea {
+	flex: 1;
+	resize: none;
+	min-height: 100px;
+}
+
+/* --- BOTÃO DE AÇÃO --- */
+#solicite-button {
+	margin-top: auto;
+	margin: 1rem;
+}
+
+#solicite-button button {
+	width: 100%;
+	background-color: var(--color-brand-primary);
+	color: white;
+	border: none;
+	padding: 18px;
+	border-radius: 8px;
+	font-weight: 600;
+	font-size: 1.1rem;
+	cursor: pointer;
+	transition:
+		transform 0.2s,
+		background 0.3s;
+}
+
+#solicite-button button:hover {
+	background-color: #153a44;
+	transform: translateY(-2px);
+}
+
+@media (min-width: 540px) {
+	.contact-highlight {
+		background-image: url("../../img/slide-mapeamento-lg.png");
+		padding: 10px;
+		justify-items: center;
+		align-items: center;
+		flex: 1;
+		background:
+			linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255)),
+			url("../../img/slide-mapeamento-lg.png");
+		background-size: cover;
+	}
+
+	.contact-form {
+		width: 100%;
+		padding: 10px;
+		background-color: var(--surface-default);
+		font-size: 1rem;
+	}
+
+	.title h3 {
+		color: var(--color-brand-primary);
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+
+	.input-box input,
+	.input-box select,
+	.input-box textarea {
+		font-size: 1rem;
+	}
+
+	.contact-highlight h3 {
+		padding: 10px;
+		font-size: 1.5rem;
+	}
+
+	.contact-highlight p {
+		text-align: center;
+		font-size: 1rem;
+	}
+
+	.highlight-image img {
+		max-width: 100%;
+		height: auto;
+		width: 300px;
+	}
+
+	/* Regras de expansão de colunas no Grid Desktop */
+	.input-box:nth-child(1) {
+		grid-column: span 2;
+	}
+
+	/* Nome ocupa a largura total */
+	.input-box:nth-child(2) {
+		grid-column: span 1;
+	}
+
+	/* E-mail ocupa a largura total */
+	.input-box:nth-child(3) {
+		grid-column: span 1;
+	}
+
+	/* UF ocupa metade */
+	.input-box:nth-child(4) {
+		grid-column: span 1;
+	}
+
+	/* Cidade ocupa metade */
+	.input-box:nth-child(5) {
+		grid-column: span 1;
+	}
+
+	/* Telefone ocupa a largura total */
+	.input-box:nth-child(6) {
+		grid-column: span 2;
+	}
+
+	.form-grid {
+		row-gap: 0.5rem;
+		padding: 1rem;
+	}
+
+	.input-box textarea {
+		min-height: 150px;
+	}
+}
+
+/* --- RESPONSIVIDADE (Telas Maiores que 992px) --- */
+@media (min-width: 992px) {
+	.contact-highlight {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background:
+			linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255)),
+			url("../../img/slide-mapeamento-lg.png");
+		background-size: cover;
+	}
+
+	.contact-form {
+		width: 100%;
+		padding: 10px;
+		background-color: var(--surface-default);
+		font-size: 1rem;
+	}
+
+	.contact-highlight .highlight-image,
+	.highlight-content {
+		opacity: 100%;
+	}
+
+	.title h3 {
+		color: var(--color-brand-primary);
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+
+	.input-box input,
+	.input-box select,
+	.input-box textarea {
+		font-size: 0.9rem;
+	}
+
+	.highlight-content {
+		align-self: center;
+		margin-top: 10px;
+	}
+
+	.contact-card {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.form-grid {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto 1fr;
+	}
+
+	/* Regras de expansão de colunas no Grid Desktop */
+	.input-box:nth-child(1) {
+		grid-column: span 2;
+	}
+
+	/* Nome ocupa a largura total */
+	.input-box:nth-child(2) {
+		grid-column: span 2;
+	}
+
+	/* Telefone ocupa a largura total */
+	.input-box:nth-child(3) {
+		grid-column: span 1;
+	}
+
+	/* UF ocupa metade */
+	.input-box:nth-child(4) {
+		grid-column: span 1;
+	}
+
+	/* Cidade ocupa metade */
+	.input-box:nth-child(5) {
+		grid-column: span 2;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.contact-highlight {
+		align-items: center;
+	}
+}

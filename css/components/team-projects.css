@@ -1,0 +1,142 @@
+
+.team-projects-section {
+  padding: 2rem 1rem;
+}
+
+.team-projects-section__layout {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.section-header {
+  margin-bottom: 1rem;
+}
+
+
+#team-projects h2,
+#team-projects h3,
+#team-projects h4,
+#team-projects h5,
+#team-projects p {
+  color: black !important;
+}
+
+/* BLOCO EQUIPE */
+
+.team-block {
+  display: grid;
+  grid-template-columns: 11fr 8fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.team-highlight {
+  display: grid;
+  gap: 1rem;
+}
+
+.team-highlight img {
+  width: 100%;  
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.team-highlight__content {
+  display: grid;
+  gap: 1rem;
+}
+
+.team-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.team-gallery__grid article {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 0.6rem;
+}
+
+.team-gallery__grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.6rem;
+}
+
+/* DIVIDER */
+
+.section-divider {
+  border: none;
+  border-top: 2px solid #ddd;
+  margin: 1rem 0;
+}
+
+/* BLOCO PROJETOS */
+
+.projects-block h4 {
+  margin-bottom: 1.5rem;
+}
+
+.projects-menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.projects-menu button {
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--brand-primary, #00633c);
+  background: white;
+  color: var(--brand-primary, #00633c);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.projects-menu button:hover {
+  background: var(--brand-primary, #00633c);
+  color: white;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.projects-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 0.8rem;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 1024px) {
+  .team-block {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-highlight img {
+    height: 280px;
+  }
+}

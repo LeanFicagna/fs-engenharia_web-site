@@ -1,0 +1,77 @@
+.navbar {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: var(--navbar-height);
+  background: var(--navbar-bg);
+  z-index: var(--navbar-z-index);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-menu a {
+  padding: 0.5rem;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.navbar-menu a:hover {
+  color: var(--color-accent-default);
+  border-bottom: 2px solid var(--color-accent-default);
+}
+
+.nav-container-flex {
+    display: flex;  
+    align-items: center;
+}
+
+.navbar-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: 0;
+  color: var(--color-neutral-40);
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    top: var(--navbar-height);
+    right: 0;
+    flex-direction: column;
+    width: 40%;
+    max-width: 0;
+    overflow: hidden;
+    background: var(--navbar-bg);
+        transition:
+            max-height 0.8s ease-in-out,
+            padding 0.4s ease;
+  }
+
+  .navbar-menu.is-open {
+    max-width: 500px;
+  }
+
+  .navbar-menu li {
+    text-align: center;
+    margin: 1rem;
+  }
+}

@@ -1,0 +1,23 @@
+.value-card {
+  color: white;
+  padding: 1.5rem 2rem;
+}
+
+.value-card h3 {
+  margin-bottom: 1rem;
+}
+
+/* Variantes */
+.value-card--top {
+  background: var(--color-brand-primary);
+  border-top-left-radius: 40px;
+}
+
+.value-card--middle {
+  background: #0b8045;
+}
+
+.value-card--bottom {
+  background: #269e37;
+  border-bottom-right-radius: 40px;
+}

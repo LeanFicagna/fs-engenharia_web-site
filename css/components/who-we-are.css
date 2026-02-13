@@ -1,0 +1,43 @@
+.who-we-are__content h1,
+.who-we-are__content h2,
+.who-we-are__content h3,
+.who-we-are__content h4,
+.who-we-are__content p {
+  color: black;
+}
+
+.who-we-are {
+  padding: 2rem 1rem;
+  background-color: var(--surface-default);
+}
+
+.who-we-are__layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.who-we-are__image img {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.who-we-are__content h2 {
+  margin-bottom: 1rem;
+}
+
+.who-we-are__content p {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .who-we-are__layout {
+    grid-template-columns: 1fr;
+  }
+}
