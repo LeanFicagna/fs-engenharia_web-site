@@ -10,6 +10,10 @@
 	background-size: cover;
 }
 
+.contact-section p {
+	color: black;
+}
+
 /* --- ESTRUTURA DO CARD PRINCIPAL --- */
 .contact-card {
 	display: grid;
