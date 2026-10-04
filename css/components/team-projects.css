@@ -185,13 +185,13 @@
   color: var(--color-neutral-10);
 }
 
-/* Georreferenciamento aparece como selecionado: igual ao botão do CTA */
-.projects-menu button:first-child {
+/* Serviço selecionado: igual ao botão do CTA */
+.projects-menu button.is-active {
   background: var(--color-logo-green);
   color: white;
 }
 
-.projects-menu button:first-child:hover {
+.projects-menu button.is-active:hover {
   background: #68a818;
   border-color: #68a818;
   color: white;
@@ -199,7 +199,7 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   margin-bottom: 2rem;
 }
@@ -209,6 +209,19 @@
   height: 220px;
   object-fit: cover;
   border-radius: 0.8rem;
+}
+
+/* Mensagem para serviços sem fotos publicadas */
+.projects-empty {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px dashed var(--color-logo-green);
+  border-radius: 0.8rem;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 /* RESPONSIVO */

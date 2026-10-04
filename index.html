@@ -238,7 +238,7 @@
             <div class="services-carousel swiper">
                 <div class="services-carousel__wrapper swiper-wrapper">
 
-                    <article class="service-card swiper-slide">
+                    <article class="service-card swiper-slide" data-service="georreferenciamento">
                         <img src="./img/servicos/servico-georreferenciamento.png" alt="Georreferenciamento de imóveis rurais" />
 
                         <div class="service-card__content">
@@ -251,7 +251,7 @@
                         </div>
                     </article>
 
-                    <article class="service-card swiper-slide">
+                    <article class="service-card swiper-slide" data-service="credito">
                         <img src="./img/servicos/servico-credito-rural.jpg" alt="Consultoria em crédito rural para produtores" />
 
                         <div class="service-card__content">
@@ -264,7 +264,7 @@
                         </div>
                     </article>
 
-                    <article class="service-card swiper-slide">
+                    <article class="service-card swiper-slide" data-service="topografia">
                         <img src="./img/servicos/servico-topografia.jpg" alt="Levantamento topográfico em área rural" />
 
                         <div class="service-card__content">
@@ -277,7 +277,7 @@
                         </div>
                     </article>
 
-                    <article class="service-card swiper-slide">
+                    <article class="service-card swiper-slide" data-service="lar">
                         <img src="./img/servicos/servico-lar.jpg" alt="Regularização fundiária e ambiental de imóveis rurais (LAR)" />
 
                         <div class="service-card__content">
@@ -371,22 +371,37 @@
                 <hr class="section-divider" />
 
                 <!-- BLOCO PROJETOS -->
-                <div class="projects-block">
+                <div class="projects-block" id="trabalhos">
 
                     <h4>Veja alguns dos nossos trabalhos realizados no campo</h4>
 
                     <div class="projects-menu">
-                        <button>Georreferenciamento</button>
-                        <button>Energia Solar</button>
-                        <button>Licença Fundiária</button>
-                        <button>Crédito Rural</button>
+                        <button type="button" data-service="georreferenciamento">Georreferenciamento</button>
+                        <button type="button" data-service="credito">Crédito Rural</button>
+                        <button type="button" data-service="topografia">Topografia</button>
+                        <button type="button" data-service="lar">LAR</button>
                     </div>
 
                     <div class="projects-grid">
-                        <img src="./img/Nossa_equipe/Trabalhos_realizados_Campo_1.webp" alt="Trabalho realizado em campo pela FS Engenharia">
-                        <img src="./img/Nossa_equipe/Trabalhos_realizados_Campo_2.webp" alt="Trabalho realizado em campo pela FS Engenharia">
-                        <img src="./img/Nossa_equipe/Trabalhos_realizados_Campo_3.webp" alt="Trabalho realizado em campo pela FS Engenharia">
+                        <img src="./img/Nossa_equipe/Trabalhos_realizados_Campo_1.webp" data-service="georreferenciamento" alt="Trabalho de Georreferenciamento realizado em campo pela FS Engenharia">
+                        <img src="./img/Nossa_equipe/Trabalhos_realizados_Campo_2.webp" data-service="georreferenciamento" alt="Trabalho de Georreferenciamento realizado em campo pela FS Engenharia">
+                        <img src="./img/Nossa_equipe/Trabalhos_realizados_Campo_3.webp" data-service="georreferenciamento" alt="Trabalho de Georreferenciamento realizado em campo pela FS Engenharia">
+                        <img src="./img/Nossa_equipe/Trabalhos_realizados_Campo_1.webp" data-service="georreferenciamento" alt="Trabalho de Georreferenciamento realizado em campo pela FS Engenharia">
+                        <img src="./img/Nossa_equipe/Trabalhos_realizados_Campo_2.webp" data-service="credito" alt="Trabalho de Crédito Rural realizado em campo pela FS Engenharia">
+                        <img src="./img/Nossa_equipe/Trabalhos_realizados_Campo_3.webp" data-service="credito" alt="Trabalho de Crédito Rural realizado em campo pela FS Engenharia">
+                        <img src="./img/Nossa_equipe/Trabalhos_realizados_Campo_1.webp" data-service="credito" alt="Trabalho de Crédito Rural realizado em campo pela FS Engenharia">
+                        <img src="./img/Nossa_equipe/Trabalhos_realizados_Campo_2.webp" data-service="credito" alt="Trabalho de Crédito Rural realizado em campo pela FS Engenharia">
+                        <img src="./img/Nossa_equipe/Trabalhos_realizados_Campo_3.webp" data-service="topografia" alt="Trabalho de Topografia realizado em campo pela FS Engenharia">
+                        <img src="./img/Nossa_equipe/Trabalhos_realizados_Campo_1.webp" data-service="topografia" alt="Trabalho de Topografia realizado em campo pela FS Engenharia">
+                        <img src="./img/Nossa_equipe/Trabalhos_realizados_Campo_2.webp" data-service="topografia" alt="Trabalho de Topografia realizado em campo pela FS Engenharia">
+                        <img src="./img/Nossa_equipe/Trabalhos_realizados_Campo_3.webp" data-service="topografia" alt="Trabalho de Topografia realizado em campo pela FS Engenharia">
+                        <img src="./img/Nossa_equipe/Trabalhos_realizados_Campo_1.webp" data-service="lar" alt="Trabalho de LAR realizado em campo pela FS Engenharia">
+                        <img src="./img/Nossa_equipe/Trabalhos_realizados_Campo_3.webp" data-service="lar" alt="Trabalho de LAR realizado em campo pela FS Engenharia">
+                        <img src="./img/Nossa_equipe/Trabalhos_realizados_Campo_2.webp" data-service="lar" alt="Trabalho de LAR realizado em campo pela FS Engenharia">
+                        <img src="./img/Nossa_equipe/Trabalhos_realizados_Campo_1.webp" data-service="lar" alt="Trabalho de LAR realizado em campo pela FS Engenharia">
                     </div>
+
+                    <p class="projects-empty" hidden></p>
 
                     <div class="projects-cta">
                         <a href="#contact" data-whatsapp data-whatsapp-text="Olá! Gostaria de solicitar um orçamento."
