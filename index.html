@@ -63,7 +63,12 @@
         </nav>
 
         <section id="home" class="hero">
-            <div class="hero-overlay"></div>
+            <div class="hero-slides" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
             <div class="hero-content">
                 <h1>
@@ -316,25 +321,39 @@
                         <hr class="section-divider" />
 
                         <div class="team-gallery__grid">
-                            <article>
-                                <img src="./img/Nossa_equipe/Dia_a_Dia_1.webp" alt="Equipe da FS Engenharia em atividade no dia a dia">
-                            </article>
+                            <!-- TODO: trocar cada href pelo link da postagem no Instagram -->
+                            <a class="insta-card" href="https://www.instagram.com/fsconsultoriarural" target="_blank"
+                                rel="noopener">
+                                <img src="./img/Nossa_equipe/Dia_a_Dia_1.webp"
+                                    alt="Equipe da FS Engenharia em visita técnica a uma plantação de cacau">
+                                <span class="insta-card__title">Visita técnica em lavoura de cacau</span>
+                            </a>
 
-                            <article>
-                                <img src="./img/Nossa_equipe/Dia_a_Dia_2.webp" alt="Equipe da FS Engenharia em atividade no dia a dia">
-                            </article>
+                            <a class="insta-card" href="https://www.instagram.com/fsconsultoriarural" target="_blank"
+                                rel="noopener">
+                                <img src="./img/Nossa_equipe/Dia_a_Dia_2.webp"
+                                    alt="Trabalhadores separando cacau colhido no campo">
+                                <span class="insta-card__title">Colheita do cacau</span>
+                            </a>
 
-                            <article>
-                                <img src="./img/Nossa_equipe/Dia_a_Dia_3.webp" alt="Equipe da FS Engenharia em atividade no dia a dia">
-                            </article>
+                            <a class="insta-card" href="https://www.instagram.com/fsconsultoriarural" target="_blank"
+                                rel="noopener">
+                                <img src="./img/Nossa_equipe/Dia_a_Dia_3.webp"
+                                    alt="Viveiro de mudas de cacau sob tela de sombreamento">
+                                <span class="insta-card__title">Viveiro de mudas</span>
+                            </a>
 
-                            <article>
-                                <img src="./img/Nossa_equipe/Dia_a_Dia_4.webp" alt="Equipe da FS Engenharia em atividade no dia a dia">
-                            </article>
+                            <a class="insta-card" href="https://www.instagram.com/fsconsultoriarural" target="_blank"
+                                rel="noopener">
+                                <img src="./img/Nossa_equipe/Dia_a_Dia_4.webp"
+                                    alt="Equipe da FS Engenharia em atendimento com notebook">
+                                <span class="insta-card__title">Atendimento ao produtor</span>
+                            </a>
 
                         </div>
 
-                        <a href="#" class="btn btn--success">
+                        <a href="https://www.instagram.com/fsconsultoriarural" target="_blank" rel="noopener"
+                            class="btn btn--success">
                             Ver mais no Instagram
                         </a>
                     </aside>
@@ -362,7 +381,8 @@
                     </div>
 
                     <div class="projects-cta">
-                        <a href="#contact" class="btn btn--success">
+                        <a href="#contact" data-whatsapp data-whatsapp-text="Olá! Gostaria de solicitar um orçamento."
+                            target="_blank" rel="noopener" class="btn btn--success">
                             Solicitar orçamento
                         </a>
 
@@ -471,7 +491,7 @@
                         </label>
 
                         <div id="solicite-button">
-                            <button type="submit">Solicitar Atendimento</button>
+                            <button type="submit" disabled>Solicitar Atendimento</button>
                         </div>
 
                         <p id="form-status" class="form-status" role="status" aria-live="polite"></p>

@@ -53,6 +53,18 @@ function buildLeadMessage(lead) {
 
 const contactForm = document.getElementById("contact-form");
 
+// O botão só é liberado com o consentimento marcado
+const consentCheckbox = contactForm.elements.consent;
+const submitButton = contactForm.querySelector("button[type=submit]");
+
+function syncSubmitButton() {
+  submitButton.disabled = !consentCheckbox.checked;
+}
+
+consentCheckbox.addEventListener("change", syncSubmitButton);
+contactForm.addEventListener("reset", () => setTimeout(syncSubmitButton));
+syncSubmitButton();
+
 contactForm.addEventListener("submit", (event) => {
   event.preventDefault();
 

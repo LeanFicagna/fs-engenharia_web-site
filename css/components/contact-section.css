@@ -151,12 +151,14 @@
 	gap: 0.5rem;
 	margin: 1rem 1rem 0;
 	font-size: 0.75rem;
-	color: var(--color-neutral-40);
+	color: #757575; /* cinza dos placeholders dos campos */
 }
 
 .form-consent input {
 	margin-top: 0.15rem;
 	flex-shrink: 0;
+	accent-color: var(--color-brand-primary);
+	cursor: pointer;
 }
 
 .form-status {
@@ -192,7 +194,12 @@
 		background 0.3s;
 }
 
-#solicite-button button:hover {
+#solicite-button button:disabled {
+	background-color: var(--color-neutral-30);
+	cursor: not-allowed;
+}
+
+#solicite-button button:not(:disabled):hover {
 	background-color: #153a44;
 	transform: translateY(-2px);
 }

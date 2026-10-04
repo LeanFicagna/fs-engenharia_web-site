@@ -1,23 +1,49 @@
 .hero {
   position: relative;
   min-height: 80vh;
+  overflow: hidden;
 
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
+/* Slides empilhados com fade entre eles (ciclo de 20s, 5s por imagem) */
+.hero-slides span {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  animation: heroBackgroundSlider 20s infinite ease-in-out;
+  opacity: 0;
+  animation: heroFade 20s infinite ease-in-out;
 }
 
+.hero-slides span:nth-child(1) {
+  background-image: url("../../img/hero/fazenda-lg.jpg");
+}
+
+.hero-slides span:nth-child(2) {
+  background-image: url("../../img/hero/credito-rural-lg.jpg");
+  animation-delay: 5s;
+}
+
+.hero-slides span:nth-child(3) {
+  background-image: url("../../img/hero/geo-referenciamento-lg.jpg");
+  animation-delay: 10s;
+}
+
+.hero-slides span:nth-child(4) {
+  background-image: url("../../img/hero/plantacao-cacau-lg.jpg");
+  animation-delay: 15s;
+}
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: rgba(0, 0, 0, 0.50);
 }
 
@@ -28,22 +54,28 @@
   max-width: 800px;
 }
 
-@keyframes heroBackgroundSlider {
-  0%,
-  10% {
-    background-image: url("../../img/hero/fazenda-lg.jpg");
+@keyframes heroFade {
+  0% {
+    opacity: 0;
   }
 
-  33%,
-  43% {
-    background-image: url("../../img/hero/credito-rural-lg.jpg");
+  5%,
+  25% {
+    opacity: 1;
   }
 
-  66%,
-  76% {
-    background-image: url("../../img/hero/geo-referenciamento-lg.jpg");
-  }
+  30%,
   100% {
-    background-image: url("../../img/hero/plantacao-cacau-lg.jpg");
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slides span {
+    animation: none;
+  }
+
+  .hero-slides span:nth-child(1) {
+    opacity: 1;
   }
 }
