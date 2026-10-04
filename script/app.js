@@ -161,6 +161,21 @@ document.querySelectorAll(".service-card[data-service]").forEach((card) => {
 
 selectService("georreferenciamento");
 
+// ===== Vídeo de apresentação =====
+// O botão de play some quando o vídeo começa e volta quando pausa; sem arquivo de vídeo, nada acontece
+const presentationVideo = document.querySelector(".video-frame video");
+const videoPlayButton = document.querySelector(".video-play");
+
+videoPlayButton.addEventListener("click", () => {
+  presentationVideo.play().catch(() => {});
+});
+presentationVideo.addEventListener("play", () => {
+  videoPlayButton.hidden = true;
+});
+presentationVideo.addEventListener("pause", () => {
+  videoPlayButton.hidden = false;
+});
+
 // Nossos Serviços
 // Inicia no "load" para garantir que o Swiper (CDN, defer) já esteja disponível
 window.addEventListener("load", () => {
