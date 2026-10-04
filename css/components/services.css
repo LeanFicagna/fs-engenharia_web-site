@@ -21,7 +21,8 @@
 
 /* CARD DE SERVIÇO */
 .service-card {
-    background: var(--color-neutral-10);
+    background: white;
+    border: 1px solid var(--color-neutral-10);
     border-radius: 1rem;
     overflow: hidden;
     display: grid;
@@ -57,11 +58,11 @@
 
 /* TEXTO */
 .service-card__content h3 {
-    color: white;
+    color: var(--color-neutral-10);
 }
 
 .service-card__content p {
-    color: white;
+    color: var(--color-neutral-10);
 }
 /* SWIPER CONTROLES */
 .services-carousel .swiper-pagination-bullet {
