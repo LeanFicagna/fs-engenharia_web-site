@@ -47,9 +47,9 @@
   z-index: 1;
   background: linear-gradient(
     0deg,
-    rgba(0, 20, 10, 0.9) 0%,
-    rgba(0, 20, 10, 0.45) 55%,
-    rgba(0, 20, 10, 0.25) 100%
+    rgba(23, 23, 23, 0.95) 0%,
+    rgba(23, 23, 23, 0.55) 55%,
+    rgba(23, 23, 23, 0.3) 100%
   );
 }
 
@@ -64,8 +64,18 @@
 
 .hero-content h1 {
   font-size: 3.2rem;
-  border-left: 4px solid var(--button-primary-bg);
+  border-left: 4px solid var(--color-logo-green);
   padding-left: 1rem;
+}
+
+/* Botão do hero: verde-lima da logo, sem transparência */
+.hero .btn--primary {
+  background: var(--color-logo-green);
+  color: white;
+}
+
+.hero .btn--primary:hover {
+  background: #68a818;
 }
 
 .hero-content h4 {
