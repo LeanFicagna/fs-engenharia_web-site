@@ -1,11 +1,12 @@
 .hero {
   position: relative;
-  min-height: 80vh;
+  min-height: calc(100vh - var(--navbar-height));
   overflow: hidden;
 
+  /* Conteúdo embaixo à esquerda, alinhado à coluna de 1200px */
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-start;
 }
 
 /* Slides empilhados com fade entre eles (ciclo de 20s, 5s por imagem) */
@@ -44,14 +45,37 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.50);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 20, 10, 0.9) 0%,
+    rgba(0, 20, 10, 0.45) 55%,
+    rgba(0, 20, 10, 0.25) 100%
+  );
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  text-align: center;
-  max-width: 800px;
+  text-align: left;
+  max-width: 720px;
+  margin-left: max(1rem, calc((100vw - 1200px) / 2));
+  padding: 0 1rem 5rem;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  border-left: 4px solid var(--button-primary-bg);
+  padding-left: 1rem;
+}
+
+.hero-content h4 {
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
 }
 
 @keyframes heroFade {
