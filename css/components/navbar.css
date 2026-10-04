@@ -3,6 +3,7 @@
   inset: 0 0 auto 0;
   height: var(--navbar-height);
   background: var(--navbar-bg);
+  border-bottom: 3px solid var(--color-logo-green);
   z-index: var(--navbar-z-index);
 }
 
@@ -30,8 +31,8 @@
 }
 
 .navbar-menu a:hover {
-  color: var(--color-accent-default);
-  border-bottom: 2px solid var(--color-accent-default);
+  color: var(--color-logo-green);
+  border-bottom: 2px solid var(--color-logo-green);
 }
 
 .nav-container-flex {

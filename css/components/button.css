@@ -33,6 +33,19 @@
   color: white;
 }
 
+/* Botão da barra superior: contorno verde-lima da logo */
+.btn--primary.btn-nav-contato {
+  background: transparent;
+  color: var(--color-logo-green);
+  border: 2px solid var(--color-logo-green);
+  padding: 0.4rem 0.9rem;
+}
+
+.btn--primary.btn-nav-contato:hover {
+  background: var(--color-logo-green);
+  color: var(--color-neutral-10);
+}
+
 /* Verde */
 .btn--success {
   background: var(--color-brand-primary);
