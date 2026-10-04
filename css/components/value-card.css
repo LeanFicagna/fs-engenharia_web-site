@@ -9,15 +9,15 @@
 
 /* Variantes */
 .value-card--top {
-  background: var(--color-brand-primary);
+  background: #1f5200;
   border-top-left-radius: 40px;
 }
 
 .value-card--middle {
-  background: #0b8045;
+  background: #2b7d00;
 }
 
 .value-card--bottom {
-  background: #269e37;
+  background: #3f9a0a;
   border-bottom-right-radius: 40px;
 }
