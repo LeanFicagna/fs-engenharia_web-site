@@ -21,19 +21,17 @@
 
 /* CARD DE SERVIÇO */
 .service-card {
-    background: white;
+    background: var(--color-neutral-10);
     border-radius: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.5);
     overflow: hidden;
     display: grid;
     grid-template-rows: auto 1fr;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
-    transition: border 0.3s ease, transform 0.3s ease;
+    transition: transform 0.3s ease;
     cursor: pointer;
 }
 
 .service-card:hover {
-    border: 1px solid black;
     transform: translateY(-4px);
 }
 
@@ -59,11 +57,11 @@
 
 /* TEXTO */
 .service-card__content h3 {
-    color: black;
+    color: white;
 }
 
 .service-card__content p {
-    color: black;
+    color: white;
 }
 /* SWIPER CONTROLES */
 .services-carousel .swiper-pagination-bullet {
