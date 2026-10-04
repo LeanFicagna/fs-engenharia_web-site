@@ -182,7 +182,7 @@
 
 #solicite-button button {
 	width: 100%;
-	background-color: var(--color-brand-primary);
+	background-color: var(--color-logo-green);
 	color: white;
 	border: none;
 	padding: 18px;
@@ -201,7 +201,7 @@
 }
 
 #solicite-button button:not(:disabled):hover {
-	background-color: #0a4d29;
+	background-color: #68a818;
 	transform: translateY(-2px);
 }
 
