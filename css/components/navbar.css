@@ -62,7 +62,7 @@
     overflow: hidden;
     background: var(--navbar-bg);
         transition:
-            max-height 0.8s ease-in-out,
+            max-width 0.8s ease-in-out,
             padding 0.4s ease;
   }
 

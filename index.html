@@ -10,9 +10,11 @@
 
     <meta property="og:title" content="FS Engenharia Rural" />
     <meta property="og:description" content="Consultoria rural, crédito e regularização fundiária." />
-    <meta property="og:image" content="https://www.fsengenhariarural.com.br/fs-engenharia-logo.png" />
+    <meta property="og:image" content="https://www.fsengenhariarural.com.br/img/fs-engenharia-horizontal.png" />
 
     <meta property="og:type" content="website" />
+
+    <link rel="canonical" href="https://www.fsengenhariarural.com.br/" />
 
     <link rel="icon" href="favicon.png" type="image/png" />
 
@@ -22,7 +24,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!-- JS do Swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -45,13 +47,13 @@
 
                 <div class="nav-container-flex">
                     <div class="nav-btn-container">
-                        <a class="btn btn--primary btn-nav-contato">Solicitar Orçamento</a>
+                        <a href="#contact" data-whatsapp data-whatsapp-text="Olá! Gostaria de solicitar um orçamento." target="_blank" rel="noopener" class="btn btn--primary btn-nav-contato">Solicitar Orçamento</a>
                     </div>
 
                     <button class="navbar-toggle" aria-label="Abrir menu">☰</button>
 
                     <ul class="navbar-menu">
-                        <li><a href="#home" class="is-open">Home</a></li>
+                        <li><a href="#home">Home</a></li>
                         <li><a href="#about">Sobre</a></li>
                         <li><a href="#service">Serviços</a></li>
                         <li><a href="#contact">Contato</a></li>
@@ -237,10 +239,10 @@
                     </article>
 
                     <article class="service-card swiper-slide">
-                        <img src="./img/servicos/servico-credito-rural.jpg" alt="Georreferenciamento de imóveis rurais" />
+                        <img src="./img/servicos/servico-credito-rural.jpg" alt="Consultoria em crédito rural para produtores" />
 
                         <div class="service-card__content">
-                            <h3>Crédito Rural.</h3>
+                            <h3>Crédito Rural</h3>
                             <p>
                                 Elaboração de projetos técnicos para acesso a linhas de
                                 crédito rural, fomentando o crescimento sustentável da
@@ -250,7 +252,7 @@
                     </article>
 
                     <article class="service-card swiper-slide">
-                        <img src="./img/servicos/servico-topografia.jpg" alt="Georreferenciamento de imóveis rurais" />
+                        <img src="./img/servicos/servico-topografia.jpg" alt="Levantamento topográfico em área rural" />
 
                         <div class="service-card__content">
                             <h3>Topografia</h3>
@@ -263,7 +265,7 @@
                     </article>
 
                     <article class="service-card swiper-slide">
-                        <img src="./img/servicos/servico-lar.jpg" alt="Georreferenciamento de imóveis rurais" />
+                        <img src="./img/servicos/servico-lar.jpg" alt="Regularização fundiária e ambiental de imóveis rurais (LAR)" />
 
                         <div class="service-card__content">
                             <h3>LAR</h3>
@@ -315,19 +317,19 @@
 
                         <div class="team-gallery__grid">
                             <article>
-                                <img src="./img/Nossa_equipe/Dia_a_Dia_1.webp" alt="">
+                                <img src="./img/Nossa_equipe/Dia_a_Dia_1.webp" alt="Equipe da FS Engenharia em atividade no dia a dia">
                             </article>
 
                             <article>
-                                <img src="./img/Nossa_equipe/Dia_a_Dia_2.webp" alt="">
+                                <img src="./img/Nossa_equipe/Dia_a_Dia_2.webp" alt="Equipe da FS Engenharia em atividade no dia a dia">
                             </article>
 
                             <article>
-                                <img src="./img/Nossa_equipe/Dia_a_Dia_3.webp" alt="">
+                                <img src="./img/Nossa_equipe/Dia_a_Dia_3.webp" alt="Equipe da FS Engenharia em atividade no dia a dia">
                             </article>
 
                             <article>
-                                <img src="./img/Nossa_equipe/Dia_a_Dia_4.webp" alt="">
+                                <img src="./img/Nossa_equipe/Dia_a_Dia_4.webp" alt="Equipe da FS Engenharia em atividade no dia a dia">
                             </article>
 
                         </div>
@@ -338,8 +340,6 @@
                     </aside>
 
                 </div>
-
-                <hr class="section-divider" />
 
                 <hr class="section-divider" />
 
@@ -356,9 +356,9 @@
                     </div>
 
                     <div class="projects-grid">
-                        <img src="./img/Nossa_equipe/Trabalhos_realizados_Campo_1.webp" alt="">
-                        <img src="./img/Nossa_equipe/Trabalhos_realizados_Campo_2.webp" alt="">
-                        <img src="./img/Nossa_equipe/Trabalhos_realizados_Campo_3.webp" alt="">
+                        <img src="./img/Nossa_equipe/Trabalhos_realizados_Campo_1.webp" alt="Trabalho realizado em campo pela FS Engenharia">
+                        <img src="./img/Nossa_equipe/Trabalhos_realizados_Campo_2.webp" alt="Trabalho realizado em campo pela FS Engenharia">
+                        <img src="./img/Nossa_equipe/Trabalhos_realizados_Campo_3.webp" alt="Trabalho realizado em campo pela FS Engenharia">
                     </div>
 
                     <div class="projects-cta">
@@ -393,7 +393,7 @@
                 </aside>
 
                 <section class="contact-form">
-                    <form action="#">
+                    <form id="contact-form" action="#">
                         <header class="form-header">
                             <h3 class="title">Entre em contato conosco</h3>
                         </header>
@@ -405,7 +405,7 @@
                             </div>
                             <div class="input-box">
                                 <label for="email">Email</label>
-                                <input id="email" autocomplete="on" type="text" name="mail"
+                                <input id="email" autocomplete="on" type="email" name="mail"
                                     placeholder="Digite seu email" required />
                             </div>
                             <div class="input-box">
@@ -414,7 +414,7 @@
                             </div>
                             <div class="input-box">
                                 <label for="uf" class="form-label">Estado (UF)</label>
-                                <select name="uf" id="uf" class="form-select">
+                                <select name="uf" id="uf" class="form-select" required>
                                     <option value="">Seu Estado</option>
                                     <option value="AC">Acre (AC)</option>
                                     <option value="AL">Alagoas (AL)</option>
@@ -447,9 +447,9 @@
                             </div>
                             <div class="input-box">
                                 <label for="telephone">Telefone</label>
-                                <input id="telephone" class="form-control" pattern="\(\d{2}\)\s\d{5}-\d{4}" type="tel"
-                                    placeholder="Digite seu telefone" maxlength="15" onkeyup="handlePhone(event)"
-                                    required />
+                                <input id="telephone" class="form-control" name="phone" pattern="\(\d{2}\)\s\d{5}-\d{4}"
+                                    type="tel" inputmode="numeric" autocomplete="tel"
+                                    placeholder="(99) 99999-9999" maxlength="15" required />
                             </div>
                             <div class="input-box input-message">
                                 <label for="menssage">Mensagem</label>
@@ -457,11 +457,25 @@
                                     required></textarea>
                             </div>
                         </fieldset>
-                    </form>
 
-                    <div id="solicite-button">
-                        <button type="submit">Solicitar Atendimento</button>
-                    </div>
+                        <!-- Honeypot anti-spam: invisível para pessoas, bots costumam preencher -->
+                        <div class="form-honeypot" aria-hidden="true">
+                            <label for="website">Não preencha este campo</label>
+                            <input id="website" type="text" name="website" tabindex="-1" autocomplete="off" />
+                        </div>
+
+                        <label class="form-consent">
+                            <input type="checkbox" name="consent" required />
+                            <span>Concordo em compartilhar meus dados para que a FS Engenharia entre em contato
+                                comigo, conforme a LGPD.</span>
+                        </label>
+
+                        <div id="solicite-button">
+                            <button type="submit">Solicitar Atendimento</button>
+                        </div>
+
+                        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+                    </form>
                 </section>
             </section>
         </section>
@@ -493,49 +507,50 @@
             </div>
 
             <!-- Navegação -->
-            <ul class="footer-list">
+            <div class="footer-column">
                 <h3>Navegação</h3>
-                <li class="footer-list-item">
-                    <a href="#home" class="footer-link">Home</a>
-                </li>
-                <li class="footer-list-item">
-                    <a href="#about" class="footer-link">Sobre</a>
-                </li>
-                <li class="footer-list-item">
-                    <a href="#service" class="footer-link">Serviços</a>
-                </li>
-                <li class="footer-list-item">
-                    <a href="#contact" class="footer-link">Contatos</a>
-                </li>
-            </ul>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="#home" class="footer-link">Home</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="#about" class="footer-link">Sobre</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="#service" class="footer-link">Serviços</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="#contact" class="footer-link">Contatos</a>
+                    </li>
+                </ul>
+            </div>
 
             <!-- Contatos -->
-            <ul class="footer-list">
+            <div class="footer-column">
                 <h3>Contatos</h3>
-                <li class="footer-list-item">
-                    <i class="fa-brands fa-whatsapp"></i>
-                    <p href="#" class="footer-link mb-0" id="whatsapp">
-                        (93) 992987-6543 <br />
-                    </p>
-                </li>
-                <li class="footer-list-item">
-                    <i class="fa-regular fa-envelope"></i>
-                    <p href="#" class="footer-link mb-0" id="email">
-                        contato@fsengenharia.com.br
-                    </p>
-                </li>
-                <li class="footer-list-item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p href="#" class="footer-link mb-0" id="mapa">
-                        Rurópolis, Pará - Brasil
-                    </p>
-                </li>
-            </ul>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="#contact" data-whatsapp data-whatsapp-text="Olá! Vim pelo site da FS Engenharia." target="_blank" rel="noopener"
+                            class="footer-link mb-0" id="whatsapp">(93) 99240-0825</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <i class="fa-regular fa-envelope"></i>
+                        <a href="mailto:contato@fsengenharia.com.br" class="footer-link mb-0" id="email">
+                            contato@fsengenharia.com.br
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span class="footer-link mb-0" id="mapa">Rurópolis, Pará - Brasil</span>
+                    </li>
+                </ul>
+            </div>
         </div>
 
         <!-- copyright -->
         <div id="footer_copyright">
-            &#169; 2024 FS Engenharia. Todos os direitos reservados.
+            &#169; <span id="copyright-year">2026</span> FS Engenharia. Todos os direitos reservados.
         </div>
     </footer>
 </body>
