@@ -11,7 +11,7 @@ Registra cada pedido numa planilha do Google Sheets e avisa a empresa por email.
    - **Executar como:** Eu
    - **Quem pode acessar:** Qualquer pessoa
 5. Autorize as permissões (Planilhas e envio de email) quando o Google pedir.
-6. Copie a **URL do app da Web** e cole em `SHEETS_ENDPOINT` no `script/app.js`.
+6. Copie a **URL do app da Web** e cole em `sheetsEndpoint` no `script/config.js`.
 
 > Ao alterar o `Code.gs` depois, é preciso criar uma **nova versão** da implantação
 > (Implantar > Gerenciar implantações > editar > Nova versão); a URL continua a mesma.
