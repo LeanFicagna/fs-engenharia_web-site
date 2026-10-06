@@ -18,9 +18,12 @@ footer {
 	gap: 10px;
 }
 
-#footer_contacts h2 {
+.footer-logo__name {
+	font-family: var(--font-secondary);
 	font-size: 1.5rem;
-	margin: 0;
+	font-weight: 500;
+	line-height: 1.2;
+	color: white;
 }
 
 #footer_contacts img {

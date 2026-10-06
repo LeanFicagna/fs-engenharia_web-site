@@ -5,8 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta name="description" content="Consultoria rural no oeste do Pará especializada em crédito rural, georreferenciamento, licenciamento ambiental e regularização de imóveis, 
-                  oferecendo soluções técnicas seguras para valorizar e desenvolver propriedades rurais." />
+    <meta name="description" content="Consultoria rural no oeste do Pará: crédito rural, georreferenciamento, topografia e regularização fundiária e ambiental de imóveis rurais. Engenharia e soluções técnicas para o campo." />
 
     <meta property="og:title" content="FS Engenharia Rural" />
     <meta property="og:description" content="Consultoria rural, crédito e regularização fundiária." />
@@ -16,20 +15,48 @@
 
     <link rel="canonical" href="https://www.fsengenhariarural.com.br/" />
 
+    <link rel="icon" href="favicon.ico" sizes="any" />
     <link rel="icon" href="favicon.png" type="image/png" />
 
-    <link href="css/pages/home.css" rel="stylesheet" />
+    <!-- Conexão antecipada com os CDNs -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
 
-    <!-- CSS do Swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- CSS do site: um <link> por arquivo, baixados em paralelo (ordem importa) -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/components/navbar.css" />
+    <link rel="stylesheet" href="css/components/button.css" />
+    <link rel="stylesheet" href="css/components/hero.css" />
+    <link rel="stylesheet" href="css/components/stats-strip.css" />
+    <link rel="stylesheet" href="css/components/about-section.css" />
+    <link rel="stylesheet" href="css/components/value-card.css" />
+    <link rel="stylesheet" href="css/components/who-we-are.css" />
+    <link rel="stylesheet" href="css/components/cta-section.css" />
+    <link rel="stylesheet" href="css/components/services.css" />
+    <link rel="stylesheet" href="css/components/team-projects.css" />
+    <link rel="stylesheet" href="css/components/video.css" />
+    <link rel="stylesheet" href="css/components/projects.css" />
+    <link rel="stylesheet" href="css/components/contact-section.css" />
+    <link rel="stylesheet" href="css/components/contact-highlight.css" />
+    <link rel="stylesheet" href="css/components/contact-form.css" />
+    <link rel="stylesheet" href="css/components/site-footer.css" />
+
+    <!-- CSS do Swiper (o carrossel fica abaixo da primeira tela, então carrega sem bloquear) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print"
+        onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /></noscript>
 
     <!-- JS do Swiper -->
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
+    <!-- Font Awesome (ícones do rodapé e do play): carrega sem bloquear a renderização -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" /></noscript>
 
     <script defer src="script/config.js"></script>
     <script defer src="script/layout.js"></script>
@@ -38,7 +65,7 @@
     <script defer src="script/video.js"></script>
     <script defer src="script/services-carousel.js"></script>
 
-    <title>FS Engenharia Rural - Consultoria, Crédito e Regularização</title>
+    <title>FS Engenharia Rural | Consultoria Rural e Georreferenciamento</title>
 </head>
 
 <body>
@@ -47,7 +74,7 @@
         <nav class="navbar">
             <div class="navbar-container">
                 <a href="#" class="navbar-brand">
-                    <img src="img/logo/fs-engenharia-horizontal.png" alt="FS Engenharia" />
+                    <img src="img/logo/fs-engenharia-horizontal.png" width="132" height="37" alt="FS Engenharia" />
                 </a>
 
                 <div class="nav-container-flex">
@@ -105,8 +132,8 @@
 
                 <!-- Texto institucional -->
                 <div class="about-section__content">
-                    <h2>Sobre</h2>
-                    <h3>FS Engenharia</h3>
+                    <h2>Sobre a FS Engenharia Rural</h2>
+                    <h3>Consultoria rural no oeste do Pará</h3>
 
                     <p>
                         A FS Engenharia é uma empresa especializada em consultoria rural, com atuação estratégica
@@ -178,7 +205,7 @@
             <div class="who-we-are__layout">
 
                 <div class="who-we-are__image">
-                    <img src="img/equipe/fachada.jpg" sizes="(max-width: 768px) 100vw, 50vw"
+                    <img src="img/equipe/fachada.webp" width="450" height="600" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw"
                         alt="Fachada da FS Engenharia" />
                 </div>
 
@@ -234,14 +261,14 @@
 
         <section class="services-section" id="service">
             <div class="services-section__header">
-                <h2>Nossos serviços</h2>
+                <h2>Nossos serviços de consultoria rural</h2>
             </div>
 
             <div class="services-carousel swiper">
                 <div class="services-carousel__wrapper swiper-wrapper">
 
                     <article class="service-card swiper-slide" data-service="georreferenciamento">
-                        <img src="./img/servicos/georreferenciamento.png" alt="Georreferenciamento de imóveis rurais" />
+                        <img src="./img/servicos/georreferenciamento.webp" width="270" height="135" loading="lazy" decoding="async" alt="Georreferenciamento de imóveis rurais" />
 
                         <div class="service-card__content">
                             <h3>Georreferenciamento de Imóveis</h3>
@@ -254,7 +281,7 @@
                     </article>
 
                     <article class="service-card swiper-slide" data-service="credito">
-                        <img src="./img/servicos/credito-rural.jpg" alt="Consultoria em crédito rural para produtores" />
+                        <img src="./img/servicos/credito-rural.webp" width="270" height="135" loading="lazy" decoding="async" alt="Consultoria em crédito rural para produtores" />
 
                         <div class="service-card__content">
                             <h3>Crédito Rural</h3>
@@ -267,7 +294,7 @@
                     </article>
 
                     <article class="service-card swiper-slide" data-service="topografia">
-                        <img src="./img/servicos/topografia.jpg" alt="Levantamento topográfico em área rural" />
+                        <img src="./img/servicos/topografia.webp" width="270" height="135" loading="lazy" decoding="async" alt="Levantamento topográfico em área rural" />
 
                         <div class="service-card__content">
                             <h3>Topografia</h3>
@@ -280,7 +307,7 @@
                     </article>
 
                     <article class="service-card swiper-slide" data-service="lar">
-                        <img src="./img/servicos/lar.jpg" alt="Regularização fundiária e ambiental de imóveis rurais (LAR)" />
+                        <img src="./img/servicos/lar.webp" width="270" height="135" loading="lazy" decoding="async" alt="Regularização fundiária e ambiental de imóveis rurais (LAR)" />
 
                         <div class="service-card__content">
                             <h3>LAR</h3>
@@ -303,14 +330,14 @@
             <div class="team-projects-section__layout">
 
                 <div class="section-header">
-                    <h2>Nossa Equipe e Projetos</h2>
+                    <h2>Nossa equipe de engenharia e projetos no campo</h2>
                 </div>
 
                 <!-- BLOCO EQUIPE -->
                 <div class="team-block">
 
                     <article class="team-highlight">
-                        <img src="./img/equipe/equipe.webp" alt="Equipe FS Engenharia no campo" />
+                        <img src="./img/equipe/equipe.webp" width="1000" height="1000" loading="lazy" decoding="async" alt="Equipe FS Engenharia no campo" />
 
                         <div class="team-highlight__content">
                             <p>
@@ -334,28 +361,28 @@
                             <!-- TODO: trocar cada href pelo link da postagem no Instagram -->
                             <a class="insta-card" href="https://www.instagram.com/fsconsultoriarural" target="_blank"
                                 rel="noopener">
-                                <img src="./img/equipe/dia-a-dia-1.webp"
+                                <img src="./img/equipe/dia-a-dia-1.webp" width="800" height="600" loading="lazy" decoding="async"
                                     alt="Equipe da FS Engenharia em visita técnica a uma plantação de cacau">
                                 <span class="insta-card__title">Visita técnica em lavoura de cacau</span>
                             </a>
 
                             <a class="insta-card" href="https://www.instagram.com/fsconsultoriarural" target="_blank"
                                 rel="noopener">
-                                <img src="./img/equipe/dia-a-dia-2.webp"
+                                <img src="./img/equipe/dia-a-dia-2.webp" width="800" height="600" loading="lazy" decoding="async"
                                     alt="Trabalhadores separando cacau colhido no campo">
                                 <span class="insta-card__title">Colheita do cacau</span>
                             </a>
 
                             <a class="insta-card" href="https://www.instagram.com/fsconsultoriarural" target="_blank"
                                 rel="noopener">
-                                <img src="./img/equipe/dia-a-dia-3.webp"
+                                <img src="./img/equipe/dia-a-dia-3.webp" width="800" height="800" loading="lazy" decoding="async"
                                     alt="Viveiro de mudas de cacau sob tela de sombreamento">
                                 <span class="insta-card__title">Viveiro de mudas</span>
                             </a>
 
                             <a class="insta-card" href="https://www.instagram.com/fsconsultoriarural" target="_blank"
                                 rel="noopener">
-                                <img src="./img/equipe/dia-a-dia-4.webp"
+                                <img src="./img/equipe/dia-a-dia-4.webp" width="800" height="600" loading="lazy" decoding="async"
                                     alt="Equipe da FS Engenharia em atendimento com notebook">
                                 <span class="insta-card__title">Atendimento ao produtor</span>
                             </a>
@@ -401,22 +428,22 @@
                     </div>
 
                     <div class="projects-grid">
-                        <img src="./img/trabalhos/campo-1.webp" data-service="georreferenciamento" alt="Trabalho de Georreferenciamento realizado em campo pela FS Engenharia">
-                        <img src="./img/trabalhos/campo-2.webp" data-service="georreferenciamento" alt="Trabalho de Georreferenciamento realizado em campo pela FS Engenharia">
-                        <img src="./img/trabalhos/campo-3.webp" data-service="georreferenciamento" alt="Trabalho de Georreferenciamento realizado em campo pela FS Engenharia">
-                        <img src="./img/trabalhos/campo-1.webp" data-service="georreferenciamento" alt="Trabalho de Georreferenciamento realizado em campo pela FS Engenharia">
-                        <img src="./img/trabalhos/campo-2.webp" data-service="credito" alt="Trabalho de Crédito Rural realizado em campo pela FS Engenharia">
-                        <img src="./img/trabalhos/campo-3.webp" data-service="credito" alt="Trabalho de Crédito Rural realizado em campo pela FS Engenharia">
-                        <img src="./img/trabalhos/campo-1.webp" data-service="credito" alt="Trabalho de Crédito Rural realizado em campo pela FS Engenharia">
-                        <img src="./img/trabalhos/campo-2.webp" data-service="credito" alt="Trabalho de Crédito Rural realizado em campo pela FS Engenharia">
-                        <img src="./img/trabalhos/campo-3.webp" data-service="topografia" alt="Trabalho de Topografia realizado em campo pela FS Engenharia">
-                        <img src="./img/trabalhos/campo-1.webp" data-service="topografia" alt="Trabalho de Topografia realizado em campo pela FS Engenharia">
-                        <img src="./img/trabalhos/campo-2.webp" data-service="topografia" alt="Trabalho de Topografia realizado em campo pela FS Engenharia">
-                        <img src="./img/trabalhos/campo-3.webp" data-service="topografia" alt="Trabalho de Topografia realizado em campo pela FS Engenharia">
-                        <img src="./img/trabalhos/campo-1.webp" data-service="lar" alt="Trabalho de LAR realizado em campo pela FS Engenharia">
-                        <img src="./img/trabalhos/campo-3.webp" data-service="lar" alt="Trabalho de LAR realizado em campo pela FS Engenharia">
-                        <img src="./img/trabalhos/campo-2.webp" data-service="lar" alt="Trabalho de LAR realizado em campo pela FS Engenharia">
-                        <img src="./img/trabalhos/campo-1.webp" data-service="lar" alt="Trabalho de LAR realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-1.webp" width="700" height="945" loading="lazy" decoding="async" data-service="georreferenciamento" alt="Trabalho de Georreferenciamento realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-2.webp" width="700" height="588" loading="lazy" decoding="async" data-service="georreferenciamento" alt="Trabalho de Georreferenciamento realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-3.webp" width="700" height="495" loading="lazy" decoding="async" data-service="georreferenciamento" alt="Trabalho de Georreferenciamento realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-1.webp" width="700" height="945" loading="lazy" decoding="async" data-service="georreferenciamento" alt="Trabalho de Georreferenciamento realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-2.webp" width="700" height="588" loading="lazy" decoding="async" data-service="credito" alt="Trabalho de Crédito Rural realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-3.webp" width="700" height="495" loading="lazy" decoding="async" data-service="credito" alt="Trabalho de Crédito Rural realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-1.webp" width="700" height="945" loading="lazy" decoding="async" data-service="credito" alt="Trabalho de Crédito Rural realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-2.webp" width="700" height="588" loading="lazy" decoding="async" data-service="credito" alt="Trabalho de Crédito Rural realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-3.webp" width="700" height="495" loading="lazy" decoding="async" data-service="topografia" alt="Trabalho de Topografia realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-1.webp" width="700" height="945" loading="lazy" decoding="async" data-service="topografia" alt="Trabalho de Topografia realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-2.webp" width="700" height="588" loading="lazy" decoding="async" data-service="topografia" alt="Trabalho de Topografia realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-3.webp" width="700" height="495" loading="lazy" decoding="async" data-service="topografia" alt="Trabalho de Topografia realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-1.webp" width="700" height="945" loading="lazy" decoding="async" data-service="lar" alt="Trabalho de LAR realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-3.webp" width="700" height="495" loading="lazy" decoding="async" data-service="lar" alt="Trabalho de LAR realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-2.webp" width="700" height="588" loading="lazy" decoding="async" data-service="lar" alt="Trabalho de LAR realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-1.webp" width="700" height="945" loading="lazy" decoding="async" data-service="lar" alt="Trabalho de LAR realizado em campo pela FS Engenharia">
                     </div>
 
                     <p class="projects-empty" hidden></p>
@@ -442,7 +469,7 @@
             <section class="contact-card">
                 <aside class="contact-highlight">
                     <figure class="highlight-image">
-                        <img src="img/mapa-brasil.svg" alt="Mapa do brasil" />
+                        <img src="img/mapa-brasil.svg" width="220" height="194" loading="lazy" decoding="async" alt="Mapa do brasil" />
                     </figure>
                     <div class="highlight-content">
                         <h3>Atuamos em todo o Brasil</h3>
@@ -547,8 +574,8 @@
         <div id="footer_content">
             <div id="footer_contacts">
                 <div class="footer-logo">
-                    <img src="./img/logo/fs-engenharia-minimalista.png" alt="Fs Engenharia-logo" />
-                    <h2>Engenharia</h2>
+                    <img src="./img/logo/fs-engenharia-minimalista.png" width="36" height="40" loading="lazy" decoding="async" alt="Fs Engenharia-logo" />
+                    <span class="footer-logo__name">Engenharia</span>
                 </div>
                 <p>
                     Mais que consultoria, somos parceiros do produtor rural na busca por

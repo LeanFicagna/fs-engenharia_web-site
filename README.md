@@ -22,7 +22,6 @@ index.html            página única
 robots.txt, sitemap.xml
 CNAME                 domínio personalizado
 css/
-  pages/home.css      ponto de entrada: importa reset, base, variáveis e componentes
   reset.css, base.css, variables.css
   components/         um arquivo por seção (navbar, hero, services, contact-form...)
 script/
@@ -54,16 +53,18 @@ Enquanto `sheetsEndpoint` estiver vazio, o formulário só abre o WhatsApp e nã
 ## Convenções
 
 - **Imagens:** nomes em minúsculas, com hífen e sem acento (`dia-a-dia-1.webp`), dentro da subpasta do uso.
-  Prefira WebP e comprima antes de subir; fotos grandes pesam no carregamento.
-- **CSS:** um arquivo por seção em `css/components/`, importado em `components.css`. Cores da marca como variável
+  Use WebP, redimensione para o tamanho em que aparecem (o dobro, para telas de alta densidade) e informe
+  `width` e `height` no `<img>`. Abaixo da primeira tela, use `loading="lazy"`.
+- **CSS:** um arquivo por seção em `css/components/`, com um `<link>` próprio no `index.html` (a ordem importa;
+  não use `@import`, que baixa os arquivos em fila). Cores da marca como variável
   (`--color-logo-green`, `--color-neutral-10`) em vez de valor solto.
 - **Variantes de layout:** para testar uma ideia visual, crie uma página separada (por exemplo `xx_nome.html`) e só aplique
   no `index.html` quando aprovada. Não deixe essas páginas no repositório.
 
 ## Publicação
 
-O site é servido pelo GitHub Pages a partir da branch `main`. O trabalho do dia a dia fica na `develop`;
-ao publicar, faça o merge da `develop` na `main` e envie.
+O site é servido pelo GitHub Pages. Confira em *Settings > Pages* do repositório qual branch está configurada
+como origem; é nela que cada `push` publica. O trabalho do dia a dia fica na `develop`.
 
 ## Pendências conhecidas
 
