@@ -68,3 +68,8 @@ h6 {
     font-size: 2.5rem;
   }
 }
+
+/* Elementos com o atributo hidden somem mesmo quando outra regra define display */
+[hidden] {
+  display: none !important;
+}
