@@ -22,21 +22,21 @@
 }
 
 .hero-slides span:nth-child(1) {
-  background-image: url("../../img/hero/fazenda-lg.jpg");
+  background-image: url("../../img/hero/fazenda-lg.webp");
 }
 
 .hero-slides span:nth-child(2) {
-  background-image: url("../../img/hero/credito-rural-lg.jpg");
+  background-image: url("../../img/hero/credito-rural-lg.webp");
   animation-delay: 5s;
 }
 
 .hero-slides span:nth-child(3) {
-  background-image: url("../../img/hero/geo-referenciamento-lg.jpg");
+  background-image: url("../../img/hero/geo-referenciamento-lg.webp");
   animation-delay: 10s;
 }
 
 .hero-slides span:nth-child(4) {
-  background-image: url("../../img/hero/plantacao-cacau-lg.jpg");
+  background-image: url("../../img/hero/plantacao-cacau-lg.webp");
   animation-delay: 15s;
 }
 

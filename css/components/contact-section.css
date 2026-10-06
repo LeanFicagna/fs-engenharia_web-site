@@ -6,7 +6,7 @@
 	padding: 2rem 0;
 	background:
 		linear-gradient(rgba(23, 23, 23, 0), rgba(23, 23, 23, 0.9)),
-		url("../../img/slide-milharal-lg.png");
+		url("../../img/slide-milharal-lg.webp");
 	background-size: cover;
 }
 
@@ -36,7 +36,7 @@
 	flex: 1;
 	background:
 		linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255)),
-		url("../../img/slide-mapeamento-lg.png");
+		url("../../img/slide-mapeamento-lg.webp");
 	background-size: cover;
 }
 
@@ -206,14 +206,14 @@
 
 @media (min-width: 540px) {
 	.contact-highlight {
-		background-image: url("../../img/slide-mapeamento-lg.png");
+		background-image: url("../../img/slide-mapeamento-lg.webp");
 		padding: 10px;
 		justify-items: center;
 		align-items: center;
 		flex: 1;
 		background:
 			linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255)),
-			url("../../img/slide-mapeamento-lg.png");
+			url("../../img/slide-mapeamento-lg.webp");
 		background-size: cover;
 	}
 
@@ -302,7 +302,7 @@
 		align-items: center;
 		background:
 			linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255)),
-			url("../../img/slide-mapeamento-lg.png");
+			url("../../img/slide-mapeamento-lg.webp");
 		background-size: cover;
 	}
 
