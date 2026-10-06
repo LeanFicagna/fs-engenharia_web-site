@@ -23,7 +23,7 @@
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: url("../../img/lavoura-de-milho.jpg") center top / cover no-repeat;
+  background: url("../../img/fundos/lavoura-de-milho.jpg") center top / cover no-repeat;
   transform: scaleX(-1);
 }
 
