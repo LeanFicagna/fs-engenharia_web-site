@@ -1,0 +1,83 @@
+/* SEÇÃO SERVIÇOS */
+.services-section {
+    padding: 1rem 1rem;
+}
+
+.services-section__header {
+    max-width: 1200px;
+    margin: 0 auto 1rem;
+}
+
+.services-section__header h2 {
+    color: black;
+}
+
+/* SWIPER CONTAINER */
+.services-carousel {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+}
+
+/* CARD DE SERVIÇO */
+.service-card {
+    background: white;
+    border: 1px solid var(--color-neutral-10);
+    border-radius: 1rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+}
+
+/* IMAGEM */
+.service-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+}
+
+.services-carousel .swiper-slide {
+    height: auto;
+}
+
+/* CONTEÚDO */
+.service-card__content {
+    padding: 1.25rem;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 0.75rem;
+}
+
+/* TEXTO */
+.service-card__content h3 {
+    color: var(--color-neutral-10);
+}
+
+.service-card__content p {
+    color: var(--color-neutral-10);
+}
+/* SWIPER CONTROLES */
+.services-carousel .swiper-pagination-bullet {
+    margin-top: 50px;
+    width: 12px;
+    height: 12px;
+    background: var(--brand-primary, #00633c);
+    opacity: 0.4;
+}
+
+.services-carousel .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.services-carousel .swiper-button-next,
+.services-carousel .swiper-button-prev {
+    color: var(--brand-primary, #00633c);
+}

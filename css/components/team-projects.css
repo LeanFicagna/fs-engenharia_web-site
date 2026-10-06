@@ -1,0 +1,305 @@
+
+/* Bloco cinza de largura total, com as bordas verde-lima da barra superior */
+.team-projects-section {
+  margin: 2rem 0 0;
+  padding: 2.5rem 1rem;
+  background: var(--color-neutral-10);
+  border-top: 3px solid var(--color-logo-green);
+  border-bottom: 3px solid var(--color-logo-green);
+}
+
+.team-projects-section__layout {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.section-header {
+  margin-bottom: 1rem;
+}
+
+
+#team-projects h2,
+#team-projects h3,
+#team-projects h4,
+#team-projects h5,
+#team-projects p {
+  color: white;
+}
+
+#team-projects strong {
+  color: var(--color-logo-green);
+  font-weight: 600;
+}
+
+/* Botões principais: verde-lima do CTA */
+#team-projects .btn--success {
+  background: var(--color-logo-green);
+  color: white;
+  border: 2px solid var(--color-logo-green);
+}
+
+#team-projects .btn--success:hover {
+  background: #68a818;
+  border-color: #68a818;
+}
+
+/* "Ver mais no Instagram" e "Entender qual serviço eu preciso": iguais ao botão da barra superior */
+#team-projects .team-gallery .btn--success,
+#team-projects .btn--outline {
+  background: transparent;
+  color: var(--color-logo-green);
+  border: 2px solid var(--color-logo-green);
+  padding: 0.4rem 0.9rem !important;
+}
+
+#team-projects .team-gallery .btn--success:hover,
+#team-projects .btn--outline:hover {
+  background: var(--color-logo-green);
+  color: var(--color-neutral-10);
+  border-color: var(--color-logo-green);
+}
+
+/* BLOCO EQUIPE */
+
+.team-block {
+  display: grid;
+  grid-template-columns: 11fr 8fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.team-highlight {
+  display: grid;
+  gap: 1rem;
+}
+
+.team-highlight img {
+  width: 100%;  
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.team-highlight__content {
+  display: grid;
+  gap: 1rem;
+}
+
+.team-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.insta-card {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 0.6rem;
+}
+
+.insta-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.insta-card__title {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  text-align: center;
+  font-weight: 600;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.insta-card:hover .insta-card__title,
+.insta-card:focus-visible .insta-card__title {
+  opacity: 1;
+}
+
+.insta-card:hover img,
+.insta-card:focus-visible img {
+  transform: scale(1.06);
+}
+
+/* Sem hover (celular): título sempre visível numa faixa embaixo */
+@media (hover: none) {
+  .insta-card__title {
+    inset: auto 0 0 0;
+    opacity: 1;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.8rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+  }
+}
+
+/* DIVIDER */
+
+/* Linhas internas iguais à borda da barra superior */
+.section-divider {
+  border: none;
+  border-top: 3px solid var(--color-logo-green);
+  margin: 1rem 0;
+}
+
+/* VÍDEO DE APRESENTAÇÃO */
+
+.video-block {
+  width: 100%;
+  padding: 1.5rem 0;
+}
+
+.video-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: #000;
+}
+
+.video-frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Botão de play sobre a capa */
+.video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5rem;
+  height: 5rem;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-logo-green);
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.video-play i {
+  margin-left: 0.2rem;
+  color: white;
+}
+
+.video-play:hover {
+  background: #68a818;
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+/* BLOCO PROJETOS */
+
+.projects-block h4 {
+  margin-bottom: 1.5rem;
+}
+
+.projects-menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.projects-menu button {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  padding: 0.4rem 0.9rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--color-logo-green);
+  background: transparent;
+  color: var(--color-logo-green);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.projects-menu button:hover {
+  background: var(--color-logo-green);
+  color: var(--color-neutral-10);
+}
+
+/* Serviço selecionado: igual ao botão do CTA */
+.projects-menu button.is-active {
+  background: var(--color-logo-green);
+  color: white;
+}
+
+.projects-menu button.is-active:hover {
+  background: #68a818;
+  border-color: #68a818;
+  color: white;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.projects-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 0.8rem;
+}
+
+/* Mensagem para serviços sem fotos publicadas */
+.projects-empty {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px dashed var(--color-logo-green);
+  border-radius: 0.8rem;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+  .team-projects-section {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .team-block {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-highlight img {
+    height: 280px;
+  }
+}

@@ -1,0 +1,115 @@
+.hero {
+  position: relative;
+  min-height: calc(100vh - var(--navbar-height));
+  overflow: hidden;
+
+  /* Conteúdo embaixo à esquerda, alinhado à coluna de 1200px */
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+/* Slides empilhados com fade entre eles (ciclo de 20s, 5s por imagem) */
+.hero-slides span {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation: heroFade 20s infinite ease-in-out;
+}
+
+.hero-slides span:nth-child(1) {
+  background-image: url("../../img/hero/fazenda.webp");
+}
+
+.hero-slides span:nth-child(2) {
+  background-image: url("../../img/hero/credito-rural.webp");
+  animation-delay: 5s;
+}
+
+.hero-slides span:nth-child(3) {
+  background-image: url("../../img/hero/geo-referenciamento.webp");
+  animation-delay: 10s;
+}
+
+.hero-slides span:nth-child(4) {
+  background-image: url("../../img/hero/plantacao-cacau.webp");
+  animation-delay: 15s;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    0deg,
+    rgba(23, 23, 23, 0.95) 0%,
+    rgba(23, 23, 23, 0.55) 55%,
+    rgba(23, 23, 23, 0.3) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  max-width: 720px;
+  margin-left: max(1rem, calc((100vw - 1200px) / 2));
+  padding: 0 1rem 5rem;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  border-left: 4px solid var(--color-logo-green);
+  padding-left: 1rem;
+}
+
+/* Botão do hero: verde-lima da logo, sem transparência */
+.hero .btn--primary {
+  background: var(--color-logo-green);
+  color: white;
+}
+
+.hero .btn--primary:hover {
+  background: #68a818;
+}
+
+.hero-content h4 {
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@keyframes heroFade {
+  0% {
+    opacity: 0;
+  }
+
+  5%,
+  25% {
+    opacity: 1;
+  }
+
+  30%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slides span {
+    animation: none;
+  }
+
+  .hero-slides span:nth-child(1) {
+    opacity: 1;
+  }
+}

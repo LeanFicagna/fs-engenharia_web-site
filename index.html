@@ -2,447 +2,613 @@
 <html lang="pt-br">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="description" content="Especialistas em crédito rural, georreferenciamento e consultoria agrícola. Atendemos produtores em todo o Brasil com soluções seguras e eficientes.">
+    <meta name="description" content="Consultoria rural no oeste do Pará especializada em crédito rural, georreferenciamento, licenciamento ambiental e regularização de imóveis, 
+                  oferecendo soluções técnicas seguras para valorizar e desenvolver propriedades rurais." />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta property="og:title" content="FS Engenharia Rural" />
+    <meta property="og:description" content="Consultoria rural, crédito e regularização fundiária." />
+    <meta property="og:image" content="https://www.fsengenhariarural.com.br/img/logo/fs-engenharia-horizontal.png" />
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta property="og:type" content="website" />
 
-  <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="canonical" href="https://www.fsengenhariarural.com.br/" />
 
-  <link href="css/style.css" rel="stylesheet">
-  <title>FS Engenharia - Serviços de Engenharia Rural</title>
+    <link rel="icon" href="favicon.png" type="image/png" />
+
+    <link href="css/pages/home.css" rel="stylesheet" />
+
+    <!-- CSS do Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- JS do Swiper -->
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script defer src="script/app.js"></script>
+
+    <title>FS Engenharia Rural - Consultoria, Crédito e Regularização</title>
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg menu-black">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img height="20px" src="img/fs-engenharia-logo.png"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <header>
 
-        <div class="collapse navbar-collapse w-100 flex-column justify-content-end align-items-end text-end"
-          id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sobre</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contatos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Serviços</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="#" class="navbar-brand">
+                    <img src="img/logo/fs-engenharia-horizontal.png" alt="FS Engenharia" />
+                </a>
 
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="overlay"></div>
-          <img
-            src="img/slide-mapeamento-lg.png"
-            srcset="
-              img/slide-mapeamento-sm.png 750w,
-              img/slide-mapeamento-md.png 1200w,
-              img/slide-mapeamento-lg.png 1500w
-            "
-            sizes="
-              (max-width: 576px) 100vw,
-              (max-width: 992px) 100vw,
-              1500px
-            "
-            class="d-block w-100"
-            alt="Mapeamento técnico de propriedade rural com uso de tecnologia de precisão para aumentar segurança, eficiência e produtividade"
-          >
-          <div class="carousel-caption">
-            <h1 class="fw-bold">Precisão que impulsiona sua produção</h1>
-            <p>Mapeamos sua terra com tecnologia e experiência para você produzir com segurança, eficiência e valor.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="overlay"></div>
-          <img
-            src="img/slide-credito-rural-lg.png"
-            srcset="
-              img/slide-credito-rural-sm.png 750w,
-              img/slide-credito-rural-md.png 1200w,
-              img/slide-credito-rural-lg.png 1500w
-            "
-            sizes="
-              (max-width: 576px) 100vw,
-              (max-width: 992px) 100vw,
-              1500px
-            "
-            class="d-block w-100"
-            alt="Consultoria em crédito rural apoiando produtores no planejamento e acesso a financiamento para investimentos no campo"
-          >
-          <div class="carousel-caption">
-            <h1 class="fw-bold">Crédito certo, na hora certa</h1>
-            <p>Conte com nossa consultoria para acessar linhas de crédito e investir com tranquilidade no seu negócio
-              rural.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="overlay"></div>
-          <img
-            src="img/slide-mapeamento-lg.png"
-            srcset="
-              img/slide-mapeamento-sm.png 750w,
-              img/slide-mapeamento-md.png 1200w,
-              img/slide-mapeamento-lg.png 1500w
-            "
-            sizes="
-              (max-width: 576px) 100vw,
-              (max-width: 992px) 100vw,
-              1500px
-            "
-            class="d-block w-100"
-            alt="Georreferenciamento de imóvel rural para regularização fundiária, valorização da terra e geração de novas oportunidades"
-          >
-          <div class="carousel-caption">
-            <h1 class="fw-bold">Seu imóvel regularizado, seu futuro garantido</h1>
-            <p>Georreferenciamento completo para dar valor, segurança e oportunidades à sua propriedade rural.</p>
-
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-        <div class="radius-bottom">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </div>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-        <div class="radius-bottom">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </div>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </header>
-
-  <main>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="my-5 md-5 mx-5">
-            <h1>Sobre</h1>
-            <h2>FS Engenharia</h2>
-            <p>
-              A F S Engenharia é uma empresa especializada em consultoria rural, com atuação estratégica na região oeste
-              do Pará, especialmente no município de Rurópolis e arredores. Nascida da necessidade de apoiar o
-              desenvolvimento sustentável no campo, a empresa consolidou-se como uma parceira fundamental de agricultores
-              familiares, médios e grandes produtores, além de comunidades tradicionais, como os quilombolas.
-            </p>
-
-            <p>
-              Com base em um plano de negócios sólido e já implementado, a F S Engenharia vem transformando propriedades
-              rurais em empreendimentos prósperos, oferecendo soluções inovadoras, técnicas e personalizadas. Entre os
-              serviços prestados, estão a elaboração de projetos para acesso a crédito rural, assistência técnica nas
-              áreas de agricultura e pecuária, análise e correção de solos, regularização fundiária e projetos de
-              licenciamento ambiental para atividades como a piscicultura.
-            </p>
-
-            <p>
-              Nosso compromisso é contribuir para o crescimento do agronegócio local com responsabilidade social e
-              ambiental, priorizando a qualidade no atendimento, a ética nas relações e o aprimoramento contínuo de nossa
-              equipe. Com um time de profissionais experientes e atualizados, utilizamos ferramentas modernas de análise
-              de dados para ajudar nossos clientes a tomar decisões estratégicas e assertivas.
-            </p>
-
-            <p>
-              Acreditamos na força do campo e no seu potencial transformador. Por isso, trabalhamos todos os dias para
-              impulsionar a produtividade, rentabilidade e sustentabilidade das propriedades rurais da nossa região.
-            </p>
-
-          </div>
-        </div>
-        <div class="col-md-6 container-valores">
-          <div class="my-5 mx-md-5 mx-4">
-            <div class="px-4 py-4 valores">
-              <h2>Missão</h2>
-              <p>Nossa missão é prestar consultoria aos produtores rurais da região, promovendo o
-                crescimento e o desenvolvimento de suas propriedades tornando-as mais competitivas
-                em suas atividades por meio de soluções inovadoras e sustentáveis, respeitando as
-                pessoas e o meio ambiente.
-              </p>
-              </p>
-            </div>
-            <div class="px-4 py-4 visao">
-              <h2>Valores</h2>
-              <p>Sustentabilidade e consciência de nossas responsabilidades sociais e com o meio ambiente; humanidade;
-                comprometimento; ética e respeito para com nossos colaboradores, clientes e parceiros; buscando novas
-                metas e desafios tanto para si quanto para a empresa.
-              </p>
-              <p>Buscando continuamente o desenvolvimento profissional investindo no seu autodesenvolvimento e
-                envolvendo-se em processos de inovação.
-              </p>
-            </div>
-            <div class="px-4 py-4 missao">
-              <h2>Visão</h2>
-              <p>
-                Ser reconhecida nacionalmente como referência em excelência na prestação de serviços de consultoria rural,
-                destacando-se pela qualidade, inovação e comprometimento com os resultados.
-              </p>
-              <p>
-                Nosso propósito é construir parcerias sólidas e duradouras,
-                promovendo o desenvolvimento sustentável, a valorização do produtor rural
-                e o fortalecimento contínuo da fronteira agrícola brasileira.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container my-5 p-4 mx-auto">
-        <div class="rounded-4 p-md-5 p-4 mx-md-5 text-white section-especialista">
-          <div class="w-lg-75">
-            <h2 class="fw-bold mb-3">Fale com um especialista</h2>
-            <p class="mb-4">FS Engenharia possui mais de 4 anos de experiência no setor, atuando com excelência em 
-              topografia, consultoria técnica e apoio especializado para acesso ao crédito rural. Com uma equipe 
-              capacitada e conhecimento do campo, ajudamos produtores a conquistar recursos e a tomar decisões 
-              seguras para o crescimento sustentável de suas propriedades.</p>
-          </div>
-          <a href="#contato" class="btn btn-warning text-white rounded-pill">
-            <h4 class="fw-bold px-4 pt-2 ">Fale com um especialista </h4>
-          </a>
-        </div>
-      </div>
-      
-
-      <div class="mx-md-5 mx-4">
-        <h1 class="mb-4">Nossos serviços</h1>
-        <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-12 mb-5">
-            <div class="card card-service">
-              <img class="card-img-top" src="img/geo.jpeg" alt="Imagem representando georreferenciamento de imóveis">
-              <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
-                <h5 class="card-text">Georreferenciamento de Imóveis</h5>
-                <p class="card-description">
-                  Levantamento topográfico preciso para certificação de imóveis rurais junto aos órgãos competentes,
-                  atendendo às exigências do Incra.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 mb-5">
-            <div class="card card-service">
-              <img class="card-img-top" src="img/geo.jpeg" alt="Imagem representando crédito rural">
-              <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
-                <h5 class="card-text">Crédito Rural</h5>
-                <p class="card-description">
-                  Elaboração de projetos técnicos para acesso a linhas de crédito rural, fomentando o crescimento
-                  sustentável da produção agropecuária.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 mb-5">
-            <div class="card card-service">
-              <img class="card-img-top" src="img/geo.jpeg" alt="Imagem representando serviço de topografia">
-              <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
-                <h5 class="card-text">Topografia</h5>
-                <p class="card-description">
-                  Serviços de medição, levantamento planialtimétrico e demarcação de terrenos, essenciais para
-                  planejamento e gestão rural eficiente.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 mb-5">
-            <div class="card card-service">
-              <img class="card-img-top" src="img/geo.jpeg" alt="Imagem representando o serviço LAR">
-              <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
-                <h5 class="card-text">LAR</h5>
-                <p class="card-description">
-                  Regularização fundiária completa com foco na legalização de imóveis rurais e acesso às políticas
-                  públicas de desenvolvimento do campo.
-                </p>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-      </div>
-    </div>
-
-<!--SECAO ENTRE EM CONTATO-->
-    <div class="container-form">
-        <div class="container-formulario">
-            <div class="form-content-left">
-                <div class="form-image">
-                    <img src="img/mapa-brasil.svg" alt="mapa do brasil">
-                </div>
-                <div class="form-sobre">
-                    <h3>Atuamos em todo o Brasil</h3>
-                    <p>Leve a excelência da FS Engenharia para sua propriedade, onde quer que ela esteja.</p>
-                </div>
-            </div>
-
-            <div class="form">
-                <form action="#">
-                    <div class="form-header">
-                        <div class="title">
-                            <h3>Entre em contato conosco</h3>
-                        </div>
+                <div class="nav-container-flex">
+                    <div class="nav-btn-container">
+                        <a href="#contact" data-whatsapp data-whatsapp-text="Olá! Gostaria de solicitar um orçamento." target="_blank" rel="noopener" class="btn btn--primary btn-nav-contato">Solicitar Orçamento</a>
                     </div>
-                    <div class="input-group">
-                        <div class="input-box">
-                            <label for="firstName">Nome</label>
-                            <input id="firstName" type="text" name="firstName" placeholder="Digite seu nome" required>
-                        </div>
-                        <div class="input-box">
-                            <label for="telephone">Telefone</label>
-                            <input id="tel" class="form-control" pattern="\(\d{2}\)\s\d{5}-\d{4}" type="tel" placeholder="Digite seu telefone" maxlength="15" onkeyup="handlePhone(event)"required>
-                        </div>
-                        <div class="input-box">
-                            <label for="uf" class="form-label">Estado (UF)</label>
-                            <select name="uf" id="uf" class="form-select" required>
-                                <option value="" selected disabled>Selecione o estado</option>
-                                <option value="AC">Acre (AC)</option>
-                                <option value="AL">Alagoas (AL)</option>
-                                <option value="AP">Amapá (AP)</option>
-                                <option value="AM">Amazonas (AM)</option>
-                                <option value="BA">Bahia (BA)</option>
-                                <option value="CE">Ceará (CE)</option>
-                                <option value="DF">Distrito Federal (DF)</option>
-                                <option value="ES">Espírito Santo (ES)</option>
-                                <option value="GO">Goiás (GO)</option>
-                                <option value="MA">Maranhão (MA)</option>
-                                <option value="MT">Mato Grosso (MT)</option>
-                                <option value="MS">Mato Grosso do Sul (MS)</option>
-                                <option value="MG">Minas Gerais (MG)</option>
-                                <option value="PA">Pará (PA)</option>
-                                <option value="PB">Paraíba (PB)</option>
-                                <option value="PR">Paraná (PR)</option>
-                                <option value="PE">Pernambuco (PE)</option>
-                                <option value="PI">Piauí (PI)</option>
-                                <option value="RJ">Rio de Janeiro (RJ)</option>
-                                <option value="RN">Rio Grande do Norte (RN)</option>
-                                <option value="RS">Rio Grande do Sul (RS)</option>
-                                <option value="RO">Rondônia (RO)</option>
-                                <option value="RR">Roraima (RR)</option>
-                                <option value="SC">Santa Catarina (SC)</option>
-                                <option value="SP">São Paulo (SP)</option>
-                                <option value="SE">Sergipe (SE)</option>
-                                <option value="TO">Tocantins (TO)</option>
-                            </select>
-                        </div>
-                        <div class="input-box">
-                            <label for="city">Cidade</label>
-                            <input id="city" type="text" name="city" placeholder="Cidade" required>
-                        </div>
-                        <div class="input-box input-message">
-                            <label for="menssage">Mensagem</label>
-                            <textarea id="menssage" type="text" name="menssage" placeholder="Qual o seu problema..." required></textarea>
-                        </div>
-                    </div>
-                </form>
 
-                <div id="solicite-button">
-                    <button type="submit">Solicitar Atendimento</button>
+                    <button class="navbar-toggle" aria-label="Abrir menu">☰</button>
+
+                    <ul class="navbar-menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#service">Serviços</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
                 </div>
             </div>
+        </nav>
+
+        <section id="home" class="hero">
+            <div class="hero-slides" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="hero-content">
+                <h1>
+                    Especialistas em regularização fundiária e ambiental de imóveis
+                    rurais, com soluções técnicas seguras e eficientes.
+                </h1>
+                <h4>
+                    Atuação técnica, estratégica e transparente para quem busca
+                    segurança, regularidade e tranquilidade na produção rural.
+                </h4>
+                <a href="#contact" class="btn btn--primary">Fale com um especialista</a>
+            </div>
+        </section>
+
+        <section class="stats-strip">
+            <div class="stats-strip__layout">
+                <div><strong>+4 anos</strong><span>de experiência no setor</span></div>
+                <div><strong>Todo o Brasil</strong><span>atendimento a produtores rurais</span></div>
+                <div><strong>Equipe técnica</strong><span>engenheiros, agrimensores e técnicos especializados</span></div>
+            </div>
+        </section>
+
+    </header>
+
+    <main>
+
+        <section class="about-section" id="about">
+            <div class="about-section__layout">
+
+                <!-- Texto institucional -->
+                <div class="about-section__content">
+                    <h2>Sobre</h2>
+                    <h3>FS Engenharia</h3>
+
+                    <p>
+                        A FS Engenharia é uma empresa especializada em consultoria rural, com atuação estratégica
+                        no oeste do Pará. Atuamos junto a agricultores familiares, médios e grandes produtores,
+                        oferecendo suporte técnico qualificado para promover segurança, regularidade e sustentabilidade
+                        às propriedades rurais, alinhando conhecimento técnico às necessidades de cada realidade no
+                        campo.
+                    </p>
+
+                    <p>
+                        Com planejamento técnico sólido, oferecemos soluções para crédito rural,
+                        regularização fundiária e ambiental, além de assistência técnica em agricultura
+                        e pecuária, garantindo eficiência e segurança em cada etapa.
+                    </p>
+
+                    <p>
+                        Nosso foco está em apoiar decisões estratégicas, aumentar a produtividade e
+                        impulsionar o crescimento sustentável no campo, sempre com transparência,
+                        responsabilidade social e compromisso com resultados concretos e duradouros
+                        para nossos clientes.
+                    </p>
+
+                    <p>
+                        Ao longo de nossa atuação, consolidamos uma relação de confiança com produtores
+                        e parceiros, baseada na proximidade, no conhecimento técnico aplicado à realidade
+                        do campo e na busca constante por soluções eficientes, contribuindo para o
+                        fortalecimento das propriedades e o desenvolvimento da região.
+                    </p>
+
+
+                </div>
+
+                <!-- Cards -->
+                <div class="about-section__cards">
+                    <article class="value-card value-card--top">
+                        <h3>Missão</h3>
+                        <p>
+                            Oferecer consultoria rural estratégica e sustentável, promovendo o
+                            desenvolvimento das propriedades e fortalecendo a competitividade
+                            dos produtores, com respeito às pessoas e ao meio ambiente.
+                        </p>
+                    </article>
+
+                    <article class="value-card value-card--middle">
+                        <h3>Valores</h3>
+                        <p>
+                            Atuamos com ética, comprometimento e responsabilidade socioambiental, valorizando
+                            as pessoas e o trabalho em parceria. Acreditamos na inovação, no planejamento técnico
+                            e na transparência como pilares para gerar confiança e resultados consistentes no campo.
+                        </p>
+
+                    </article>
+
+                    <article class="value-card value-card--bottom">
+                        <h3>Visão</h3>
+                        <p>
+                            Ser referência nacional em consultoria rural, reconhecida pela excelência técnica,
+                            inovação e compromisso com resultados sustentáveis, contribuindo para o
+                            fortalecimento do agronegócio e o desenvolvimento das propriedades rurais.
+                        </p>
+
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="who-we-are" id="quem-somos">
+            <div class="who-we-are__layout">
+
+                <div class="who-we-are__image">
+                    <img src="img/equipe/fachada.jpg" sizes="(max-width: 768px) 100vw, 50vw"
+                        alt="Fachada da FS Engenharia" />
+                </div>
+
+                <div class="who-we-are__content">
+                    <h2>Quem somos</h2>
+                    <p>
+                        A FS Engenharia nasceu com o propósito de transformar desafios do campo em
+                        oportunidades de crescimento sustentável. Atuando estrategicamente no oeste
+                        do Pará, construímos nossa trajetória ao lado de produtores rurais que buscam
+                        segurança, regularização e desenvolvimento estruturado para suas propriedades.
+                    </p>
+
+                    <p>
+                        Somos uma equipe técnica comprometida com a excelência, unindo conhecimento
+                        em engenharia, legislação rural, gestão produtiva e planejamento estratégico.
+                        Nosso trabalho vai além da consultoria: oferecemos direcionamento claro,
+                        embasado e responsável para decisões que impactam diretamente o presente e o
+                        futuro do produtor.
+                    </p>
+
+                    <p>
+                        Acreditamos que o crescimento no campo deve acontecer com base em
+                        planejamento sólido, responsabilidade ambiental e acesso estruturado a
+                        recursos. Por isso, atuamos de forma próxima e personalizada, entendendo a
+                        realidade de cada cliente e propondo soluções que respeitam suas
+                        particularidades e objetivos.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="cta-section" id="especialista">
+            <div class="cta-section__layout">
+                <div class="cta-section__content">
+                    <h2>Fale com um especialista</h2>
+
+                    <p>
+                        FS Engenharia possui mais de 4 anos de experiência no setor, atuando
+                        com excelência em topografia, consultoria técnica e apoio
+                        especializado para acesso ao crédito rural. Com uma equipe
+                        capacitada e conhecimento do campo, ajudamos produtores a conquistar
+                        recursos e a tomar decisões seguras para o crescimento sustentável
+                        de suas propriedades.
+                    </p>
+
+                    <a href="#contact" class="btn btn--primary">
+                        Fale com um especialista
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section" id="service">
+            <div class="services-section__header">
+                <h2>Nossos serviços</h2>
+            </div>
+
+            <div class="services-carousel swiper">
+                <div class="services-carousel__wrapper swiper-wrapper">
+
+                    <article class="service-card swiper-slide" data-service="georreferenciamento">
+                        <img src="./img/servicos/georreferenciamento.png" alt="Georreferenciamento de imóveis rurais" />
+
+                        <div class="service-card__content">
+                            <h3>Georreferenciamento de Imóveis</h3>
+                            <p>
+                                Levantamento topográfico preciso para certificação de
+                                imóveis rurais junto aos órgãos competentes, atendendo
+                                às exigências do Incra.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="service-card swiper-slide" data-service="credito">
+                        <img src="./img/servicos/credito-rural.jpg" alt="Consultoria em crédito rural para produtores" />
+
+                        <div class="service-card__content">
+                            <h3>Crédito Rural</h3>
+                            <p>
+                                Elaboração de projetos técnicos para acesso a linhas de
+                                crédito rural, fomentando o crescimento sustentável da
+                                produção agropecuária.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="service-card swiper-slide" data-service="topografia">
+                        <img src="./img/servicos/topografia.jpg" alt="Levantamento topográfico em área rural" />
+
+                        <div class="service-card__content">
+                            <h3>Topografia</h3>
+                            <p>
+                                Serviços de medição, levantamento planialtimétrico e
+                                demarcação de terrenos, essenciais para planejamento e
+                                gestão rural eficiente.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="service-card swiper-slide" data-service="lar">
+                        <img src="./img/servicos/lar.jpg" alt="Regularização fundiária e ambiental de imóveis rurais (LAR)" />
+
+                        <div class="service-card__content">
+                            <h3>LAR</h3>
+                            <p>
+                                Regularização fundiária completa com foco na legalização
+                                de imóveis rurais e acesso às políticas públicas de
+                                desenvolvimento do campo.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+
+        <section class="team-projects-section" id="team-projects">
+            <div class="team-projects-section__layout">
+
+                <div class="section-header">
+                    <h2>Nossa Equipe e Projetos</h2>
+                </div>
+
+                <!-- BLOCO EQUIPE -->
+                <div class="team-block">
+
+                    <article class="team-highlight">
+                        <img src="./img/equipe/equipe.webp" alt="Equipe FS Engenharia no campo" />
+
+                        <div class="team-highlight__content">
+                            <p>
+                                A <strong>FS Engenharia Rural</strong> conta com uma equipe de
+                                engenheiros, agrimensores e técnicos especializados, com sólida
+                                atuação no campo e foco em soluções eficientes e sustentáveis.
+                            </p>
+
+                        </div>
+                        <a href="#contact" class="btn btn--success">
+                            Fale com nossos especialistas
+                        </a>
+                    </article>
+
+                    <aside class="team-gallery">
+                        <h4>Conheça nosso dia a dia:</h4>
+
+                        <hr class="section-divider" />
+
+                        <div class="team-gallery__grid">
+                            <!-- TODO: trocar cada href pelo link da postagem no Instagram -->
+                            <a class="insta-card" href="https://www.instagram.com/fsconsultoriarural" target="_blank"
+                                rel="noopener">
+                                <img src="./img/equipe/dia-a-dia-1.webp"
+                                    alt="Equipe da FS Engenharia em visita técnica a uma plantação de cacau">
+                                <span class="insta-card__title">Visita técnica em lavoura de cacau</span>
+                            </a>
+
+                            <a class="insta-card" href="https://www.instagram.com/fsconsultoriarural" target="_blank"
+                                rel="noopener">
+                                <img src="./img/equipe/dia-a-dia-2.webp"
+                                    alt="Trabalhadores separando cacau colhido no campo">
+                                <span class="insta-card__title">Colheita do cacau</span>
+                            </a>
+
+                            <a class="insta-card" href="https://www.instagram.com/fsconsultoriarural" target="_blank"
+                                rel="noopener">
+                                <img src="./img/equipe/dia-a-dia-3.webp"
+                                    alt="Viveiro de mudas de cacau sob tela de sombreamento">
+                                <span class="insta-card__title">Viveiro de mudas</span>
+                            </a>
+
+                            <a class="insta-card" href="https://www.instagram.com/fsconsultoriarural" target="_blank"
+                                rel="noopener">
+                                <img src="./img/equipe/dia-a-dia-4.webp"
+                                    alt="Equipe da FS Engenharia em atendimento com notebook">
+                                <span class="insta-card__title">Atendimento ao produtor</span>
+                            </a>
+
+                        </div>
+
+                        <a href="https://www.instagram.com/fsconsultoriarural" target="_blank" rel="noopener"
+                            class="btn btn--success">
+                            Ver mais no Instagram
+                        </a>
+                    </aside>
+
+                </div>
+
+                <hr class="section-divider" />
+
+                <!-- BLOCO VÍDEO -->
+                <div class="video-block">
+                    <div class="video-frame">
+                        <!-- TODO: colocar o arquivo do vídeo em <source> (ex.: video/apresentacao.mp4) -->
+                        <video controls preload="none" poster="./img/equipe/equipe.webp">
+                            <!-- <source src="video/apresentacao.mp4" type="video/mp4"> -->
+                            Seu navegador não suporta vídeos.
+                        </video>
+                        <button type="button" class="video-play" aria-label="Reproduzir vídeo">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <hr class="section-divider" />
+
+                <!-- BLOCO PROJETOS -->
+                <div class="projects-block" id="trabalhos">
+
+                    <h4>Veja alguns dos nossos trabalhos realizados no campo</h4>
+
+                    <div class="projects-menu">
+                        <button type="button" data-service="georreferenciamento">Georreferenciamento</button>
+                        <button type="button" data-service="credito">Crédito Rural</button>
+                        <button type="button" data-service="topografia">Topografia</button>
+                        <button type="button" data-service="lar">LAR</button>
+                    </div>
+
+                    <div class="projects-grid">
+                        <img src="./img/trabalhos/campo-1.webp" data-service="georreferenciamento" alt="Trabalho de Georreferenciamento realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-2.webp" data-service="georreferenciamento" alt="Trabalho de Georreferenciamento realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-3.webp" data-service="georreferenciamento" alt="Trabalho de Georreferenciamento realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-1.webp" data-service="georreferenciamento" alt="Trabalho de Georreferenciamento realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-2.webp" data-service="credito" alt="Trabalho de Crédito Rural realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-3.webp" data-service="credito" alt="Trabalho de Crédito Rural realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-1.webp" data-service="credito" alt="Trabalho de Crédito Rural realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-2.webp" data-service="credito" alt="Trabalho de Crédito Rural realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-3.webp" data-service="topografia" alt="Trabalho de Topografia realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-1.webp" data-service="topografia" alt="Trabalho de Topografia realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-2.webp" data-service="topografia" alt="Trabalho de Topografia realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-3.webp" data-service="topografia" alt="Trabalho de Topografia realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-1.webp" data-service="lar" alt="Trabalho de LAR realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-3.webp" data-service="lar" alt="Trabalho de LAR realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-2.webp" data-service="lar" alt="Trabalho de LAR realizado em campo pela FS Engenharia">
+                        <img src="./img/trabalhos/campo-1.webp" data-service="lar" alt="Trabalho de LAR realizado em campo pela FS Engenharia">
+                    </div>
+
+                    <p class="projects-empty" hidden></p>
+
+                    <div class="projects-cta">
+                        <a href="#contact" data-whatsapp data-whatsapp-text="Olá! Gostaria de solicitar um orçamento."
+                            target="_blank" rel="noopener" class="btn btn--success">
+                            Solicitar orçamento
+                        </a>
+
+                        <a href="#service" class="btn btn--outline">
+                            Entender qual serviço eu preciso
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!--SECAO ENTRE EM CONTATO-->
+        <section id="contact" class="contact-section">
+            <section class="contact-card">
+                <aside class="contact-highlight">
+                    <figure class="highlight-image">
+                        <img src="img/mapa-brasil.svg" alt="Mapa do brasil" />
+                    </figure>
+                    <div class="highlight-content">
+                        <h3>Atuamos em todo o Brasil</h3>
+                        <p>
+                            Leve a excelência da FS Engenharia para sua propriedade, onde
+                            quer que ela esteja.
+                        </p>
+                    </div>
+                </aside>
+
+                <section class="contact-form">
+                    <form id="contact-form" action="#">
+                        <header class="form-header">
+                            <h3 class="title">Entre em contato conosco</h3>
+                        </header>
+                        <fieldset class="form-grid">
+                            <div class="input-box">
+                                <label for="firstName">Nome</label>
+                                <input id="firstName" type="text" name="firstName" placeholder="Digite seu nome"
+                                    required />
+                            </div>
+                            <div class="input-box">
+                                <label for="email">Email</label>
+                                <input id="email" autocomplete="on" type="email" name="mail"
+                                    placeholder="Digite seu email" required />
+                            </div>
+                            <div class="input-box">
+                                <label for="city">Cidade</label>
+                                <input id="city" type="text" name="city" placeholder="Cidade" required />
+                            </div>
+                            <div class="input-box">
+                                <label for="uf" class="form-label">Estado (UF)</label>
+                                <select name="uf" id="uf" class="form-select" required>
+                                    <option value="">Seu Estado</option>
+                                    <option value="AC">Acre (AC)</option>
+                                    <option value="AL">Alagoas (AL)</option>
+                                    <option value="AP">Amapá (AP)</option>
+                                    <option value="AM">Amazonas (AM)</option>
+                                    <option value="BA">Bahia (BA)</option>
+                                    <option value="CE">Ceará (CE)</option>
+                                    <option value="DF">Distrito Federal (DF)</option>
+                                    <option value="ES">Espírito Santo (ES)</option>
+                                    <option value="GO">Goiás (GO)</option>
+                                    <option value="MA">Maranhão (MA)</option>
+                                    <option value="MT">Mato Grosso (MT)</option>
+                                    <option value="MS">Mato Grosso do Sul (MS)</option>
+                                    <option value="MG">Minas Gerais (MG)</option>
+                                    <option value="PA">Pará (PA)</option>
+                                    <option value="PB">Paraíba (PB)</option>
+                                    <option value="PR">Paraná (PR)</option>
+                                    <option value="PE">Pernambuco (PE)</option>
+                                    <option value="PI">Piauí (PI)</option>
+                                    <option value="RJ">Rio de Janeiro (RJ)</option>
+                                    <option value="RN">Rio Grande do Norte (RN)</option>
+                                    <option value="RS">Rio Grande do Sul (RS)</option>
+                                    <option value="RO">Rondônia (RO)</option>
+                                    <option value="RR">Roraima (RR)</option>
+                                    <option value="SC">Santa Catarina (SC)</option>
+                                    <option value="SP">São Paulo (SP)</option>
+                                    <option value="SE">Sergipe (SE)</option>
+                                    <option value="TO">Tocantins (TO)</option>
+                                </select>
+                            </div>
+                            <div class="input-box">
+                                <label for="telephone">Telefone</label>
+                                <input id="telephone" class="form-control" name="phone" pattern="\(\d{2}\)\s\d{5}-\d{4}"
+                                    type="tel" inputmode="numeric" autocomplete="tel"
+                                    placeholder="(99) 99999-9999" maxlength="15" required />
+                            </div>
+                            <div class="input-box input-message">
+                                <label for="menssage">Mensagem</label>
+                                <textarea id="menssage" type="text" name="menssage" placeholder="Qual o seu problema..."
+                                    required></textarea>
+                            </div>
+                        </fieldset>
+
+                        <!-- Honeypot anti-spam: invisível para pessoas, bots costumam preencher -->
+                        <div class="form-honeypot" aria-hidden="true">
+                            <label for="website">Não preencha este campo</label>
+                            <input id="website" type="text" name="website" tabindex="-1" autocomplete="off" />
+                        </div>
+
+                        <label class="form-consent">
+                            <input type="checkbox" name="consent" required />
+                            <span>Concordo em compartilhar meus dados para que a FS Engenharia entre em contato
+                                comigo, conforme a LGPD.</span>
+                        </label>
+
+                        <div id="solicite-button">
+                            <button type="submit" disabled>Solicitar Atendimento</button>
+                        </div>
+
+                        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+                    </form>
+                </section>
+            </section>
+        </section>
+
+    </main>
+
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <div class="footer-logo">
+                    <img src="./img/logo/fs-engenharia-minimalista.png" alt="Fs Engenharia-logo" />
+                    <h2>Engenharia</h2>
+                </div>
+                <p>
+                    Mais que consultoria, somos parceiros do produtor rural na busca por
+                    resultados sólidos e sustentáveis.
+                </p>
+
+                <div id="footer_social_media">
+                    <a href="https://www.instagram.com/fsconsultoriarural" class="footer-link"
+                        id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/fsengenhariarural" class="footer-link" id="facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Navegação -->
+            <div class="footer-column">
+                <h3>Navegação</h3>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="#home" class="footer-link">Home</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="#about" class="footer-link">Sobre</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="#service" class="footer-link">Serviços</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="#contact" class="footer-link">Contatos</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contatos -->
+            <div class="footer-column">
+                <h3>Contatos</h3>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="#contact" data-whatsapp data-whatsapp-text="Olá! Vim pelo site da FS Engenharia." target="_blank" rel="noopener"
+                            class="footer-link mb-0" id="whatsapp">(93) 99240-0825</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <i class="fa-regular fa-envelope"></i>
+                        <a href="mailto:contato@fsengenharia.com.br" class="footer-link mb-0" id="email">
+                            contato@fsengenharia.com.br
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span class="footer-link mb-0" id="mapa">Rurópolis, Pará - Brasil</span>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-  </main>
 
-  <!-- Rodapé -->
-  <Footer>
-    <div id="footer_content">
-      <div id="footer_contacts">
-        <div class="footer-logo">
-          <img src="img/fs-engenharia-logo.png" alt="Fs Engenharia-logo">
-          <h1>Engenharia</h1>
+        <!-- copyright -->
+        <div id="footer_copyright">
+            &#169; <span id="copyright-year">2026</span> FS Engenharia. Todos os direitos reservados.
         </div>
-          <p>Mais que consultoria, somos parceiros do produtor rural na busca por resultados sólidos e sustentáveis.</p>
-        
-        <div id="footer_social_media">
-          <a href="https://www.instagram.com/fsconsultoriarural?igsh=NTQxbnllamVkZnBu" class="footer-link" id="instagram">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-
-          <a href="https://www.facebook.com/fsengenhariarural" class="footer-link" id="facebook">
-            <i class="fa-brands fa-facebook"></i>
-          </a>
-
-          
-        </div>
-      </div>
-
-      <!-- Navegação -->
-      <ul class="footer-list">
-        <h3>Navegação</h3>
-        <li class="footer-list-item">
-          <a href="#" class="footer-link">Home</a>
-        </li>
-        <li class="footer-list-item">
-          <a href="#" class="footer-link">Sobre</a>
-        </li>
-        <li class="footer-list-item">
-          <a href="#" class="footer-link">Contatos</a>
-        </li>
-        <li class="footer-list-item">
-          <a href="#" class="footer-link">Serviços</a>
-        </li>
-      </ul>
-
-      <!-- Contatos -->
-      <ul class="footer-list">
-        <h3>Contatos</h3>
-        <li class="footer-list-item">
-          <i class="fa-brands fa-whatsapp"></i>
-          <p href="#" class="footer-link mb-0" id="whatsapp">(93) 992987-6543 <br>
-            (xx) xxxxx-xxxx</p>
-        </li>
-        <li class="footer-list-item">
-          <i class="fa-regular fa-envelope"></i>
-          <p href="#" class="footer-link mb-0" id="email">contato@fsengenharia.com.br</p>
-        </li>
-        <li class="footer-list-item">
-          <i class="fa-solid fa-location-dot"></i>
-          <p href="#" class="footer-link mb-0" id="mapa">Rurópolis, Pará - Brasil</p>
-        </li>
-      </ul>
-    </div>
-
-    <!-- copyright -->
-      <div id="footer_copyright">
-        &#169; 2024 FS Engenharia. Todos os direitos reservados.
-      </div>
-    
-  </Footer>
-
-  
-  
-  <!-- Optional JavaScript; choose one of the two! -->
-
-  <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-    crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-    crossorigin="anonymous"></script>
-
+    </footer>
 </body>
 
 </html>
