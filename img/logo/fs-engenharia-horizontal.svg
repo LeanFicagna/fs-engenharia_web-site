@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 133 39" role="img" aria-label="FS Engenharia, consultoria rural">
+  <!-- Recriação vetorial da logo a partir do PNG de 132x37, para fundo escuro (texto branco).
+       F em Tahoma, S desenhado, nomes em Arial; o monograma não tem a folha do original.
+       O viewBox tem folga em cima, embaixo e à esquerda para o S e o F não serem cortados. -->
+  <!-- Monograma: o F é a letra da Tahoma (levemente condensada); o S é geométrico: dois arcos de elipse
+       (bojo de cima e o de baixo, um pouco maior) ligados por uma reta tangente aos dois, num traço de espessura
+       constante com as pontas cortadas perpendiculares à curva, como no original. -->
+  <text x="-4.56" y="36.53" transform="scale(0.77 1)" fill="#70b51e" font-family="Tahoma, Verdana, Arial, sans-serif" font-size="49.37">F</text>
+  <path d="M29.89 6.83A7.18 6.65 0 1 0 18.08 13.28L27.67 21.3A8.13 8.01 0 1 1 14.39 28.71"
+        fill="none" stroke="#70b51e" stroke-width="3.3" stroke-linecap="butt"/>
+
+  <!-- Textos -->
+  <g fill="#ffffff" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif">
+    <text x="30.8" y="19.8" font-size="15.8" textLength="100" lengthAdjust="spacing">ENGENHARIA</text>
+    <text x="34.2" y="30.8" font-size="10.2" textLength="82.3" lengthAdjust="spacingAndGlyphs">/consultoria rural</text>
+  </g>
+</svg>
