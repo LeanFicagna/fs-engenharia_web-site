@@ -63,8 +63,8 @@ Enquanto `sheetsEndpoint` estiver vazio, o formulário só abre o WhatsApp e nã
 
 ## Publicação
 
-O site é servido pelo GitHub Pages. Confira em *Settings > Pages* do repositório qual branch está configurada
-como origem; é nela que cada `push` publica. O trabalho do dia a dia fica na `develop`.
+O site é servido pelo GitHub Pages a partir da branch **`develop`**: cada `push` nela publica as mudanças.
+A `main` serve de ponto de backup (merge da `develop` na `main` quando uma etapa está estável).
 
 ## Pendências conhecidas
 
