@@ -18,18 +18,12 @@ footer {
 	gap: 10px;
 }
 
-.footer-logo__name {
-	font-family: var(--font-secondary);
-	font-size: 1.5rem;
-	font-weight: 500;
-	line-height: 1.2;
-	color: white;
-}
-
+/* Logo vertical (FS com o nome embaixo) */
 #footer_contacts img {
 	display: block;
+	width: 140px;
+	max-width: 100%;
 	height: auto;
-	max-width: 30px;
 }
 
 .footer-logo {
