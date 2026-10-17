@@ -12,11 +12,19 @@
     color: black;
 }
 
-/* SWIPER CONTAINER */
-.services-carousel {
-    max-width: 1200px;
+/* SWIPER CONTAINER
+   O envoltório reserva as laterais para as setas, fora do carrossel (assim nenhum card aparece atrás delas).
+   O carrossel reserva embaixo o espaço das bolinhas; o seletor com a seção ganha do "padding: 0"
+   do CSS do Swiper, que carrega depois. */
+.services-carousel-wrap {
+    position: relative;
+    max-width: calc(1200px + 6rem); /* os cards continuam com até 1200px, alinhados ao título */
     margin: 0 auto;
-    padding-bottom: 3rem;
+    padding: 0 3rem;
+}
+
+.services-section .services-carousel {
+    padding: 0 0 3rem;
 }
 
 /* CARD DE SERVIÇO */
@@ -66,7 +74,6 @@
 }
 /* SWIPER CONTROLES */
 .services-carousel .swiper-pagination-bullet {
-    margin-top: 50px;
     width: 12px;
     height: 12px;
     background: var(--brand-primary, #00633c);
@@ -77,9 +84,36 @@
     opacity: 1;
 }
 
-.services-carousel .swiper-button-next,
-.services-carousel .swiper-button-prev {
+/* Setas no espaço lateral do envoltório, centralizadas na altura dos cards (descontando as bolinhas) */
+.services-carousel-wrap .swiper-button-prev,
+.services-carousel-wrap .swiper-button-next {
+    top: calc(50% - 1.5rem);
     color: var(--brand-primary, #00633c);
+}
+
+.services-carousel-wrap .swiper-button-prev {
+    left: 0.25rem;
+}
+
+.services-carousel-wrap .swiper-button-next {
+    right: 0.25rem;
+}
+
+/* Bolinhas no espaço de baixo, fora dos cards */
+.services-section .services-carousel .swiper-pagination {
+    bottom: 0.75rem;
+}
+
+/* No celular, sem setas (o carrossel é arrastado com o dedo) e sem espaço lateral */
+@media (max-width: 600px) {
+    .services-carousel-wrap {
+        padding: 0;
+    }
+
+    .services-carousel-wrap .swiper-button-prev,
+    .services-carousel-wrap .swiper-button-next {
+        display: none;
+    }
 }
 
 /* Card "Outros serviços": não leva a um filtro de trabalhos, então não parece clicável */
