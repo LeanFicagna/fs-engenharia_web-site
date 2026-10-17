@@ -3,14 +3,36 @@
 (() => {
   const SERVICE_NAMES = {
     georreferenciamento: "Georreferenciamento",
+    car: "CAR",
     credito: "Crédito Rural",
-    topografia: "Topografia",
     lar: "LAR",
+    titulacao: "Titulação",
+    licencas: "Licenças",
   };
 
   const projectFilters = Array.from(document.querySelectorAll(".projects-menu button"));
-  const projectImages = Array.from(document.querySelectorAll(".projects-grid img"));
+  const projectsGrid = document.querySelector(".projects-grid");
+  const projectImages = Array.from(projectsGrid.querySelectorAll("img"));
   const projectsEmptyMessage = document.querySelector(".projects-empty");
+
+  // Foto grande do serviço selecionado; as fotos da grade viram miniaturas clicáveis
+  const mainImage = document.createElement("img");
+  mainImage.className = "projects-main";
+  mainImage.alt = "";
+  projectsGrid.parentNode.insertBefore(mainImage, projectsGrid);
+
+  function showMainImage(image) {
+    projectImages.forEach((thumb) => thumb.classList.toggle("is-current", thumb === image));
+    mainImage.hidden = !image;
+    if (image) {
+      mainImage.src = image.currentSrc || image.src;
+      mainImage.alt = image.alt;
+    }
+  }
+
+  projectsGrid.addEventListener("click", (event) => {
+    if (event.target.tagName === "IMG") showMainImage(event.target);
+  });
 
   function selectService(service) {
     projectFilters.forEach((button) => {
@@ -19,12 +41,13 @@
       button.setAttribute("aria-pressed", String(selected));
     });
 
-    let visibleCount = 0;
-    projectImages.forEach((image) => {
+    const visibleImages = projectImages.filter((image) => {
       const show = image.dataset.service === service;
       image.hidden = !show;
-      if (show) visibleCount += 1;
+      return show;
     });
+    const visibleCount = visibleImages.length;
+    showMainImage(visibleImages[0]);
 
     // Serviço sem fotos publicadas
     projectsEmptyMessage.hidden = visibleCount > 0;
