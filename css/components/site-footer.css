@@ -18,15 +18,12 @@ footer {
 	gap: 10px;
 }
 
-#footer_contacts h2 {
-	font-size: 1.5rem;
-	margin: 0;
-}
-
+/* Logo horizontal (FS ao lado do nome), a mesma da barra superior */
 #footer_contacts img {
 	display: block;
+	width: 230px;
+	max-width: 100%;
 	height: auto;
-	max-width: 30px;
 }
 
 .footer-logo {
@@ -98,6 +95,14 @@ footer {
 .footer-list-item {
 	display: flex;
 	gap: 1rem;
+	min-width: 0;
+}
+
+/* O email não tem onde quebrar; em colunas estreitas ele quebra em qualquer ponto */
+.footer-list .footer-link {
+	display: block;
+	min-width: 0;
+	overflow-wrap: anywhere;
 }
 
 .footer-list-item i {
@@ -114,8 +119,9 @@ footer {
 
 @media screen and (max-width: 768px) {
 	#footer_content {
-		grid-template-columns: repeat(2, 1fr);
-		gap: 2rem;
+		/* minmax(0, 1fr): colunas iguais, sem a logo ou o email alargarem a primeira */
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1rem;
 	}
 }
 

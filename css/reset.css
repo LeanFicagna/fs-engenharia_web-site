@@ -35,6 +35,7 @@ input, textarea, button {
 /* Imagens responsivas */
 img {
   max-width: 100%;
+  height: auto; /* com width/height no HTML, mantém a proporção quando só a largura é limitada */
   display: block;
 }
 
