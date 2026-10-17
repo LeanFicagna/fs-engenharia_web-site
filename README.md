@@ -1,6 +1,6 @@
-# FS Engenharia Rural: site institucional
+# FS Consultoria Rural: site institucional
 
-Site estático (HTML, CSS e JavaScript puros) da FS Engenharia Rural, consultoria rural no oeste do Pará.
+Site estático (HTML, CSS e JavaScript puros) da FS Consultoria Rural, consultoria rural no oeste do Pará.
 Publicado em <https://www.fsengenhariarural.com.br> (domínio no arquivo `CNAME`).
 
 ## Como rodar localmente
