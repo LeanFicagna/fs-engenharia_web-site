@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="css/components/services.css" />
     <link rel="stylesheet" href="css/components/team-projects.css" />
     <link rel="stylesheet" href="css/components/video.css" />
+    <link rel="stylesheet" href="css/components/lightbox.css" />
     <link rel="stylesheet" href="css/components/projects.css" />
     <link rel="stylesheet" href="css/components/contact-section.css" />
     <link rel="stylesheet" href="css/components/contact-highlight.css" />
@@ -64,6 +65,7 @@
     <script defer src="script/layout.js"></script>
     <script defer src="script/contact.js"></script>
     <script defer src="script/projects.js"></script>
+    <script defer src="script/gallery.js"></script>
     <script defer src="script/video.js"></script>
     <script defer src="script/services-carousel.js"></script>
 
@@ -389,34 +391,30 @@
                         <hr class="section-divider" />
 
                         <div class="team-gallery__grid">
-                            <!-- TODO: trocar cada href pelo link da postagem no Instagram -->
-                            <a class="insta-card" href="https://www.instagram.com/fsconsultoriarural" target="_blank"
-                                rel="noopener">
+                            <!-- Cada foto abre a galeria em tela cheia (script/gallery.js) -->
+                            <button type="button" class="insta-card" aria-label="Ampliar foto: Visita técnica em lavoura de cacau">
                                 <img src="./img/equipe/dia-a-dia-1.webp" width="800" height="600" loading="lazy" decoding="async"
                                     alt="Equipe da FS Consultoria Rural em visita técnica a uma plantação de cacau">
                                 <span class="insta-card__title">Visita técnica em lavoura de cacau</span>
-                            </a>
+                            </button>
 
-                            <a class="insta-card" href="https://www.instagram.com/fsconsultoriarural" target="_blank"
-                                rel="noopener">
+                            <button type="button" class="insta-card" aria-label="Ampliar foto: Colheita do cacau">
                                 <img src="./img/equipe/dia-a-dia-2.webp" width="800" height="600" loading="lazy" decoding="async"
                                     alt="Trabalhadores separando cacau colhido no campo">
                                 <span class="insta-card__title">Colheita do cacau</span>
-                            </a>
+                            </button>
 
-                            <a class="insta-card" href="https://www.instagram.com/fsconsultoriarural" target="_blank"
-                                rel="noopener">
+                            <button type="button" class="insta-card" aria-label="Ampliar foto: Viveiro de mudas">
                                 <img src="./img/equipe/dia-a-dia-3.webp" width="800" height="800" loading="lazy" decoding="async"
                                     alt="Viveiro de mudas de cacau sob tela de sombreamento">
                                 <span class="insta-card__title">Viveiro de mudas</span>
-                            </a>
+                            </button>
 
-                            <a class="insta-card" href="https://www.instagram.com/fsconsultoriarural" target="_blank"
-                                rel="noopener">
+                            <button type="button" class="insta-card" aria-label="Ampliar foto: Atendimento ao produtor">
                                 <img src="./img/equipe/dia-a-dia-4.webp" width="800" height="600" loading="lazy" decoding="async"
                                     alt="Equipe da FS Consultoria Rural em atendimento com notebook">
                                 <span class="insta-card__title">Atendimento ao produtor</span>
-                            </a>
+                            </button>
 
                         </div>
 
