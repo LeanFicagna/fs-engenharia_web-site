@@ -3,9 +3,11 @@
 (() => {
   const SERVICE_NAMES = {
     georreferenciamento: "Georreferenciamento",
+    car: "CAR",
     credito: "Crédito Rural",
-    topografia: "Topografia",
     lar: "LAR",
+    titulacao: "Titulação",
+    licencas: "Licenças",
   };
 
   const projectFilters = Array.from(document.querySelectorAll(".projects-menu button"));

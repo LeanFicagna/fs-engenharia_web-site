@@ -81,3 +81,12 @@
 .services-carousel .swiper-button-prev {
     color: var(--brand-primary, #00633c);
 }
+
+/* Card "Outros serviços": não leva a um filtro de trabalhos, então não parece clicável */
+.service-card--static {
+    cursor: default;
+}
+
+.service-card--static:hover {
+    transform: none;
+}
