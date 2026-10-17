@@ -58,10 +58,15 @@
 
 /* CONTEÚDO */
 .service-card__content {
-    padding: 1.25rem;
+    padding: 0.9rem 1rem 1rem;
     display: grid;
     grid-template-rows: auto auto 1fr auto;
-    gap: 0.75rem;
+    gap: 0.5rem;
+}
+
+/* o espaço entre título e texto fica só no gap acima */
+.service-card__content h3 {
+    margin-bottom: 0;
 }
 
 /* TEXTO */
@@ -84,11 +89,27 @@
     opacity: 1;
 }
 
-/* Setas no espaço lateral do envoltório, centralizadas na altura dos cards (descontando as bolinhas) */
+/* Setas no espaço lateral do envoltório, centralizadas na altura dos cards (descontando as bolinhas),
+   dentro de um círculo escuro translúcido */
+.services-carousel-wrap {
+    --swiper-navigation-size: 18px; /* tamanho do ícone da seta */
+}
+
 .services-carousel-wrap .swiper-button-prev,
 .services-carousel-wrap .swiper-button-next {
     top: calc(50% - 1.5rem);
-    color: var(--brand-primary, #00633c);
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-top: -1.375rem;
+    border-radius: 50%;
+    background: rgba(23, 23, 23, 0.6);
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.services-carousel-wrap .swiper-button-prev:hover,
+.services-carousel-wrap .swiper-button-next:hover {
+    background: rgba(23, 23, 23, 0.85);
 }
 
 .services-carousel-wrap .swiper-button-prev {
