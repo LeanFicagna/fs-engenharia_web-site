@@ -1,6 +1,8 @@
 
 /* Bloco cinza de largura total, com as bordas verde-lima da barra superior */
 .team-projects-section {
+  position: relative;
+  overflow: hidden;
   margin: 2rem 0 0;
   padding: 2.5rem 1rem;
   background: var(--color-neutral-10);
@@ -8,7 +10,21 @@
   border-bottom: 3px solid var(--color-logo-green);
 }
 
+/* Fundo com a logo horizontal repetida, em branco, inclinada e apagada (20%) atrás do conteúdo */
+.team-projects-section::before {
+  content: "";
+  position: absolute;
+  inset: -50%; /* maior que a seção para a inclinação não deixar cantos vazios */
+  transform: rotate(-20deg);
+  background: url("../../img/fundos/padrao-logo.webp") repeat;
+  background-size: 520px 203px;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
 .team-projects-section__layout {
+  position: relative;
+  z-index: 1; /* acima do fundo com a logo */
   max-width: 1200px;
   margin: 0 auto;
 }
