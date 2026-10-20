@@ -59,6 +59,11 @@
   height: 56px;
 }
 
+/* logo com o nome embutido (INCRA): mais baixo, para ter a mesma presença dos símbolos com nome */
+.partners__logos img.partners__wordmark {
+  height: 40px;
+}
+
 .partners__logos span {
   font-family: var(--font-secondary);
   font-size: 1.1rem;
@@ -72,7 +77,8 @@
   margin-top: 0;
 }
 
-@media (max-width: 900px) {
+/* Abaixo de 1260px os três logos não cabem lado a lado na coluna da direita: texto em cima, logos embaixo */
+@media (max-width: 1260px) {
   .partners__layout {
     grid-template-columns: 1fr;
   }
