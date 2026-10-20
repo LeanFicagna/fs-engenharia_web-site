@@ -2,7 +2,9 @@
 /* Bloco cinza de largura total, com as bordas verde-lima da barra superior */
 .team-projects-section {
   position: relative;
-  overflow: hidden;
+  /* clip (e não hidden): corta o fundo inclinado sem virar área rolável. Com hidden, o scrollIntoView
+     dos cards de serviço rolava a seção por dentro e o título, a equipe e o vídeo sumiam para cima */
+  overflow: clip;
   margin: 2rem 0 0;
   padding: 2.5rem 1rem;
   background: var(--color-neutral-10);
