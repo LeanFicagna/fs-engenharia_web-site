@@ -1,27 +1,31 @@
 /* =========================
-   Botão Base
+   Botão Base: retos e em caixa-alta, o mesmo formato no site todo
 ========================= */
 .btn {
-  display: inline-block;
-  padding: 0.6rem 1rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.5rem;
+  border: 2px solid transparent;
+  border-radius: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
   text-align: center;
+  text-transform: uppercase;
   cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .btn-nav-contato {
-  margin-right: 20px;
+  margin-right: 0;
 }
 
-/* Hover padrão */
-.btn:hover {
-  transform: scale(1.03);
-}
-
-
-@media (max-width: 426px) {
+/* Em telas estreitas o botão da barra superior some: em caixa-alta ele não cabe ao lado da logo
+   (o WhatsApp continua no rodapé e no botão "Solicitar orçamento" dos trabalhos) */
+@media (max-width: 600px) {
   .btn-nav-contato {
     display: none;
   }
@@ -33,17 +37,18 @@
   color: white;
 }
 
-/* Botão da barra superior: contorno verde-lima da logo */
+/* Botão da barra superior: verde-lima da logo */
 .btn--primary.btn-nav-contato {
-  background: transparent;
-  color: var(--color-logo-green);
-  border: 2px solid var(--color-logo-green);
-  padding: 0.4rem 0.9rem;
+  padding: 0.65rem 1.1rem;
+  background: var(--color-logo-green);
+  border-color: var(--color-logo-green);
+  color: white;
 }
 
 .btn--primary.btn-nav-contato:hover {
-  background: var(--color-logo-green);
-  color: var(--color-neutral-10);
+  background: #68a818;
+  border-color: #68a818;
+  color: white;
 }
 
 /* Verde */

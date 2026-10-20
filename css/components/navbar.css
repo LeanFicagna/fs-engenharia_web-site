@@ -20,13 +20,21 @@
   height: 40px;
 }
 
+/* menu antes do botão de orçamento */
 .navbar-menu {
+  order: 1;
   display: flex;
   gap: 1rem;
+  margin-right: 1.5rem;
 }
 
 .navbar-menu a {
   padding: 0.5rem;
+  border-bottom: 2px solid transparent; /* reserva o espaço do hover, o texto não pula */
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   transition: color 0.3s, border-bottom 0.3s;
 }
 
@@ -40,7 +48,12 @@
     align-items: center;
 }
 
+.nav-btn-container {
+  order: 2;
+}
+
 .navbar-toggle {
+  order: 3;
   display: none;
   font-size: 1.8rem;
   background: none;
@@ -53,11 +66,16 @@
     display: block;
   }
 
+  .nav-btn-container {
+    margin-right: 1rem;
+  }
+
   .navbar-menu {
     position: absolute;
     top: var(--navbar-height);
     right: 0;
     flex-direction: column;
+    margin-right: 0;
     width: 40%;
     max-width: 0;
     overflow: hidden;
