@@ -34,15 +34,15 @@ footer {
 
 #footer_social_media {
 	display: flex;
-	justify-content: center;
-	gap: 2rem;
+	justify-content: flex-start;
+	gap: 0.75rem;
 }
 
 #footer_social_media .footer-link {
 	height: 2.5rem;
 	width: 2.5rem;
 	color: var(--color-neutral-40);
-	border-radius: 50%;
+	border-radius: 0.35rem; /* no formato dos botões */
 	transition: all 0.3s ease;
 }
 
@@ -51,8 +51,8 @@ footer {
 }
 
 #footer_social_media .footer-link:hover {
-	background-color: var(--color-neutral-30);
-	color: var(--color-neutral-0);
+	background-color: var(--color-logo-green);
+	color: white;
 }
 
 .footer-link {
@@ -61,16 +61,19 @@ footer {
 	align-items: center;
 }
 
-#instagram {
-	background: linear-gradient(#7f37c9, #ff2992, #ff9807);
-}
-
+/* Instagram e Facebook no mesmo estilo, sem as cores das marcas */
+#instagram,
 #facebook {
-	background: #1877f2;
+	background: rgba(255, 255, 255, 0.08);
 }
 
 .footer-column h3 {
 	margin-bottom: 0.75rem;
+	font-size: 1rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--color-logo-green);
 }
 
 .footer-list {
