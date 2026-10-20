@@ -1,14 +1,7 @@
-.who-we-are__content h1,
-.who-we-are__content h2,
-.who-we-are__content h3,
-.who-we-are__content h4,
-.who-we-are__content p {
-  color: black;
-}
-
+/* Quem somos: seção cinza, foto à esquerda e texto à direita */
 .who-we-are {
-  padding: 2rem 1rem;
-  background-color: var(--surface-default);
+  padding: 4rem 1rem;
+  background-color: var(--color-neutral-10);
 }
 
 .who-we-are__layout {
@@ -17,23 +10,25 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3.5rem;
-  align-items: start;
+  align-items: center;
 }
 
 .who-we-are__image img {
   aspect-ratio: 1 / 1;
   width: 100%;
   height: auto;
-  border-radius: 1rem;
+  border-radius: 0.35rem;
   object-fit: cover;
 }
 
 .who-we-are__content h2 {
   margin-bottom: 1rem;
+  color: white;
 }
 
 .who-we-are__content p {
   margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 @media (max-width: 768px) {
