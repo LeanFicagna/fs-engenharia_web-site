@@ -1,42 +1,38 @@
-/* Nossos parceiros: bancos parceiros, entre Nossos serviços e Nossa Equipe e Projetos */
+/* Nossos parceiros: bancos parceiros, entre Nossos serviços e Nossa Equipe e Projetos.
+   Texto à esquerda e logos à direita */
 .partners {
-  margin-top: 1rem;
-  padding: 3rem 1rem;
+  padding: 3.5rem 1rem;
   background: var(--color-neutral-40);
 }
 
 .partners__layout {
   max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  column-gap: 3rem;
+  align-items: center;
 }
 
 .partners h2,
 .partners p {
+  grid-column: 1;
   color: var(--color-neutral-10);
-}
-
-/* traço verde-lima embaixo do título */
-.partners h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  margin: 0.75rem auto 0;
-  background: var(--color-logo-green);
 }
 
 .partners p {
   max-width: 60ch;
-  margin: 0 auto 2rem;
+  margin: 0;
 }
 
 .partners__logos {
+  grid-column: 2;
+  grid-row: 1 / span 2;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 1.5rem 4rem;
+  gap: 1.5rem 2rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -45,7 +41,7 @@
 /* logos em cinza; ganham a cor original ao passar o mouse */
 .partners__logos img {
   display: block;
-  width: 210px;
+  width: 180px;
   max-width: 100%;
   filter: grayscale(1);
   opacity: 0.6;
@@ -60,4 +56,17 @@
 /* sem o espaço branco entre esta seção e Nossa Equipe e Projetos */
 .partners + .team-projects-section {
   margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .partners__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .partners__logos {
+    grid-column: 1;
+    grid-row: auto;
+    justify-content: center;
+    margin-top: 2rem;
+  }
 }
