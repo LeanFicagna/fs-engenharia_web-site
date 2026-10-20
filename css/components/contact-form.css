@@ -1,19 +1,21 @@
 /* --- ÁREA DO FORMULÁRIO (Direita) --- */
 .contact-form {
 	width: 100%;
-	padding: 10px;
+	padding: 2rem 1.5rem;
 	background-color: var(--surface-default);
-	font-size: 0.7rem;
+	font-size: 1rem;
 }
 
 .form-header {
-	margin: 0.5rem;
-	text-align: center;
+	margin: 0 1rem;
+	text-align: left;
 }
 
 .title {
 	color: var(--color-neutral-10);
-	padding-top: 1rem;
+	padding-top: 0;
+	font-size: 1.5rem;
+	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 }
@@ -32,17 +34,21 @@
 	color: var(--color-neutral-10);
 	margin-bottom: 5px;
 	display: block;
+	font-size: 0.8rem;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
 }
 
 .input-box input,
 .input-box select,
 .input-box textarea {
 	width: 100%;
-	padding: 0.1rem 0.5rem;
-	font-size: 0.7rem;
-	background-color: var(--surface-default);
-	border: 1px solid var(--color-neutral-40);
-	border-radius: 8px;
+	padding: 0.75rem 0.9rem;
+	font-size: 0.95rem;
+	background-color: var(--color-neutral-40);
+	border: 0;
+	border-bottom: 2px solid #d4d4d4; /* fica verde-lima com o foco */
+	border-radius: 0.35rem 0.35rem 0 0;
 	transition: all 0.3s ease;
 }
 
@@ -51,8 +57,7 @@
 .input-box select:focus,
 .input-box textarea:focus {
 	outline: none;
-	border-color: #00633c;
-	box-shadow: 0 0 10px rgba(255, 152, 7, 0.2);
+	border-bottom-color: var(--color-logo-green);
 }
 
 /* Comportamento específico para o campo de Mensagem (Textarea) */
@@ -115,10 +120,12 @@
 	background-color: var(--color-logo-green);
 	color: white;
 	border: none;
-	padding: 18px;
-	border-radius: 8px;
+	padding: 1rem;
+	border-radius: 0.35rem;
 	font-weight: 600;
-	font-size: 1.1rem;
+	font-size: 0.95rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
 	cursor: pointer;
 	transition:
 		transform 0.2s,
@@ -136,19 +143,6 @@
 }
 
 @media (min-width: 540px) {
-	.contact-form {
-		width: 100%;
-		padding: 10px;
-		background-color: var(--surface-default);
-		font-size: 1rem;
-	}
-
-	.input-box input,
-	.input-box select,
-	.input-box textarea {
-		font-size: 1rem;
-	}
-
 	/* Posição de cada campo na grade: 1 nome, 2 email, 3 cidade, 4 estado, 5 telefone, 6 mensagem */
 	.input-box:nth-child(1) {
 		grid-column: span 2;
@@ -176,12 +170,6 @@
 }
 
 @media (min-width: 992px) {
-	.input-box input,
-	.input-box select,
-	.input-box textarea {
-		font-size: 0.9rem;
-	}
-
 	.form-grid {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto auto 1fr;

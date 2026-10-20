@@ -90,3 +90,30 @@
 		margin-top: 10px;
 	}
 }
+
+/* No celular o mapa (largura fixa) passava do cartão: mapa em cima e texto embaixo */
+@media (max-width: 539px) {
+	.contact-highlight {
+		flex-direction: column;
+		align-items: center;
+		padding: 1.5rem 1rem;
+		text-align: center;
+	}
+
+	.highlight-image {
+		padding: 0;
+	}
+
+	.highlight-image img {
+		width: 200px;
+	}
+
+	.contact-highlight h3,
+	.contact-highlight p {
+		padding-right: 0;
+	}
+
+	.contact-highlight p {
+		font-size: 0.9rem;
+	}
+}
