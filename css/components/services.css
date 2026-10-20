@@ -1,11 +1,11 @@
 /* SEÇÃO SERVIÇOS */
 .services-section {
-    padding: 1rem 1rem;
+    padding: 4rem 1rem 3rem;
 }
 
 .services-section__header {
     max-width: 1200px;
-    margin: 0 auto 1rem;
+    margin: 0 auto 2rem;
 }
 
 .services-section__header h2 {
@@ -30,13 +30,14 @@
 /* CARD DE SERVIÇO */
 .service-card {
     background: white;
-    border: 1px solid var(--color-neutral-10);
-    border-radius: 1rem;
+    border: 0;
+    border-bottom: 3px solid transparent; /* fica verde-lima no hover */
+    border-radius: 0.35rem;
     overflow: hidden;
     display: grid;
     grid-template-rows: auto 1fr;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
-    transition: transform 0.3s ease;
+    box-shadow: 0 0 0 1px #e5e5e5, 0 10px 30px rgba(23, 23, 23, 0.06);
+    transition: border-color 0.3s ease, transform 0.3s ease;
     cursor: pointer;
 }
 
@@ -44,10 +45,14 @@
     transform: translateY(-4px);
 }
 
+.service-card[data-service]:hover {
+    border-bottom-color: var(--color-logo-green);
+}
+
 /* IMAGEM */
 .service-card img {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 10;
     object-fit: cover;
     display: block;
 }
@@ -56,9 +61,15 @@
     height: auto;
 }
 
+/* o CSS do Swiper (carregado depois) troca o display dos cards por block; assim o conteúdo estica
+   até o fim do card e o "Ver trabalhos" fica alinhado embaixo em todos */
+.services-carousel .service-card {
+    display: grid;
+}
+
 /* CONTEÚDO */
 .service-card__content {
-    padding: 0.9rem 1rem 1rem;
+    padding: 1.25rem;
     display: grid;
     grid-template-rows: auto auto 1fr auto;
     gap: 0.5rem;
@@ -71,17 +82,33 @@
 
 /* TEXTO */
 .service-card__content h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
     color: var(--color-neutral-10);
 }
 
 .service-card__content p {
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* convite para ver os trabalhos do serviço (o card leva aos trabalhos, ver script/projects.js) */
+.service-card[data-service] .service-card__content::after {
+    content: "Ver trabalhos  →";
+    align-self: end;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     color: var(--color-neutral-10);
 }
 /* SWIPER CONTROLES */
-.services-carousel .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background: var(--brand-primary, #00633c);
+/* bolinhas em traços verde-lima */
+.services-section .services-carousel .swiper-pagination-bullet {
+    width: 18px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--color-logo-green);
     opacity: 0.4;
 }
 
@@ -90,7 +117,7 @@
 }
 
 /* Setas no espaço lateral do envoltório, centralizadas na altura dos cards (descontando as bolinhas),
-   dentro de um círculo escuro translúcido */
+   num quadrado cinza, no formato dos botões */
 .services-carousel-wrap {
     --swiper-navigation-size: 18px; /* tamanho do ícone da seta */
 }
@@ -101,15 +128,15 @@
     width: 2.75rem;
     height: 2.75rem;
     margin-top: -1.375rem;
-    border-radius: 50%;
-    background: rgba(23, 23, 23, 0.6);
+    border-radius: 0.35rem;
+    background: var(--color-neutral-10);
     color: white;
     transition: background 0.3s ease;
 }
 
 .services-carousel-wrap .swiper-button-prev:hover,
 .services-carousel-wrap .swiper-button-next:hover {
-    background: rgba(23, 23, 23, 0.85);
+    background: var(--color-logo-green);
 }
 
 .services-carousel-wrap .swiper-button-prev {

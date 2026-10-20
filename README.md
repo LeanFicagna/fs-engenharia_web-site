@@ -24,6 +24,7 @@ CNAME                 domínio personalizado
 css/
   reset.css, base.css, variables.css
   components/         um arquivo por seção (navbar, hero, services, contact-form...)
+  alternativas/       estilos guardados para uso futuro, fora do index.html (ex.: valores-numerados.css)
 script/
   config.js           WhatsApp e URL da planilha: o que costuma mudar
   layout.js           menu e ano do rodapé

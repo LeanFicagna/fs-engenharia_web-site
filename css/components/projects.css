@@ -17,11 +17,13 @@
 
 .projects-menu button {
   font-family: inherit;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   padding: 0.35rem 1rem;
   border: 1px solid #444;
-  border-radius: 999px;
+  border-radius: 0.35rem; /* no formato dos botões */
   background: #232323;
   color: #ddd;
   cursor: pointer;
