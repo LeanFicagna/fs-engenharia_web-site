@@ -48,6 +48,7 @@ O `config.js` precisa vir primeiro.
 | Cores, fontes, altura da barra | `css/variables.css` |
 | Vídeo de apresentação | `index.html`, bloco `video-block`: coloque o arquivo em `video/` e descomente o `<source>` |
 | Fotos por serviço | `index.html`, bloco `projects-grid`: cada `<img>` tem `data-service` (`georreferenciamento`, `credito`, `topografia`, `lar`) |
+| Fotos da galeria do dia a dia | `index.html`, lista `team-gallery__more`: um `<li>` por foto, com o arquivo em `img/equipe/galeria/` (WebP, até 1400 px), a legenda em `data-caption` e a descrição no texto do link. Elas aparecem só na galeria em tela cheia, depois das 4 fotos da grade |
 
 Enquanto `sheetsEndpoint` estiver vazio, o formulário só abre o WhatsApp e não registra na planilha.
 

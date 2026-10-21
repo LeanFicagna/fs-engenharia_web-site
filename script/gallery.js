@@ -1,14 +1,33 @@
 // Galeria em tela cheia do "Conheça nosso dia a dia": clicar numa foto abre a foto grande,
 // com setas para passar as fotos. Também funciona com o teclado (Esc, ← e →) e deslizando o dedo.
+// Depois das fotos da grade vêm as da lista .team-gallery__more, que só aparecem aqui.
 (() => {
   const cards = Array.from(document.querySelectorAll(".team-gallery .insta-card"));
   if (cards.length === 0) return;
 
-  const photos = cards.map((card) => {
+  const gridPhotos = cards.map((card) => {
     const image = card.querySelector("img");
     const title = card.querySelector(".insta-card__title");
     return { src: image.currentSrc || image.src, alt: image.alt, caption: title ? title.textContent.trim() : "" };
   });
+
+  const morePhotos = Array.from(document.querySelectorAll(".team-gallery__more a")).map((link) => ({
+    src: link.getAttribute("href"),
+    alt: link.textContent.trim(),
+    caption: link.dataset.caption || "",
+  }));
+
+  const photos = gridPhotos.concat(morePhotos);
+
+  // Selo "+N fotos" no último card, para mostrar que a galeria tem mais fotos que a grade
+  if (morePhotos.length > 0) {
+    const lastCard = cards[cards.length - 1];
+    const badge = document.createElement("span");
+    badge.className = "insta-card__more";
+    badge.textContent = `+${morePhotos.length} fotos`;
+    lastCard.appendChild(badge);
+    lastCard.setAttribute("aria-label", `${lastCard.getAttribute("aria-label")} (e mais ${morePhotos.length} fotos na galeria)`);
+  }
 
   const ICONS = {
     prev: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>',
@@ -49,6 +68,11 @@
     image.alt = photo.alt;
     caption.textContent = photo.caption;
     counter.textContent = `${current + 1} / ${photos.length}`;
+
+    // Já baixa a próxima e a anterior, para não ter espera ao passar
+    [current + 1, current - 1].forEach((neighbor) => {
+      new Image().src = photos[(neighbor + photos.length) % photos.length].src;
+    });
   }
 
   function open(index) {
