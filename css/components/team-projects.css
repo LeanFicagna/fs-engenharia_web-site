@@ -157,7 +157,7 @@
   opacity: 1;
 }
 
-/* Selo "+N fotos" no último card (criado pelo script/gallery.js): a galeria tem mais fotos que a grade */
+/* Selo "+N" no último card (criado pelo script/gallery.js): a galeria tem mais fotos que a grade */
 .insta-card__more {
   position: absolute;
   top: 0.5rem;
@@ -173,7 +173,7 @@
   pointer-events: none;
 }
 
-/* Em telas pequenas o card é estreito: selo menor e só "+N" */
+/* Em telas pequenas o card é estreito: selo menor */
 @media (max-width: 600px) {
   .insta-card__more {
     top: 0.35rem;
@@ -181,10 +181,6 @@
     padding: 0.15rem 0.4rem;
     font-size: 0.7rem;
     letter-spacing: 0;
-  }
-
-  .insta-card__more-label {
-    display: none;
   }
 }
 

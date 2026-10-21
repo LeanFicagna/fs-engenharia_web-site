@@ -19,16 +19,12 @@
 
   const photos = gridPhotos.concat(morePhotos);
 
-  // Selo "+N fotos" no último card, para mostrar que a galeria tem mais fotos que a grade
+  // Selo "+N" no último card, para mostrar que a galeria tem mais fotos que a grade
   if (morePhotos.length > 0) {
     const lastCard = cards[cards.length - 1];
     const badge = document.createElement("span");
     badge.className = "insta-card__more";
     badge.textContent = `+${morePhotos.length}`;
-    const badgeLabel = document.createElement("span");
-    badgeLabel.className = "insta-card__more-label"; // some em telas pequenas, fica só "+N"
-    badgeLabel.textContent = " fotos";
-    badge.appendChild(badgeLabel);
     lastCard.appendChild(badge);
     lastCard.setAttribute("aria-label", `${lastCard.getAttribute("aria-label")} (e mais ${morePhotos.length} fotos na galeria)`);
   }
