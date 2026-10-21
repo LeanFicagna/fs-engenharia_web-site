@@ -173,6 +173,21 @@
   pointer-events: none;
 }
 
+/* Em telas pequenas o card é estreito: selo menor e só "+N" */
+@media (max-width: 600px) {
+  .insta-card__more {
+    top: 0.35rem;
+    right: 0.35rem;
+    padding: 0.15rem 0.4rem;
+    font-size: 0.7rem;
+    letter-spacing: 0;
+  }
+
+  .insta-card__more-label {
+    display: none;
+  }
+}
+
 .insta-card:hover img,
 .insta-card:focus-visible img {
   transform: scale(1.06);
