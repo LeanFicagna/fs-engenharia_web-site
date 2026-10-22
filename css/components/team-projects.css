@@ -157,6 +157,33 @@
   opacity: 1;
 }
 
+/* Selo "+N" no último card (criado pelo script/gallery.js): a galeria tem mais fotos que a grade */
+.insta-card__more {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.35rem; /* no formato dos botões */
+  background: var(--color-logo-green);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: white;
+  pointer-events: none;
+}
+
+/* Em telas pequenas o card é estreito: selo menor */
+@media (max-width: 600px) {
+  .insta-card__more {
+    top: 0.35rem;
+    right: 0.35rem;
+    padding: 0.15rem 0.4rem;
+    font-size: 0.7rem;
+    letter-spacing: 0;
+  }
+}
+
 .insta-card:hover img,
 .insta-card:focus-visible img {
   transform: scale(1.06);
