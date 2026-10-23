@@ -1,5 +1,5 @@
-// Trabalhos por serviço: os cards de "Nossos serviços" e os filtros de "Veja alguns dos nossos trabalhos"
-// usam os mesmos serviços
+// Trabalhos por serviço: os filtros de "Veja alguns dos nossos trabalhos" usam os mesmos serviços dos cards
+// de "Nossos serviços" (clicar num card abre os detalhes do serviço, ver script/service-details.js)
 (() => {
   const SERVICE_NAMES = {
     georreferenciamento: "Georreferenciamento",
@@ -58,24 +58,6 @@
 
   projectFilters.forEach((button) => {
     button.addEventListener("click", () => selectService(button.dataset.service));
-  });
-
-  // Clicar num card de serviço leva aos trabalhos daquele serviço
-  document.querySelectorAll(".service-card[data-service]").forEach((card) => {
-    function openWorks() {
-      selectService(card.dataset.service);
-      document.getElementById("trabalhos").scrollIntoView({ behavior: "smooth" });
-    }
-
-    card.setAttribute("role", "link");
-    card.tabIndex = 0;
-    card.addEventListener("click", openWorks);
-    card.addEventListener("keydown", (event) => {
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        openWorks();
-      }
-    });
   });
 
   selectService("georreferenciamento");

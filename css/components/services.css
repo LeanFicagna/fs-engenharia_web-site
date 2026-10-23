@@ -43,9 +43,6 @@
 
 .service-card:hover {
     transform: translateY(-4px);
-}
-
-.service-card[data-service]:hover {
     border-bottom-color: var(--color-logo-green);
 }
 
@@ -62,7 +59,7 @@
 }
 
 /* o CSS do Swiper (carregado depois) troca o display dos cards por block; assim o conteúdo estica
-   até o fim do card e o "Ver trabalhos" fica alinhado embaixo em todos */
+   até o fim do card e o "Ver detalhes" fica alinhado embaixo em todos */
 .services-carousel .service-card {
     display: grid;
 }
@@ -92,9 +89,9 @@
     color: #444;
 }
 
-/* convite para ver os trabalhos do serviço (o card leva aos trabalhos, ver script/projects.js) */
-.service-card[data-service] .service-card__content::after {
-    content: "Ver trabalhos  →";
+/* convite para abrir os detalhes do serviço (a janela é criada pelo script/service-details.js) */
+.service-card__content::after {
+    content: "Ver detalhes  →";
     align-self: end;
     font-size: 0.75rem;
     font-weight: 700;
@@ -162,13 +159,4 @@
     .services-carousel-wrap .swiper-button-next {
         display: none;
     }
-}
-
-/* Card "Outros serviços": não leva a um filtro de trabalhos, então não parece clicável */
-.service-card--static {
-    cursor: default;
-}
-
-.service-card--static:hover {
-    transform: none;
 }

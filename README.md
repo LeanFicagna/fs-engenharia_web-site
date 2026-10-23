@@ -32,6 +32,7 @@ script/
   projects.js         trabalhos por serviço
   video.js            vídeo de apresentação
   services-carousel.js  carrossel de "Nossos serviços"
+  service-details.js  janela com os detalhes de cada serviço (abre ao clicar no card)
 img/                  logo, hero, servicos, equipe, trabalhos, fundos
 apps-script/          script do Google que registra o formulário na planilha e envia email
 ```
@@ -49,6 +50,7 @@ O `config.js` precisa vir primeiro.
 | Vídeo de apresentação | `index.html`, bloco `video-block`: coloque o arquivo em `video/` e descomente o `<source>` |
 | Fotos por serviço | `index.html`, bloco `projects-grid`: cada `<img>` tem `data-service` (`georreferenciamento`, `credito`, `topografia`, `lar`) |
 | Fotos da galeria do dia a dia | `index.html`, lista `team-gallery__more`: um `<li>` por foto, com o arquivo em `img/equipe/galeria/` (WebP, até 1400 px), a legenda em `data-caption` e a descrição no texto do link. Elas aparecem só na galeria em tela cheia, depois das 4 fotos da grade |
+| Detalhes de cada serviço | `index.html`, dentro de cada card de "Nossos serviços": bloco `service-card__details` (escondido), com o texto, "Para quem é" e "O que inclui". A janela mostra esse bloco ao clicar no card |
 
 Enquanto `sheetsEndpoint` estiver vazio, o formulário só abre o WhatsApp e não registra na planilha.
 
