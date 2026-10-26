@@ -9,7 +9,8 @@
   justify-content: flex-start;
 }
 
-/* Slides empilhados com fade entre eles (ciclo de 20s, 5s por imagem) */
+/* Fotos de fundo: a lavoura de cacau fica sempre embaixo e a segunda foto aparece e some por cima
+   (ciclo de 14s, 7s cada), sem tela preta entre elas */
 .hero-slides span {
   position: absolute;
   inset: 0;
@@ -17,27 +18,17 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0;
-  animation: heroFade 20s infinite ease-in-out;
 }
 
 .hero-slides span:nth-child(1) {
-  background-image: url("../../img/hero/fazenda.webp");
+  background-image: url("../../img/hero/plantacao-cacau.webp");
 }
 
 .hero-slides span:nth-child(2) {
-  background-image: url("../../img/hero/credito-rural.webp");
-  animation-delay: 5s;
-}
-
-.hero-slides span:nth-child(3) {
-  background-image: url("../../img/hero/geo-referenciamento.webp");
-  animation-delay: 10s;
-}
-
-.hero-slides span:nth-child(4) {
-  background-image: url("../../img/hero/plantacao-cacau.webp");
-  animation-delay: 15s;
+  background-image: url("../../img/hero/caminho-ao-campo.webp");
+  background-position: 65% center; /* no celular, mantém a pessoa no enquadramento */
+  opacity: 0;
+  animation: heroFade 14s infinite ease-in-out;
 }
 
 .hero::before {
@@ -89,27 +80,24 @@
 }
 
 @keyframes heroFade {
-  0% {
+  0%,
+  40% {
     opacity: 0;
   }
 
-  5%,
-  25% {
+  50%,
+  90% {
     opacity: 1;
   }
 
-  30%,
   100% {
     opacity: 0;
   }
 }
 
+/* Sem animação para quem prefere menos movimento: fica só a foto do cacau */
 @media (prefers-reduced-motion: reduce) {
-  .hero-slides span {
+  .hero-slides span:nth-child(2) {
     animation: none;
-  }
-
-  .hero-slides span:nth-child(1) {
-    opacity: 1;
   }
 }
