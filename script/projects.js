@@ -5,9 +5,6 @@
     georreferenciamento: "Georreferenciamento",
     car: "CAR",
     credito: "Crédito Rural",
-    lar: "LAR",
-    titulacao: "Titulação",
-    licencas: "Licenças",
   };
 
   const projectFilters = Array.from(document.querySelectorAll(".projects-menu button"));
