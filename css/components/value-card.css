@@ -7,6 +7,12 @@
   margin-bottom: 1rem;
 }
 
+.value-card p {
+  text-align: justify;
+  -webkit-hyphens: auto; /* divide palavras longas (pt-br, do <html lang>) e evita buracos entre as palavras */
+  hyphens: auto;
+}
+
 /* Variantes */
 .value-card--top {
   background: #1f5200;
