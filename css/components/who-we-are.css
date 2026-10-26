@@ -29,6 +29,9 @@
 .who-we-are__content p {
   margin-bottom: 1rem;
   color: rgba(255, 255, 255, 0.8);
+  text-align: justify;
+  -webkit-hyphens: auto; /* divide palavras longas (pt-br, do <html lang>) e evita buracos entre as palavras */
+  hyphens: auto;
 }
 
 @media (max-width: 768px) {
