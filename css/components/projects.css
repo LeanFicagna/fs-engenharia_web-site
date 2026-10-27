@@ -43,14 +43,15 @@
   color: white;
 }
 
-/* FOTO GRANDE (criada pelo script/projects.js) */
+/* FOTO GRANDE (criada pelo script/projects.js): quadro 16:9 com a imagem inteira, sem corte;
+   o que sobrar (fotos em pé, mapas) fica com fundo escuro sólido */
 
 .projects-main {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
-  max-height: 440px;
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--color-neutral-0);
   border-radius: 0.8rem;
   margin-bottom: 0.75rem;
 }
@@ -64,10 +65,13 @@
   margin-bottom: 2rem;
 }
 
+/* miniaturas também em 16:9 e sem corte */
 .projects-grid img {
   width: 110px;
-  height: 72px;
-  object-fit: cover;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: var(--color-neutral-0);
   border-radius: 0.4rem;
   opacity: 0.55;
   cursor: pointer;
@@ -104,8 +108,13 @@
 
 /* RESPONSIVO */
 
-/* Telas pequenas: miniaturas em 4 colunas iguais, para não sobrar uma sozinha na linha de baixo */
+/* Telas pequenas: foto grande em 4:3 (as fotos em pé ficam maiores) e miniaturas em 4 colunas iguais,
+   para não sobrar uma sozinha na linha de baixo */
 @media (max-width: 600px) {
+  .projects-main {
+    aspect-ratio: 4 / 3;
+  }
+
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -113,6 +122,5 @@
 
   .projects-grid img {
     width: 100%;
-    height: 56px;
   }
 }
