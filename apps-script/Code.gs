@@ -4,7 +4,7 @@
  */
 
 // Email que recebe os avisos (troque se for outro)
-const RECIPIENT_EMAIL = "contato@fsengenharia.com.br";
+const RECIPIENT_EMAIL = "engenharfs@gmail.com";
 const SHEET_NAME = "Solicitações";
 const HEADERS = ["Data", "Nome", "Email", "Cidade", "UF", "Telefone", "Mensagem"];
 const MAX_LENGTH = 2000;
