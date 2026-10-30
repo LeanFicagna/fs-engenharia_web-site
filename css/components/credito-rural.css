@@ -1,0 +1,185 @@
+/* Estilos só da página credito-rural.html, a página enxuta para o tráfego */
+
+/* ---------- BARRA SUPERIOR: só a logo e o botão do WhatsApp ---------- */
+
+.btn-nav-contato {
+  white-space: nowrap;
+}
+
+/* Sem o menu, a logo e o botão ficam nas pontas e precisam de respiro nas telas médias */
+@media (max-width: 1232px) {
+  .navbar-container {
+    padding-inline: 1rem;
+  }
+}
+
+/* ---------- HERO: três fotos, a primeira com a equipe e o Banco da Amazônia ---------- */
+
+/* A primeira foto fica sempre embaixo e as outras duas aparecem e somem por cima
+   (ciclo de 21s, 7s cada), sem tela preta entre elas */
+.hero-slides span:nth-child(1) {
+  background-image: url("../../img/hero/credito-rural.webp");
+}
+
+.hero-slides span:nth-child(2) {
+  background-image: url("../../img/hero/plantacao-cacau.webp");
+  background-position: center;
+  opacity: 0;
+  animation: heroFadeSecond 21s infinite ease-in-out;
+}
+
+.hero-slides span:nth-child(3) {
+  background-image: url("../../img/hero/caminho-ao-campo.webp");
+  background-position: 65% center; /* no celular, mantém a pessoa no enquadramento */
+  opacity: 0;
+  animation: heroFadeThird 21s infinite ease-in-out;
+}
+
+/* A segunda foto só some depois que a terceira já a cobriu por inteiro */
+@keyframes heroFadeSecond {
+  0%,
+  28% {
+    opacity: 0;
+  }
+
+  33%,
+  66% {
+    opacity: 1;
+  }
+
+  67%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes heroFadeThird {
+  0%,
+  61% {
+    opacity: 0;
+  }
+
+  66%,
+  95% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Sem animação para quem prefere menos movimento: fica só a primeira foto */
+@media (prefers-reduced-motion: reduce) {
+  .hero-slides span:nth-child(2),
+  .hero-slides span:nth-child(3) {
+    animation: none;
+  }
+}
+
+/* ---------- CRÉDITO PARA A SUA PRODUÇÃO ---------- */
+
+.credit-lines {
+  padding: 3.5rem 1rem 1.5rem;
+}
+
+.credit-lines__layout {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.credit-lines h2,
+.credit-lines h3,
+.credit-lines p {
+  color: var(--color-neutral-10);
+}
+
+.credit-lines__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.credit-lines__cards article {
+  padding: 1.5rem;
+  border-top: 3px solid var(--color-logo-green);
+  border-radius: 0.35rem;
+  background: var(--color-neutral-40);
+}
+
+.credit-lines__cards h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.credit-lines__cards p {
+  margin-bottom: 0;
+}
+
+/* ---------- PERGUNTAS FREQUENTES ---------- */
+
+.credit-faq {
+  padding: 3.5rem 1rem;
+  background: var(--color-neutral-40);
+}
+
+.credit-faq__layout {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.credit-faq h2 {
+  color: var(--color-neutral-10);
+}
+
+.credit-faq details {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.credit-faq summary {
+  padding: 1rem 0;
+  font-family: var(--font-secondary);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-neutral-10);
+  cursor: pointer;
+}
+
+.credit-faq summary::marker {
+  color: var(--color-logo-green);
+}
+
+.credit-faq details p {
+  color: var(--color-neutral-10);
+}
+
+/* ---------- RESPONSIVO ---------- */
+
+/* Contato sem o mapa: o texto desce para a parte clara da foto, abaixo do rosto */
+@media (min-width: 992px) {
+  .contact-highlight {
+    justify-content: flex-end;
+    padding-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .credit-lines__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .credit-lines__cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Rodapé sem a coluna de navegação */
+@media (min-width: 769px) {
+  #footer_content {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+}
