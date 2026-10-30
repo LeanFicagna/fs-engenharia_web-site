@@ -34,6 +34,7 @@ script/
   services-carousel.js  carrossel de "Nossos serviços"
   service-details.js  janela com os detalhes de cada serviço (abre ao clicar no card)
 img/                  logo, hero, servicos, equipe, trabalhos, fundos
+video/                vídeo de apresentação
 apps-script/          script do Google que registra o formulário na planilha e envia email
 ```
 
@@ -47,7 +48,7 @@ O `config.js` precisa vir primeiro.
 | Número do WhatsApp | `script/config.js` → `whatsappNumber` |
 | URL do formulário na planilha | `script/config.js` → `sheetsEndpoint` (passo a passo em `apps-script/README.md`) |
 | Cores, fontes, altura da barra | `css/variables.css` |
-| Vídeo de apresentação | `index.html`, bloco `video-block`: coloque o arquivo em `video/` e descomente o `<source>` |
+| Vídeo de apresentação | `video/apresentacao.mp4`, com a capa em `img/equipe/video-capa.webp`. Para trocar, use H.264 com o MP4 em início rápido: `ffmpeg -i novo.mp4 -c copy -movflags +faststart video/apresentacao.mp4` |
 | Fotos por serviço | `index.html`, bloco `projects-grid`: cada `<img>` tem `data-service` (`georreferenciamento`, `car`, `credito`), com o arquivo em `img/trabalhos/` (até 1000 px). Para um serviço novo, inclua também o botão em `projects-menu` e o nome em `SERVICE_NAMES` (`script/projects.js`) |
 | Fotos da galeria do dia a dia | `index.html`, lista `team-gallery__more`: um `<li>` por foto, com o arquivo em `img/equipe/galeria/` (WebP, até 1400 px), a legenda em `data-caption` e a descrição no texto do link. Elas aparecem só na galeria em tela cheia, depois das 4 fotos da grade |
 | Detalhes de cada serviço | `index.html`, dentro de cada card de "Nossos serviços": bloco `service-card__details` (escondido), com o texto, "Para quem é" e "O que inclui". A janela mostra esse bloco ao clicar no card |
