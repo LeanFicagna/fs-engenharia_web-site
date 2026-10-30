@@ -57,5 +57,6 @@
     button.addEventListener("click", () => selectService(button.dataset.service));
   });
 
-  selectService("georreferenciamento");
+  // Começa pelo serviço da primeira foto (credito-rural.html só tem fotos de crédito, sem filtros)
+  selectService(projectImages[0].dataset.service);
 })();

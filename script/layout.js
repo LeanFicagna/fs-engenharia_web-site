@@ -3,7 +3,8 @@
   const toggle = document.querySelector(".navbar-toggle");
   const menu = document.querySelector(".navbar-menu");
 
-  toggle.addEventListener("click", () => {
+  // credito-rural.html não tem menu
+  toggle?.addEventListener("click", () => {
     menu.classList.toggle("is-open");
   });
 
