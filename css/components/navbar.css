@@ -18,6 +18,7 @@
 
 .navbar-brand img {
   height: 40px;
+  object-fit: contain; /* quando a barra aperta perto de 769px, a logo não deforma */
 }
 
 /* menu antes do botão de orçamento */
