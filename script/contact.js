@@ -1,4 +1,4 @@
-// Contato: links do WhatsApp e formulário (WhatsApp + planilha do Google)
+// Contato: links do WhatsApp e formulário (planilha do Google + email para a empresa)
 (() => {
   function buildWhatsappUrl(text) {
     return `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(text)}`;
@@ -28,17 +28,6 @@
     status.classList.toggle("form-status--error", isError);
   }
 
-  function buildLeadMessage(lead) {
-    return [
-      `Olá! Meu nome é ${lead.name}.`,
-      `Cidade/UF: ${lead.city} - ${lead.uf}`,
-      `Telefone: ${lead.phone}`,
-      `Email: ${lead.email}`,
-      "",
-      lead.message,
-    ].join("\n");
-  }
-
   const contactForm = document.getElementById("contact-form");
 
   // O botão só é liberado com o consentimento marcado
@@ -53,7 +42,21 @@
   contactForm.addEventListener("reset", () => setTimeout(syncSubmitButton));
   syncSubmitButton();
 
-  contactForm.addEventListener("submit", (event) => {
+  // O Apps Script grava na planilha, manda o email e responde { ok: true } ou { ok: false, error }
+  async function sendLead(lead) {
+    if (!SITE_CONFIG.sheetsEndpoint) throw new Error("sheetsEndpoint vazio");
+
+    // text/plain evita o preflight de CORS, que o Apps Script não responde
+    const response = await fetch(SITE_CONFIG.sheetsEndpoint, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(lead),
+    });
+    const result = await response.json();
+    if (!result.ok) throw new Error(result.error);
+  }
+
+  contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const form = contactForm.elements;
@@ -70,24 +73,17 @@
       message: form.menssage.value.trim(),
     };
 
-    // Registra na planilha sem aguardar a resposta (text/plain evita preflight de CORS)
-    if (SITE_CONFIG.sheetsEndpoint) {
-      fetch(SITE_CONFIG.sheetsEndpoint, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "text/plain;charset=utf-8" },
-        body: JSON.stringify(lead),
-        keepalive: true,
-      }).catch(() => {});
-    }
+    submitButton.disabled = true; // evita envio duplicado enquanto espera
+    showFormStatus("Enviando...");
 
-    // Abre o WhatsApp no próprio clique (evita bloqueio de pop-up no iOS)
-    const whatsappWindow = window.open(buildWhatsappUrl(buildLeadMessage(lead)), "_blank");
-    if (!whatsappWindow) {
-      window.location.href = buildWhatsappUrl(buildLeadMessage(lead));
+    try {
+      await sendLead(lead);
+      contactForm.reset();
+      showFormStatus("Pedido enviado! Nossa equipe vai entrar em contato em breve.");
+    } catch {
+      // Mantém o que a pessoa digitou para ela tentar de novo
+      syncSubmitButton();
+      showFormStatus("Não conseguimos enviar agora. Tente de novo ou fale com a gente pelo WhatsApp.", true);
     }
-
-    contactForm.reset();
-    showFormStatus("Recebemos seus dados! Continue o atendimento pelo WhatsApp.");
   });
 })();
