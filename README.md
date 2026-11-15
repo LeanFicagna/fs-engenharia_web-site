@@ -58,6 +58,11 @@ O `config.js` precisa vir primeiro.
 
 O formulário envia para o `sheetsEndpoint`, que grava na planilha e manda o email para a empresa. Sem ele, o formulário mostra erro e sugere o WhatsApp.
 
+Cada clique num botão do WhatsApp também vai para o `sheetsEndpoint` e vira uma linha na aba "Cliques WhatsApp"
+(data, página, botão, utm_source/medium/campaign e celular ou computador). O nome do botão vem do atributo
+`data-whatsapp-button` (`menu`, `hero`, `como-funciona`, `trabalhos`, `rodape`, `flutuante`). Num botão novo de
+WhatsApp, inclua `data-whatsapp` e um `data-whatsapp-button` com nome próprio; sem ele, o clique aparece como `sem-nome`.
+
 ## Convenções
 
 - **Imagens:** nomes em minúsculas, com hífen e sem acento (`dia-a-dia-1.webp`), dentro da subpasta do uso.
