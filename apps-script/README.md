@@ -3,14 +3,17 @@
 Registra cada pedido numa planilha do Google Sheets e avisa a empresa por email.
 Também tem uma leitura protegida por token (`doGet`) que devolve os pedidos em JSON.
 
-A planilha e o script ficam na conta `fsengenhariarural.ti@gmail.com`, que também recebe os avisos.
+A planilha e o script ficam na conta `fsengenhariarural.ti@gmail.com`, que é quem envia os avisos.
+Quem recebe fica na propriedade `RECIPIENT_EMAILS` (passo 3), e não no código, que é público.
 
 ## Como publicar
 
 1. Crie uma planilha no Google Sheets (pode ser em branco).
 2. Abra **Extensões > Apps Script** e substitua o conteúdo de `Code.gs` pelo arquivo `Code.gs` desta pasta.
-3. Confira `RECIPIENT_EMAIL` no topo do script.
-4. Em **Configurações do projeto > Propriedades do script**, crie `API_TOKEN` com um texto longo e aleatório.
+3. Em **Configurações do projeto > Propriedades do script**, crie `RECIPIENT_EMAILS` com os emails que recebem
+   os avisos, separados por vírgula (ex.: `a@gmail.com, b@gmail.com`). Vazia, o aviso vai para a própria conta do script.
+   Para mudar a lista depois, basta editar a propriedade: não precisa de nova versão nem de mexer no site.
+4. Na mesma tela, crie `API_TOKEN` com um texto longo e aleatório.
    Sem ela, a leitura (`doGet`) recusa tudo. Guarde o token fora do Git.
 5. Clique em **Implantar > Nova implantação > Tipo: App da Web**:
    - **Executar como:** Eu
@@ -41,5 +44,5 @@ A resposta vem com os mais recentes primeiro; `id` é o número da linha na plan
 
 - A URL é pública, por isso o script valida os campos e o formulário tem um campo honeypot contra bots.
 - O site envia como `text/plain` (sem preflight de CORS) e lê a resposta: com `ok: true` mostra "Pedido enviado!"; senão, mostra erro e sugere o WhatsApp. O detalhe dos erros fica em **Execuções** no painel do Apps Script.
-- Limite do `MailApp`: cerca de 100 emails/dia em conta Gmail comum e 1500 em Google Workspace.
+- Limite do `MailApp`: cerca de 100 destinatários/dia em conta Gmail comum e 1500 em Google Workspace. Cada email da lista conta: com 3 emails, são uns 33 pedidos por dia.
 - A aba `Solicitações` e o cabeçalho são criados automaticamente no primeiro envio.
