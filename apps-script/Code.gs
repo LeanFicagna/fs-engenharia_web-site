@@ -3,8 +3,10 @@
  * Publicar como Web App (ver README.md desta pasta).
  */
 
-// Email que recebe os avisos (troque se for outro)
-const RECIPIENT_EMAIL = "fsengenhariarural.ti@gmail.com";
+// Quem recebe os avisos fica nas Propriedades do script, fora do código.
+// NÃO coloque os emails nesta linha: ela é só o NOME da propriedade. Em Configurações do projeto >
+// Propriedades do script, crie RECIPIENT_EMAILS com o valor "a@gmail.com, b@gmail.com".
+const RECIPIENTS_PROPERTY = "RECIPIENT_EMAILS";
 const SHEET_NAME = "Solicitações";
 const HEADERS = ["Data", "Nome", "Email", "Cidade", "UF", "Telefone", "Mensagem"];
 const MAX_LENGTH = 2000;
@@ -86,6 +88,22 @@ function getOrCreateSheet() {
   return sheet;
 }
 
+// Lista da propriedade RECIPIENT_EMAILS; vazia = a própria conta do script, para nenhum aviso se perder
+function getRecipients() {
+  const value = PropertiesService.getScriptProperties().getProperty(RECIPIENTS_PROPERTY) || "";
+  const recipients = value
+    .replace(/[\[\]"']/g, "") // aceita também o formato ["a@gmail.com", "b@gmail.com"]
+    .split(",")
+    .map(function (email) {
+      return email.trim();
+    })
+    .filter(function (email) {
+      return email;
+    });
+
+  return recipients.length ? recipients : [Session.getEffectiveUser().getEmail()];
+}
+
 function sendNotificationEmail(lead) {
   const body = [
     "Novo pedido de atendimento pelo site:",
@@ -100,7 +118,7 @@ function sendNotificationEmail(lead) {
   ].join("\n");
 
   MailApp.sendEmail({
-    to: RECIPIENT_EMAIL,
+    to: getRecipients().join(","),
     replyTo: lead.email,
     subject: "Novo pedido de atendimento - " + lead.name,
     body: body,
