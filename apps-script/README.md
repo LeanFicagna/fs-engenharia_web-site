@@ -29,6 +29,19 @@ Quem recebe fica na propriedade `RECIPIENT_EMAILS` (passo 3), e não no código,
 `GET <URL do app da Web>?token=SEU_TOKEN`, com filtros opcionais `&cidade=Rurópolis`, `&uf=PA` e `&limite=50`.
 A resposta vem com os mais recentes primeiro; `id` é o número da linha na planilha.
 
+## Cliques nos botões do WhatsApp
+
+O site manda `{"type":"whatsapp_click", page, button, utmSource, utmMedium, utmCampaign, device}` para a mesma URL,
+com `navigator.sendBeacon`, a cada clique num botão do WhatsApp. O script grava na aba `Cliques WhatsApp`, criada
+no primeiro clique, e não manda email. Não há dado pessoal: só a página, o botão, a campanha e o tipo de aparelho.
+
+- Para ver por botão ou por campanha, crie uma tabela dinâmica nessa aba (**Inserir > Tabela dinâmica**),
+  com Botão ou Campanha nas linhas e contagem de Data nos valores.
+- Se o site for publicado antes da nova versão do script, os cliques chegam ao script antigo, são recusados
+  como pedido inválido e nada é gravado. Nada quebra no site.
+- Cada clique é uma execução do script; o limite do Google para Gmail comum é de 30 execuções simultâneas,
+  folgado para o tráfego do site.
+
 ## Migrar para outra conta Google
 
 1. Na conta nova, siga **Como publicar** acima, com uma planilha nova.
