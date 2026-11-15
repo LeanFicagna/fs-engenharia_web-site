@@ -1,5 +1,6 @@
 /**
  * Recebe os pedidos de atendimento do site, registra na planilha e avisa a empresa por email.
+ * Também registra os cliques nos botões do WhatsApp, na aba "Cliques WhatsApp".
  * Publicar como Web App (ver README.md desta pasta).
  */
 
@@ -11,16 +12,40 @@ const SHEET_NAME = "Solicitações";
 const HEADERS = ["Data", "Nome", "Email", "Cidade", "UF", "Telefone", "Mensagem"];
 const MAX_LENGTH = 2000;
 
+// Cliques nos botões do WhatsApp: só dados do clique, nenhum dado pessoal
+const CLICK_TYPE = "whatsapp_click";
+const CLICKS_SHEET_NAME = "Cliques WhatsApp";
+const CLICK_HEADERS = ["Data", "Página", "Botão", "Origem (utm_source)", "Mídia (utm_medium)", "Campanha (utm_campaign)", "Dispositivo"];
+const CLICK_FIELD_LENGTH = 100;
+
 function doPost(e) {
   const lock = LockService.getScriptLock();
 
   try {
     lock.waitLock(10000);
 
-    const lead = parseLead(e);
+    const data = parseBody(e);
+
+    if (data && data.type === CLICK_TYPE) {
+      const click = parseClick(data);
+      if (!click) return jsonResponse({ ok: false, error: "invalid" });
+
+      getOrCreateSheet(CLICKS_SHEET_NAME, CLICK_HEADERS).appendRow([
+        new Date(),
+        safeCell(click.page),
+        safeCell(click.button),
+        safeCell(click.utmSource),
+        safeCell(click.utmMedium),
+        safeCell(click.utmCampaign),
+        safeCell(click.device),
+      ]);
+      return jsonResponse({ ok: true });
+    }
+
+    const lead = parseLead(data);
     if (!lead) return jsonResponse({ ok: false, error: "invalid" });
 
-    const sheet = getOrCreateSheet();
+    const sheet = getOrCreateSheet(SHEET_NAME, HEADERS);
     sheet.appendRow([
       new Date(),
       safeCell(lead.name),
@@ -40,15 +65,34 @@ function doPost(e) {
   }
 }
 
-function parseLead(e) {
+// Corpo do POST em JSON; null se vier vazio ou inválido
+function parseBody(e) {
   if (!e || !e.postData || !e.postData.contents) return null;
 
-  let data;
   try {
-    data = JSON.parse(e.postData.contents);
+    const data = JSON.parse(e.postData.contents);
+    return data && typeof data === "object" ? data : null;
   } catch (error) {
     return null;
   }
+}
+
+function parseClick(data) {
+  const click = {
+    page: clean(data.page).slice(0, CLICK_FIELD_LENGTH),
+    button: clean(data.button).slice(0, CLICK_FIELD_LENGTH),
+    utmSource: clean(data.utmSource).slice(0, CLICK_FIELD_LENGTH),
+    utmMedium: clean(data.utmMedium).slice(0, CLICK_FIELD_LENGTH),
+    utmCampaign: clean(data.utmCampaign).slice(0, CLICK_FIELD_LENGTH),
+    device: clean(data.device).slice(0, CLICK_FIELD_LENGTH),
+  };
+
+  if (!click.page || !click.button) return null;
+  return click;
+}
+
+function parseLead(data) {
+  if (!data) return null;
 
   const lead = {
     name: clean(data.name),
@@ -74,15 +118,16 @@ function safeCell(value) {
   return /^[=+\-@]/.test(value) ? "'" + value : value;
 }
 
-function getOrCreateSheet() {
+// Cria a aba e o cabeçalho na primeira vez
+function getOrCreateSheet(name, headers) {
   const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
-  let sheet = spreadsheet.getSheetByName(SHEET_NAME);
+  let sheet = spreadsheet.getSheetByName(name);
 
   if (!sheet) {
-    sheet = spreadsheet.insertSheet(SHEET_NAME);
+    sheet = spreadsheet.insertSheet(name);
   }
   if (sheet.getLastRow() === 0) {
-    sheet.appendRow(HEADERS);
+    sheet.appendRow(headers);
     sheet.setFrozenRows(1);
   }
   return sheet;
@@ -146,7 +191,7 @@ function doGet(e) {
     return jsonResponse({ ok: false, error: "unauthorized" });
   }
 
-  const sheet = getOrCreateSheet();
+  const sheet = getOrCreateSheet(SHEET_NAME, HEADERS);
   const valores = sheet.getDataRange().getValues();
   const linhas = valores.slice(1); // pula o cabeçalho
 

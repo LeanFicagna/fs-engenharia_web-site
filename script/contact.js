@@ -4,9 +4,33 @@
     return `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(text)}`;
   }
 
-  // Links com data-whatsapp apontam para o número da empresa
+  // Registra o clique na aba "Cliques WhatsApp" da planilha (ver apps-script/Code.gs).
+  // sendBeacon envia em segundo plano: não atrasa a abertura do WhatsApp, sobrevive à troca
+  // de página e não interfere em outros scripts de clique, como o Pixel da Meta.
+  function trackWhatsappClick(link) {
+    if (!SITE_CONFIG.sheetsEndpoint || !navigator.sendBeacon) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const click = {
+      type: "whatsapp_click",
+      page: window.location.pathname.split("/").pop() || "index.html",
+      button: link.dataset.whatsappButton || "sem-nome",
+      utmSource: params.get("utm_source") ?? "",
+      utmMedium: params.get("utm_medium") ?? "",
+      utmCampaign: params.get("utm_campaign") ?? "",
+      device: /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? "celular" : "computador",
+    };
+
+    // text/plain, como no formulário: o Apps Script não responde ao preflight de CORS
+    const body = new Blob([JSON.stringify(click)], { type: "text/plain;charset=utf-8" });
+    navigator.sendBeacon(SITE_CONFIG.sheetsEndpoint, body);
+  }
+
+  // Links com data-whatsapp apontam para o número da empresa;
+  // data-whatsapp-button diz qual botão foi clicado (menu, hero, rodape...)
   document.querySelectorAll("[data-whatsapp]").forEach((link) => {
     link.href = buildWhatsappUrl(link.dataset.whatsappText ?? "");
+    link.addEventListener("click", () => trackWhatsappClick(link));
   });
 
   // Máscara (99) 99999-9999
