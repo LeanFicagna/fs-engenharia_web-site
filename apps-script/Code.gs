@@ -4,7 +4,7 @@
  */
 
 // Email que recebe os avisos (troque se for outro)
-const RECIPIENT_EMAIL = "engenharfs@gmail.com";
+const RECIPIENT_EMAIL = "fsengenhariarural.ti@gmail.com";
 const SHEET_NAME = "Solicitações";
 const HEADERS = ["Data", "Nome", "Email", "Cidade", "UF", "Telefone", "Mensagem"];
 const MAX_LENGTH = 2000;
@@ -111,4 +111,59 @@ function jsonResponse(payload) {
   return ContentService.createTextOutput(JSON.stringify(payload)).setMimeType(
     ContentService.MimeType.JSON
   );
+}
+
+/**
+ * Devolve as solicitações registradas na planilha, em JSON.
+ * Exige o token salvo nas Propriedades do script (API_TOKEN).
+ *
+ * Uso: GET <URL do Web App>?token=SEU_TOKEN
+ * Filtros opcionais: &cidade=Rurópolis  &uf=PA  &limite=50
+ */
+function doGet(e) {
+  const params = (e && e.parameter) || {};
+  const tokenEsperado = PropertiesService.getScriptProperties().getProperty("API_TOKEN");
+
+  if (!tokenEsperado || params.token !== tokenEsperado) {
+    return jsonResponse({ ok: false, error: "unauthorized" });
+  }
+
+  const sheet = getOrCreateSheet();
+  const valores = sheet.getDataRange().getValues();
+  const linhas = valores.slice(1); // pula o cabeçalho
+
+  let solicitacoes = linhas.map(function (linha, i) {
+    return {
+      id: i + 2, // número da linha na planilha
+      data: linha[0] instanceof Date ? linha[0].toISOString() : String(linha[0]),
+      nome: String(linha[1]),
+      email: String(linha[2]),
+      cidade: String(linha[3]),
+      uf: String(linha[4]),
+      telefone: String(linha[5]),
+      mensagem: String(linha[6]),
+    };
+  });
+
+  // Filtros opcionais
+  if (params.cidade) {
+    const cidade = params.cidade.toLowerCase();
+    solicitacoes = solicitacoes.filter(function (s) {
+      return s.cidade.toLowerCase().indexOf(cidade) !== -1;
+    });
+  }
+  if (params.uf) {
+    const uf = params.uf.toUpperCase();
+    solicitacoes = solicitacoes.filter(function (s) {
+      return s.uf === uf;
+    });
+  }
+
+  // Mais recentes primeiro
+  solicitacoes.reverse();
+
+  const limite = parseInt(params.limite, 10);
+  if (limite > 0) solicitacoes = solicitacoes.slice(0, limite);
+
+  return jsonResponse({ ok: true, total: solicitacoes.length, solicitacoes: solicitacoes });
 }

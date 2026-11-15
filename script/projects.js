@@ -57,6 +57,6 @@
     button.addEventListener("click", () => selectService(button.dataset.service));
   });
 
-  // Começa pelo serviço da primeira foto (credito-rural.html só tem fotos de crédito, sem filtros)
+  // Começa pelo serviço da primeira foto (credito-rural-oeste-do-para.html só tem fotos de crédito, sem filtros)
   selectService(projectImages[0].dataset.service);
 })();

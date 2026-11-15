@@ -18,7 +18,9 @@ O Swiper (carrossel) e o Font Awesome (ícones) vêm de CDN, então é preciso i
 
 ```
 index.html            página principal do site
-credito-rural.html    página enxuta para o tráfego: só crédito rural, sem menu
+credito-rural-oeste-do-para.html
+                      página enxuta para o tráfego: só crédito rural, sem menu
+credito-rural.html    endereço antigo: só leva para credito-rural-oeste-do-para.html
 404.html              página de erro (o GitHub Pages usa automaticamente)
 robots.txt, sitemap.xml
 CNAME                 domínio personalizado
