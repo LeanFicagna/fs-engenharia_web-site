@@ -56,7 +56,7 @@ O `config.js` precisa vir primeiro.
 | Fotos da galeria do dia a dia | `index.html`, lista `team-gallery__more`: um `<li>` por foto, com o arquivo em `img/equipe/galeria/` (WebP, até 1400 px), a legenda em `data-caption` e a descrição no texto do link. Elas aparecem só na galeria em tela cheia, depois das 4 fotos da grade |
 | Detalhes de cada serviço | `index.html`, dentro de cada card de "Nossos serviços": bloco `service-card__details` (escondido), com o texto, "Para quem é" e "O que inclui". A janela mostra esse bloco ao clicar no card |
 
-Enquanto `sheetsEndpoint` estiver vazio, o formulário só abre o WhatsApp e não registra na planilha.
+O formulário envia para o `sheetsEndpoint`, que grava na planilha e manda o email para a empresa. Sem ele, o formulário mostra erro e sugere o WhatsApp.
 
 ## Convenções
 

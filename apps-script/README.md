@@ -40,6 +40,6 @@ A resposta vem com os mais recentes primeiro; `id` é o número da linha na plan
 ## Observações
 
 - A URL é pública, por isso o script valida os campos e o formulário tem um campo honeypot contra bots.
-- O navegador envia com `mode: "no-cors"`, então o site não lê a resposta. Para ver erros, use **Execuções** no painel do Apps Script.
+- O site envia como `text/plain` (sem preflight de CORS) e lê a resposta: com `ok: true` mostra "Pedido enviado!"; senão, mostra erro e sugere o WhatsApp. O detalhe dos erros fica em **Execuções** no painel do Apps Script.
 - Limite do `MailApp`: cerca de 100 emails/dia em conta Gmail comum e 1500 em Google Workspace.
 - A aba `Solicitações` e o cabeçalho são criados automaticamente no primeiro envio.
