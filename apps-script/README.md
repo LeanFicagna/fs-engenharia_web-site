@@ -3,6 +3,8 @@
 Registra cada pedido numa planilha do Google Sheets e avisa a empresa por email.
 Também tem uma leitura protegida por token (`doGet`) que devolve os pedidos em JSON.
 
+A planilha e o script ficam na conta `fsengenhariarural.ti@gmail.com`, que também recebe os avisos.
+
 ## Como publicar
 
 1. Crie uma planilha no Google Sheets (pode ser em branco).
@@ -23,6 +25,17 @@ Também tem uma leitura protegida por token (`doGet`) que devolve os pedidos em 
 
 `GET <URL do app da Web>?token=SEU_TOKEN`, com filtros opcionais `&cidade=Rurópolis`, `&uf=PA` e `&limite=50`.
 A resposta vem com os mais recentes primeiro; `id` é o número da linha na planilha.
+
+## Migrar para outra conta Google
+
+1. Na conta nova, siga **Como publicar** acima, com uma planilha nova.
+2. Copie os pedidos antigos: na planilha antiga, clique com o botão direito na aba `Solicitações` >
+   **Copiar para > Planilha existente**, escolha a planilha nova, apague a aba vazia criada pelo script
+   (se houver) e renomeie a cópia para `Solicitações`.
+3. Troque `sheetsEndpoint` no `script/config.js` pela URL nova e publique o site.
+4. Envie um pedido de teste pelo site e confira a linha na planilha e o email.
+5. Só então arquive a implantação antiga (**Implantar > Gerenciar implantações > Arquivar**).
+   Até o site novo estar no ar, a antiga continua recebendo os pedidos.
 
 ## Observações
 
